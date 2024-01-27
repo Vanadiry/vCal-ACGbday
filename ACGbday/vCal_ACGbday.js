@@ -180,7 +180,6 @@ var list = [
   { name: "琪琪", bday: "02-02", origin: "魔女宅急便" },
   { name: "桐生慧辉", bday: "10-11", origin: "只要长得可爱即使是变态你也喜欢吗？",},
   { name: "桐生瑞叶", bday: "03-03", origin: "只要长得可爱即使是变态你也喜欢吗？",},
-  { name: "TEST", bday: "01-28", origin: "TEST",},
 ];
 
 // app.js
@@ -210,10 +209,10 @@ for (var i = 0; i < list.length; i++) {
 // 输出结果
 if (result.length == 0) {
   // 如果结果数组为空，说明没有找到匹配的角色
-  document.getElementById("result").innerHTML = "今天没有角色的生日。";
+  document.getElementById("result").innerHTML = "今天没有角色生日...";
 } else {
   // 否则，输出结果数组中的每个元素
-  var output = "今天生日的二次元角色：<br>"; // 创建一个输出字符串，用<br>表示换行
+  var output = ""; // 创建一个输出字符串，用<br>表示换行
   for (var j = 0; j < result.length; j++) {
     var role = result[j]; // 取出每个角色
     output += role.name + " [" + role.origin + "]" + "<br>"; // 把角色的名字和出处添加到输出字符串中
