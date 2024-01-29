@@ -1,3 +1,5 @@
+// By Vanadiry
+
 var list = [
   { name: "里中千惠", bday: "01-01", origin: "房东妹子青春期" },
   { name: "海凪日和", bday: "01-04", origin: "女孩的钓鱼慢活" },
@@ -182,40 +184,32 @@ var list = [
   { name: "桐生瑞叶", bday: "03-03", origin: "只要长得可爱即使是变态你也喜欢吗？",},
 ];
 
-// app.js
-// 获取今天的日期，格式为"MM-DD"
 var today = new Date();
-var month = today.getMonth() + 1; // 月份从0开始
+var month = today.getMonth() + 1;
 var day = today.getDate();
 if (month < 10) {
   month = "0" + month;
-} // 补零
+}
 if (day < 10) {
   day = "0" + day;
-} // 补零
+}
 var date = month + "-" + day;
 
-// 在列表中查找今天生日的角色，并显示出来
-var result = []; // 用一个数组存放结果
+var result = [];
 for (var i = 0; i < list.length; i++) {
-  // 遍历列表
-  var item = list[i]; // 取出每个元素
+  var item = list[i];
   if (item.bday == date) {
-    // 如果生日和今天相同
-    result.push(item); // 将元素添加到结果数组中
+    result.push(item);
   }
 }
 
-// 输出结果
 if (result.length == 0) {
-  // 如果结果数组为空，说明没有找到匹配的角色
   document.getElementById("result").innerHTML = "今天没有角色生日...";
 } else {
-  // 否则，输出结果数组中的每个元素
-  var output = ""; // 创建一个输出字符串，用<br>表示换行
+  var output = "";
   for (var j = 0; j < result.length; j++) {
-    var role = result[j]; // 取出每个角色
-    output += role.name + " [" + role.origin + "]" + "<br>"; // 把角色的名字和出处添加到输出字符串中
+    var role = result[j];
+    output += role.name + " [" + role.origin + "]" + "<br>";
   }
-  document.getElementById("result").innerHTML = output; // 把输出字符串赋值给<div>元素的innerHTML属性
+  document.getElementById("result").innerHTML = output;
 }
