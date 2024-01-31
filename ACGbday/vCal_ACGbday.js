@@ -182,6 +182,7 @@ var list = [
   { name: "琪琪", bday: "02-02", origin: "魔女宅急便" },
   { name: "桐生慧辉", bday: "10-11", origin: "只要长得可爱即使是变态你也喜欢吗？",},
   { name: "桐生瑞叶", bday: "03-03", origin: "只要长得可爱即使是变态你也喜欢吗？",},
+  { name: "小鸟游真宙", bday: "04-12", origin: "魔法少女",},
 ];
 
 var today = new Date();
