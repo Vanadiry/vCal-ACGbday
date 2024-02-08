@@ -183,6 +183,20 @@ var list = [
   { name: "桐生慧辉", bday: "10-11", origin: "只要长得可爱即使是变态你也喜欢吗？",},
   { name: "桐生瑞叶", bday: "03-03", origin: "只要长得可爱即使是变态你也喜欢吗？",},
   { name: "小鸟游真宙", bday: "04-12", origin: "魔法少女",},
+  { name: "冈部伦太郎", bday: "12-14", origin: "命运石之门",},
+  { name: "椎名真由理", bday: "02-01", origin: "命运石之门",},
+  { name: "桥田至", bday: "05-19", origin: "命运石之门",},
+  { name: "牧濑红莉栖", bday: "07-25", origin: "命运石之门",},
+  { name: "桐生萌郁", bday: "06-06", origin: "命运石之门",},
+  { name: "漆原琉华", bday: "08-30", origin: "命运石之门",},
+  { name: "秋叶留未穗", bday: "04-03", origin: "命运石之门",},
+  { name: "阿万音铃羽", bday: "09-27", origin: "命运石之门",},
+  { name: "比屋定真帆", bday: "11-02", origin: "命运石之门",},
+  { name: "椎名篝", bday: "07-07", origin: "命运石之门",},
+  { name: "阿万音由季", bday: "05-31", origin: "命运石之门",},
+  { name: "天王寺裕吾", bday: "03-12", origin: "命运石之门",},
+  { name: "中濑克美", bday: "01-14", origin: "命运石之门",},
+  { name: "来岛枫", bday: "10-04", origin: "命运石之门",},
 ];
 
 var today = new Date();
