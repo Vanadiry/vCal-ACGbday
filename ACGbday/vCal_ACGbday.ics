@@ -23,7 +23,6 @@ TRIGGER:-PT4H
 END:VALARM
 END:VEVENT
 
-
 BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:海凪日和 的生日
 DTSTART;VALUE=DATE:20230104
@@ -181,7 +180,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:春日野穹 的生日
 DTSTART;VALUE=DATE:20230205
 LOCATION:缘之空
-DESCRIPTION:春日野 穹／かすがの そら\n\n性格上沉默寡言，身体上弱不禁风，是一个三无少女。后来在悠哥的陪伴下变开朗了。非常了解，也非常喜欢哥哥春日野悠，但不承认双胞胎的悠是哥哥，对他直呼其名。有时如依赖兄长的妹妹，有时如担心弟弟的姐姐。\n经常带着小时候悠送的黑色的兔子布偶，在悠的面前常常抱怨且任性。喜欢吃除了方便面以外的一切零食，有严重的网络依存症。小时候体弱多病所以经常住在医院，现在身体好转了一些，但似乎因为心理因素依旧无法正常上学。看见蚊虫会极度惊慌失措。\n「悠和我一直都在一起，是对等的关系哦」\n「并没有谁大谁小，永远都在一起的」\n「不过在我看来，悠总是冒冒失失的，才像个小孩子呢」\n「所以说不要把我当小孩子啊」\n「一同来到这个世界，没有谁先谁后哦」
+DESCRIPTION:春日野 穹／かすがの そら\n\n性格上沉默寡言，身体上弱不禁风，是一个三无少女。后来在悠的陪伴下变开朗了。非常了解，也非常喜欢哥哥春日野悠，但不承认双胞胎的悠是哥哥，对他直呼其名。有时如依赖兄长的妹妹，有时如担心弟弟的姐姐。\n经常带着小时候悠送的黑色的兔子布偶，在悠的面前常常抱怨且任性。喜欢吃除了方便面以外的一切零食，有严重的网络依存症。小时候体弱多病所以经常住在医院，现在身体好转了一些，但似乎因为心理因素依旧无法正常上学。看见蚊虫会极度惊慌失措。\n「悠和我一直都在一起，是对等的关系哦」\n「并没有谁大谁小，永远都在一起的」\n「不过在我看来，悠总是冒冒失失的，才像个小孩子呢」\n「所以说不要把我当小孩子啊」\n「一同来到这个世界，没有谁先谁后哦」
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -419,7 +418,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:乔伊·莫奇马兹 的生日
 DTSTART;VALUE=DATE:20230303
 LOCATION:玉子市场
-DESCRIPTION:チョイ・モチマッヅィ\n\n占卜师，深色皮肤，耳朵上有红色耳饰。占卜的方式为鸟占卜，借助小德拉会看见未来的事情。德拉对她言听计从。\n派出寻找王妃的小德拉失联后追到兔子商业街来。因为看见小德拉胖成球，一度以为是商业街居民设下的陷阱，对商业街众人保持警惕。\n乔伊认为玉子就是自己正在寻找的王妃。但是自己也因为陷于对王子的爱慕而伤心。
+DESCRIPTION:チョイ・モチマッヅィ／choi・mochimazzui\n\n占卜师，深色皮肤，耳朵上有红色耳饰。占卜的方式为鸟占卜，借助小德拉会看见未来的事情。德拉对她言听计从。\n派出寻找王妃的小德拉失联后追到兔子商业街来。因为看见小德拉胖成球，一度以为是商业街居民设下的陷阱，对商业街众人保持警惕。\n乔伊认为玉子就是自己正在寻找的王妃。但是自己也因为陷于对王子的爱慕而伤心。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -504,7 +503,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:巽绀 的生日
 DTSTART;VALUE=DATE:20230315
 LOCATION:Urara迷路帖
-DESCRIPTION:巽 绀／たつみ こん／Xùn gàn\n\n乌菈菈见习生。名门茶屋巽屋的独生女。\n成绩优秀且个性认真。不喜欢豆皮。头上戴有发带，曾被千矢误认为是耳朵。\n十分憧憬自己的母亲：二番占卜师巽时江。与千矢互相约定成为一番占卜师。\n对应动物为狐狗狸中的狐，巽绀的人物形象温柔美丽，而且经常被狐仙附身，并以此研发出自己的占卜术（狐狸水晶占卜）。
+DESCRIPTION:巽 绀／Xùn gàn／たつみ こん\n\n乌菈菈见习生。名门茶屋巽屋的独生女。\n成绩优秀且个性认真。不喜欢豆皮。头上戴有发带，曾被千矢误认为是耳朵。\n十分憧憬自己的母亲：二番占卜师巽时江。与千矢互相约定成为一番占卜师。\n对应动物为狐狗狸中的狐，巽绀的人物形象温柔美丽，而且经常被狐仙附身，并以此研发出自己的占卜术（狐狸水晶占卜）。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -674,7 +673,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:梅查·莫奇马兹 的生日
 DTSTART;VALUE=DATE:20230406
 LOCATION:玉子市场
-DESCRIPTION:メチャ・モチマッヅィ\n\n王子，性格温柔，德拉与他从小就是朋友。但由于德拉变得太胖，刚到商店街的王子一开始没认出德拉。\n南国以精神年龄为成年与否判断标准，而王子十岁时就已经被承认成年。
+DESCRIPTION:メチャ・モチマッヅィ／mecha・mochimazzui\n\n王子，性格温柔，德拉与他从小就是朋友。但由于德拉变得太胖，刚到商店街的王子一开始没认出德拉。\n南国以精神年龄为成年与否判断标准，而王子十岁时就已经被承认成年。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -708,7 +707,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:高坂桐乃 的生日
 DTSTART;VALUE=DATE:20230408
 LOCATION:我的妹妹哪有这么可爱！
-DESCRIPTION:高坂 桐乃／こうさか きりの\n\n外表出众、成绩优秀、运动万能的少女，而且还兼职流行杂志的专属模特。\n阳光的外表下却有着特别的兴趣，是个在意周围眼光的御宅族，喜欢妹系的成人游戏和梅露露的动画。\n原本与哥哥的关系冷淡到极点，在被哥哥偶然发现了兴趣后开始找哥哥进行「人生咨询」。\n虽然平时对哥哥表现得很厌恶，但实际上是个不折不扣的兄控；此外，桐乃也是个「妹控」，十分喜欢玩有妹妹出现的美少女R-18游戏。 
+DESCRIPTION:高坂 桐乃／こうさか きりの\n\n外表出众、成绩优秀、运动万能的少女，而且还兼职流行杂志的专属模特。\n阳光的外表下却有着特别的兴趣，是个在意周围眼光的御宅族，喜欢妹系的成人游戏和梅露露的动画。\n原本与哥哥的关系冷淡到极点，在被哥哥偶然发现了兴趣后开始找哥哥进行「人生咨询」。\n虽然平时对哥哥表现得很厌恶，但实际上是个不折不扣的兄控；此外，桐乃也是个「妹控」，十分喜欢玩有妹妹出现的美少女R-18游戏。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -1796,7 +1795,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:环彩羽 的生日
 DTSTART;VALUE=DATE:20230822
 LOCATION:魔法纪录 魔法少女小圆外传
-DESCRIPTION:環 いろは／たまき いろは\n沉默的魔女化身／沈黙のドッペル／Giovanna（姿态为呼子鸟）\n\n「所以让我们待在一起吧，哪怕只是多一秒也好……」\n「姐姐虽然不知道世界上的魔法少女们，是否真的能够得救……」\n「但我不会让你们再擅自离开了！」
+DESCRIPTION:環 いろは／たまき いろは\n沉默的魔女化身／沈黙のドッペル／Giovanna\n\n「所以让我们待在一起吧，哪怕只是多一秒也好……」\n「姐姐虽然不知道世界上的魔法少女们，是否真的能够得救……」\n「但我不会让你们再擅自离开了！」
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -2272,7 +2271,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:青山Blue Mountain 的生日
 DTSTART;VALUE=DATE:20231027
 LOCATION:请问您今天要来点兔子吗？
-DESCRIPTION:青山 翠／あおやま みどり\n笔名青山 ブルーマウンテン\n\nBlue Mountain的名字源自蓝山咖啡（Blue Mountain Coffee）。
+DESCRIPTION:青山 翠／あおやま みどり\n青山 ブルーマウンテン\n\nBlue Mountain的名字源自蓝山咖啡（Blue Mountain Coffee）。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -2323,7 +2322,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:诺艾尔 的生日
 DTSTART;VALUE=DATE:20231103
 LOCATION:天体的秩序
-DESCRIPTION:ノエル\n\n身体外貌在小学生低年级左右，年龄不详。\n性格天真烂漫又开朗，一直在积极地行动，却又总是不得要领，是个不可思议的女孩子。\n本体是乃乃香和小伙伴们一起召唤来的圆盘。\n为了实现与乃乃香的约定而一直留在雾弥湖町。
+DESCRIPTION:ノエル／noel\n\n身体外貌在小学生低年级左右，年龄不详。\n性格天真烂漫又开朗，一直在积极地行动，却又总是不得要领，是个不可思议的女孩子。\n本体是乃乃香和小伙伴们一起召唤来的圆盘。\n为了实现与乃乃香的约定而一直留在雾弥湖町。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -2578,7 +2577,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:胡桃 的生日
 DTSTART;VALUE=DATE:20231216
 LOCATION:Lycoris Recoil
-DESCRIPTION:クルミ\n最强黑客-Walnut\n\n在互联网初期就活跃的老手，在暗网十分有名。在过去30年间就有好几次死亡记录。\n表面上是位于东京城郊的和风咖啡厅「LycoReco」的店员。\n留着黄发，绑有兔耳蝴蝶结的特征，著黄色店服工作。\n非常喜欢玩各种游戏，国籍不明、年龄不明的离家幼女。
+DESCRIPTION:クルミ／kurumi\n最强黑客-Walnut\n\n在互联网初期就活跃的老手，在暗网十分有名。在过去30年间就有好几次死亡记录。\n表面上是位于东京城郊的和风咖啡厅「LycoReco」的店员。\n留着黄发，绑有兔耳蝴蝶结的特征，著黄色店服工作。\n非常喜欢玩各种游戏，国籍不明、年龄不明的离家幼女。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -2918,7 +2917,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:宝木遥乃 的生日
 DTSTART;VALUE=DATE:20231018
 LOCATION:星灵感应
-DESCRIPTION:宝木遥乃\n\n曾经的灯塔管理人的孙女。\n性格开朗，善于交际，经常倾听他人诉苦，也不会拒绝他人的请求。
+DESCRIPTION:宝木 遥乃／たからき はるの\n\n曾经的灯塔管理人的孙女。\n性格开朗，善于交际，经常倾听他人诉苦，也不会拒绝他人的请求。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -3037,7 +3036,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:琪琪 的生日
 DTSTART;VALUE=DATE:20230202
 LOCATION:魔女宅急便
-DESCRIPTION:キキ\n\n帮面包店老板娘送奶嘴后被好心收留。开始在面包店帮忙，后来靠飞行魔法送快递养活自己。
+DESCRIPTION:キキ／kiki\n\n帮面包店老板娘送奶嘴后被好心收留。开始在面包店帮忙，后来靠飞行魔法送快递养活自己。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -3333,6 +3332,227 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:b1db697c-4997-eead-dd3c-c5b897e78b3b
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:志摩凛 的生日
+DTSTART;VALUE=DATE:20231001
+LOCATION:摇曳露营△
+DESCRIPTION:志摩 リン／しま リン\n\n在爷爷的影响下开始露营的独自露营者，被野外社团称为芝麻凛，保持着一种微妙的关系。体型娇小，并且十分喜欢狗。同时也是个吃货，且因为抚子的美食而逐渐对多人的露营有了好感。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:de8fff89-2dab-6522-2e23-0709d68e40da
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:各务原抚子 的生日
+DTSTART;VALUE=DATE:20230304
+LOCATION:摇曳露营△
+DESCRIPTION:各務原 なでしこ／かがみはら なでしこ\n\n来自静冈县滨松市的少女，来到山梨后为了看富士山而偶遇了正在单人露营的志摩凛。之后就被露营所吸引，并加入了高中的野外活动社团。\n总是开朗乐观，喜欢令人愉快的事情。总是会很热情地对待他人，可以很自然地融入任何群体，多次被吐槽像狗狗一样。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:323778c5-a1ad-7064-7bd2-ec28f6ff1b19
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:犬山葵 的生日
+DTSTART;VALUE=DATE:20230304
+LOCATION:摇曳露营△
+DESCRIPTION:犬山 あおい／いぬやま あおい\n\n用关西腔说话的沉稳系。在总是向前冲的野外社团成员中，是会在关键时刻顾虑大家的，背后领袖的存在。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:3c9798ec-1eb8-9661-be0b-d7cdd743faa9
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:大垣千明 的生日
+DTSTART;VALUE=DATE:20230831
+LOCATION:摇曳露营△
+DESCRIPTION:大垣 千明／おおがき ちあき\n\n本栖高校「野外活动露营」社团的部长。由于“想要露营！”，而和葵一起成立了野外社团。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:50153fcd-937a-62e4-478e-aa9d8d5a51f3
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:齐藤惠那 的生日
+DTSTART;VALUE=DATE:20230901
+LOCATION:摇曳露营△
+DESCRIPTION:斉藤 恵那／さいとう えな\n\n凛的朋友，我行我素的自由人，养了一只名叫竹轮的犬。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:8382487d-6d01-5383-10b9-593253589d2a
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:神前美月 的生日
+DTSTART;VALUE=DATE:20231221
+LOCATION:最近，妹妹的样子有点怪。
+DESCRIPTION:神前 美月／かんざき みつき\n\n美樱高中一年级生，对因母亲再婚而突然多出来的哥哥夕哉态度冷淡，但经过共同生活后因为受到夕哉的照顾, 慢慢的也对夕哉比较友善, 但是在哥哥面前十分不率直。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:87efac8c-841a-b588-3b92-82f539eda0da
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:朝雾彩 的生日
+DTSTART;VALUE=DATE:20230408
+LOCATION:魔法少女网站
+DESCRIPTION:朝霧 彩／あさぎり あや\n\n有着比其他人更为温柔的心灵，却不擅长和他人交流。在学校遭受雫芽纱理奈的团体的欺凌，在家里被哥哥朝雾要所虐待。\n\n拥有的魔杖是枪械型魔杖。拥有能使击中的对象瞬间移动的能力。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:897a5196-a0e6-3a61-cbd2-bb1063ce0d77
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:穴泽虹海 的生日
+DTSTART;VALUE=DATE:20230705
+LOCATION:魔法少女网站
+DESCRIPTION:穴沢 虹海／あなざわ にじみ\n\n偶像团体“玩耍小狗”中的一员，吉娃娃担当，外表天真无邪，把所有魔法少女都当做她的朋友，实际上当遇到令自己气愤的人或事时也会因愤怒而过于冲动。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:950f4422-e783-90af-de04-21437525cd7a
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:奴村露乃 的生日
+DTSTART;VALUE=DATE:20230409
+LOCATION:魔法少女网站
+DESCRIPTION:奴村 露乃／やつむら つゆの\n\n目睹过彩被霸凌，在知晓了彩变成魔法少女之后帮助她解围。以防止被魔法少女猎人袭击为理由，与彩联手，并在联手的当晚在彩的身边守护了她一晚上。心思慎密，一眼就看穿了朝雾要的本性。实际上由于过度使用魔杖，寿命已所剩无几。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:0f1227e7-90aa-9ec9-a739-e9a9d848fdd9
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:雨谷小雨 的生日
+DTSTART;VALUE=DATE:20231106
+LOCATION:魔法少女网站
+DESCRIPTION:雨谷 小雨／あまがい こさめ\n\n从管理员“捌”管理的另一个“魔法少女网站”获取魔杖的魔法少女。貌似患有晚期的癌症，肺部肿瘤但本人貌似拒绝治疗。是郁娇属性的标杆角色。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:5c1ba110-e24e-bd0b-f146-ef798607a782
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:水莲寺清春 的生日
+DTSTART;VALUE=DATE:20231112
+LOCATION:魔法少女网站
+DESCRIPTION:水莲寺 清春／すいれんじ きよはる\n\n出生指派性别为男性，由于想要变得更加可爱而在学校和日常生活中穿着女装，因此遭到过同学的校园霸凌。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:ffb7b801-6d10-ea1b-f1ee-b9b7e096107f
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:潮井梨奈 的生日
+DTSTART;VALUE=DATE:20231208
+LOCATION:魔法少女网站
+DESCRIPTION:潮井 梨ナ／しおい りな\n\n言语粗鲁，行为略有些疯癫的魔法少女。在知晓自己被魔法少女网站欺骗成为魔法少女猎人后决定帮助彩一行人瓦解魔法少女网站。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:135a131f-9b47-f07e-f74f-a3e5407cc65a
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:雫芽纱理奈 的生日
+DTSTART;VALUE=DATE:20230425
+LOCATION:魔法少女网站
+DESCRIPTION:雫芽 纱理奈／しずくめ さりな\n\n太妹集团的头目，长期与同伴一起对彩进行霸凌。由于复仇的执念而从“漆”处获得了魔杖，继承了潮井梨奈魔法少女猎人的职位。
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:23c9ad38-c316-6c1e-86f0-13dd3cfbf8ae
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H

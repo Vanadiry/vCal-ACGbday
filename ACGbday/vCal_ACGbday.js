@@ -197,6 +197,19 @@ var list = [
   { name: "天王寺裕吾", bday: "03-12", origin: "命运石之门",},
   { name: "中濑克美", bday: "01-14", origin: "命运石之门",},
   { name: "来岛枫", bday: "10-04", origin: "命运石之门",},
+  { name: "志摩凛", bday: "10-01", origin: "摇曳露营△",},
+  { name: "各务原抚子", bday: "03-04", origin: "摇曳露营△",},
+  { name: "犬山葵", bday: "03-04", origin: "摇曳露营△",},
+  { name: "大垣千明", bday: "08-31", origin: "摇曳露营△",},
+  { name: "齐藤惠那", bday: "09-01", origin: "摇曳露营△",},
+  { name: "神前美月", bday: "12-21", origin: "最近，妹妹的样子有点怪。",},
+  { name: "朝雾彩", bday: "04-08", origin: "魔法少女网站",},
+  { name: "穴泽虹海", bday: "07-05", origin: "魔法少女网站",},
+  { name: "奴村露乃", bday: "04-09", origin: "魔法少女网站",},
+  { name: "雨谷小雨", bday: "11-06", origin: "魔法少女网站",},
+  { name: "水莲寺清春", bday: "11-12", origin: "魔法少女网站",},
+  { name: "潮井梨奈", bday: "12-08", origin: "魔法少女网站",},
+  { name: "雫芽纱理奈", bday: "04-25", origin: "魔法少女网站",},
 ];
 
 var today = new Date();
