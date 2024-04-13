@@ -210,7 +210,11 @@ var list = [
   { name: "水莲寺清春", bday: "1112", origin: "魔法少女网站" },
   { name: "潮井梨奈", bday: "1208", origin: "魔法少女网站" },
   { name: "雫芽纱理奈", bday: "0425", origin: "魔法少女网站" },
-  { name: "TEST", bday: "0413", origin: "TEST" },
+  { name: "雏月加代", bday: "0302", origin: "只有我不存在的城市" },
+  { name: "藤沼悟", bday: "0302", origin: "只有我不存在的城市" },
+  { name: "一之濑双叶", bday: "0825", origin: "那就是声优！" },
+  { name: "萌咲莓", bday: "0505", origin: "那就是声优！" },
+  { name: "小花铃", bday: "0317", origin: "那就是声优！" },
 ];
 
 var today = new Date();
