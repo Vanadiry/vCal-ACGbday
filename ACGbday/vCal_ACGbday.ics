@@ -3240,7 +3240,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:比屋定真帆 的生日
 DTSTART;VALUE=DATE:20241102
 LOCATION:命运石之门
-DESCRIPTION:比屋定 真帆／ひやじょう まほ\nLABMEM NO.09\n\n红莉栖所属大学的前辈研究员。\n由于其年幼的姿容，无论在美国还是日本都被误认是孩子。
+DESCRIPTION:比屋定 真帆／ひやじょう まほ\nLABMEM NO.009\n\n红莉栖所属大学的前辈研究员。\n由于其年幼的姿容，无论在美国还是日本都被误认是孩子。
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
