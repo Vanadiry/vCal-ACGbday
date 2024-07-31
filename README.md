@@ -4,4 +4,4 @@
 
 ## 二次元角色生日
 
-[订阅](https://magic.vanadiry.com/lts/ACGBirthdayCalendar/)，[详细信息](https://magic.vanadiry.com/wiki/magic/ACGBirthday.html)
+[订阅](https://magic.vanadiry.com/wiki/vcal/acgbday/subscribe/)，[详细信息](https://magic.vanadiry.com/wiki/vcal/acgbday/)
