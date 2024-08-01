@@ -3,8 +3,7 @@
 这个东西是二次元作品中角色生日的ics文件，方便在日历中查看，主要记录我自己看过并且喜欢的动漫里的角色。
 二次元角色都是虚拟角色，所以只过生日，不长岁数（暴论）。总之角色的出场日期、年龄都忽略，只记录生日XD。
 
-详情请参考[订阅和引用](https://magic.vanadiry.com/wiki/vcal/acgbday/subscribe/)、[角色列表](https://magic.vanadiry.com/wiki/vcal/acgbday/list/)、[更新记录](https://magic.vanadiry.com/wiki/vcal/acgbday/update/)，
-若发现错误或有歧义，请在[留言板](https://magic.vanadiry.com/wiki/vcal/acgbday/issue/)或者[Issue](https://github.com/Vanadiry/vCal-ACGbday/issues)留言。
+角色列表等内容请参考[vCal-ACGbday](https://magic.vanadiry.com/wiki/vcal/acgbday/)，若发现错误或有歧义，请在[留言板](https://magic.vanadiry.com/wiki/vcal/acgbday/issue/)或者[Issue](https://github.com/Vanadiry/vCal-ACGbday/issues)留言。
 
 日历中角色的详细信息来自[萌娘百科](https://mzh.moegirl.org.cn)(部分)，并稍加修改以适应本项目。
 
