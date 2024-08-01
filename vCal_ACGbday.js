@@ -367,6 +367,15 @@ var list = [
   { name: "一色诚", bday: "1207", origin: "中二病也要谈恋爱！" },
   { name: "巫部风铃", bday: "1114", origin: "中二病也要谈恋爱！" },
   { name: "神前美月", bday: "1221", origin: "最近，妹妹的样子有点怪。" },
+  { name: "藏野莓", bday: "0331", origin: "魔法少女育成计划" },
+  { name: "洲崎绫", bday: "1225", origin: "洲崎西" },
+  { name: "西明日香", bday: "0210", origin: "洲崎西" },
+  { name: "山田结衣", bday: "0916", origin: "牵牛花与加濑同学" },
+  { name: "加濑友香", bday: "0501", origin: "牵牛花与加濑同学" },
+  { name: "小桥若叶", bday: "0401", origin: "若叶女孩" },
+  { name: "时田萌子", bday: "1020", origin: "若叶女孩" },
+  { name: "黑川真鱼", bday: "0717", origin: "若叶女孩" },
+  { name: "真柴直", bday: "1212", origin: "若叶女孩" },
 ];
 
 var today = new Date();

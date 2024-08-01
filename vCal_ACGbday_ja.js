@@ -367,6 +367,15 @@ var list = [
   { name: "一色 誠", bday: "1207", origin: "中二病でも恋がしたい！" },
   { name: "巫部 風鈴", bday: "1114", origin: "中二病でも恋がしたい！" },
   { name: "神前 美月", bday: "1221", origin: "最近、妹のようすがちょっとおかしいんだが。" },
+  { name: "森林音乐家库兰贝莉", bday: "0331", origin: "魔法少女育成計画" },
+  { name: "洲崎 綾", bday: "1225", origin: "洲崎西" },
+  { name: "西 明日香", bday: "0210", origin: "洲崎西" },
+  { name: "山田 结衣", bday: "0916", origin: "あさがおと加瀬さん" },
+  { name: "加瀬 友香", bday: "0501", origin: "あさがおと加瀬さん" },
+  { name: "小橋 若葉", bday: "0401", origin: "わかば＊ガール" },
+  { name: "時田 萌子", bday: "1020", origin: "わかば＊ガール" },
+  { name: "黒川 真魚", bday: "0717", origin: "わかば＊ガール" },
+  { name: "真柴 直", bday: "1212", origin: "わかば＊ガール" },
 ];
 
 var today = new Date();
