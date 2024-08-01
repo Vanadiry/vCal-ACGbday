@@ -20,5 +20,5 @@
 
 *代号：角色在剧中除本名外的其他称呼，例如 冈部伦太郎（LABMEM NO.001）。
 
-样式如下：
+日历订阅在MacOS上的表现（以zh-full为例），样式如下：
 ![日历订阅在MacOS上的表现（以zh-full为例）](https://magic.vanadiry.com/library/wiki/vcal/acgbday/vcal_acgbday_01.webp)
