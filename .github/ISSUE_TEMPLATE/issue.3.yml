@@ -1,0 +1,33 @@
+name: 报告存疑条目
+description: 发现已收录条目中存在不准确的信息
+title: "存疑条目: <角色名字>"
+labels: ["存疑"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        每个问题对应一个条目，如有多个存疑条目，请提交多个问题。
+  - type: input
+    id: contact
+    attributes:
+      label: 角色名
+      placeholder: 鹿目圆
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: 类型
+      options:
+        - 生日日期
+        - 出处或出处译名
+        - 角色代号
+        - 角色描述
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 修正建议
+      description: 请提交相关资料截图或链接，并告知为何存疑。
+    validations:
+      required: true

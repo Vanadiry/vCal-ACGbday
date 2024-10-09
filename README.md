@@ -21,3 +21,6 @@
 
 日历订阅在MacOS上的表现（以zh-full为例），样式如下：
 ![日历订阅在MacOS上的表现（以zh-full为例）](https://magic.vanadiry.com/library/wiki/vcal/acgbday/vcal_acgbday_01.webp)
+
+
+本文采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 许可协议。\n订阅文件位于项目[MagicCalendar](https://github.com/Vanadiry/MagicCalendar)，采用MIT许可协议。"

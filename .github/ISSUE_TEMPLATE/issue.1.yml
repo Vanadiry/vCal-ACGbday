@@ -1,9 +1,7 @@
 name: 新角色请求
 description: 提交一个或多个你喜欢的角色
-title: "新角色请求: "
+title: "新角色请求: <角色或动画作品名字>"
 labels: ["请求"]
-assignees:
-  - Vanadiry
 body:
   - type: dropdown
     attributes:
