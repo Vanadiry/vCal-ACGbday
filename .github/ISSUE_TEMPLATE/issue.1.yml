@@ -1,0 +1,31 @@
+name: 新角色请求
+description: 提交一个或多个你喜欢的角色
+title: "新角色请求: "
+labels: ["请求"]
+assignees:
+  - Vanadiry
+body:
+  - type: dropdown
+    attributes:
+      label: 类型
+      options:
+        - 单个或多个角色
+        - 整个动画中出现的角色
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 角色/动画作品名字
+      description: 每行一个名字。如果可以，请一并附上角色/动画作品在 萌娘百科 或者 番组计划 中的详情页链接。
+      placeholder: |
+        1. [鹿目圆](https://zh.moegirl.org.cn/鹿目圆)
+        2. [牧濑红莉栖](https://bgm.tv/character/12393)
+        ...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 留言
+      description: 非必填
+    validations:
+      required: false
