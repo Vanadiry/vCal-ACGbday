@@ -378,6 +378,22 @@
     { name: "时田萌子", bday: "1020", origin: "若叶女孩" },
     { name: "黑川真鱼", bday: "0717", origin: "若叶女孩" },
     { name: "真柴直", bday: "1212", origin: "若叶女孩" },
+    { name: "远野贵树", bday: "1223", origin: "秒速5厘米" },
+    { name: "篠原明里", bday: "0719", origin: "秒速5厘米" },
+    { name: "吉田优子", bday: "0928", origin: "街角魔族" },
+    { name: "千代田桃", bday: "0325", origin: "街角魔族" },
+    { name: "阳夏木蜜柑", bday: "1103", origin: "街角魔族" },
+    { name: "佐田杏里", bday: "0501", origin: "街角魔族" },
+    { name: "小仓紫苑", bday: "1214", origin: "街角魔族" },
+    { name: "吉田良子", bday: "0107", origin: "街角魔族" },
+    { name: "久世政近", bday: "0409", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "艾莉莎·米哈伊罗夫纳·九条", bday: "1107", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "周防有希", bday: "0312", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "玛莉亚·米哈伊罗夫纳·九条", bday: "1224", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "君岛绫乃", bday: "0221", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "更科茅咲", bday: "0910", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "剑崎统也", bday: "0518", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "宫前乃乃亚", bday: "0513", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
   ];
 
   const today = new Date();
