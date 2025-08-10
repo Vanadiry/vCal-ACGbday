@@ -1,8 +1,8 @@
 // vCal_ACGbday_zh-CN
-//By Vanadiry
+// By Vanadiry
 
 (function () {
-  const characterList = [
+    const characterList = [
     { name: "恋冢小梦", bday: "0303", origin: "Comic Girls" },
     { name: "萌田薰子", bday: "0401", origin: "Comic Girls" },
     { name: "胜木翼", bday: "0504", origin: "Comic Girls" },
@@ -39,6 +39,11 @@
     { name: "色井佐久", bday: "0801", origin: "Urara迷路帖" },
     { name: "枣乃乃", bday: "1216", origin: "Urara迷路帖" },
     { name: "和泉纱雾", bday: "1210", origin: "埃罗芒阿老师" },
+    { name: "温水和彦", bday: "1225", origin: "败犬女主太多了！" },
+    { name: "八奈见杏菜", bday: "1129", origin: "败犬女主太多了！" },
+    { name: "烧盐柠檬", bday: "0801", origin: "败犬女主太多了！" },
+    { name: "小鞠知花", bday: "0329", origin: "败犬女主太多了！" },
+    { name: "温水佳树", bday: "0606", origin: "败犬女主太多了！" },
     { name: "雾岛翔子", bday: "1111", origin: "笨蛋、测验、召唤兽" },
     { name: "工藤爱子", bday: "0211", origin: "笨蛋、测验、召唤兽" },
     { name: "木下优子", bday: "1006", origin: "笨蛋、测验、召唤兽" },
@@ -55,6 +60,14 @@
     { name: "穗月枫", bday: "0912", origin: "别当欧尼酱了！" },
     { name: "穗月椛", bday: "1020", origin: "别当欧尼酱了！" },
     { name: "天川那由多", bday: "1123", origin: "别当欧尼酱了！" },
+    { name: "久世政近", bday: "0409", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "艾莉莎·米哈伊罗夫纳·九条", bday: "1107", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "周防有希", bday: "0312", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "玛莉亚·米哈伊罗夫纳·九条", bday: "1224", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "君岛绫乃", bday: "0221", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "更科茅咲", bday: "0910", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "剑崎统也", bday: "0518", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
+    { name: "宫前乃乃亚", bday: "0513", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
     { name: "爱城恋太郎", bday: "0501", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "花园羽香里", bday: "0622", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "院田唐音", bday: "0909", origin: "超超超超超喜欢你的100个女朋友" },
@@ -99,13 +112,6 @@
     { name: "大神樱", bday: "0913", origin: "弹丸论破" },
     { name: "叶隐康比吕", bday: "0725", origin: "弹丸论破" },
     { name: "江之岛盾子", bday: "1224", origin: "弹丸论破" },
-    { name: "樱之宫莓香", bday: "0404", origin: "调教咖啡厅" },
-    { name: "天野美雨", bday: "0609", origin: "调教咖啡厅" },
-    { name: "神崎日照", bday: "0710", origin: "调教咖啡厅" },
-    { name: "日向夏帆", bday: "0812", origin: "调教咖啡厅" },
-    { name: "星川麻冬", bday: "1223", origin: "调教咖啡厅" },
-    { name: "秋月红叶", bday: "1128", origin: "调教咖啡厅" },
-    { name: "迪诺", bday: "0505", origin: "调教咖啡厅" },
     { name: "里中千惠", bday: "0101", origin: "房东妹子青春期" },
     { name: "本场切绘", bday: "0315", origin: "干物妹！小埋" },
     { name: "土间大平", bday: "0602", origin: "干物妹！小埋" },
@@ -147,6 +153,14 @@
     { name: "大宫勇", bday: "0202", origin: "黄金拼图" },
     { name: "乌丸樱", bday: "1019", origin: "黄金拼图" },
     { name: "久世桥朱里", bday: "0724", origin: "黄金拼图" },
+    { name: "伊理户水斗", bday: "1103", origin: "继母的拖油瓶是我的前女友" },
+    { name: "伊理户结女", bday: "1103", origin: "继母的拖油瓶是我的前女友" },
+    { name: "吉田优子", bday: "0928", origin: "街角魔族" },
+    { name: "千代田桃", bday: "0325", origin: "街角魔族" },
+    { name: "阳夏木蜜柑", bday: "1103", origin: "街角魔族" },
+    { name: "佐田杏里", bday: "0501", origin: "街角魔族" },
+    { name: "小仓紫苑", bday: "1214", origin: "街角魔族" },
+    { name: "吉田良子", bday: "0107", origin: "街角魔族" },
     { name: "栗山未来", bday: "0331", origin: "境界的彼方" },
     { name: "神原秋人", bday: "1007", origin: "境界的彼方" },
     { name: "名濑美月", bday: "1101", origin: "境界的彼方" },
@@ -181,6 +195,8 @@
     { name: "夜叉神天衣", bday: "1210", origin: "龙王的工作！" },
     { name: "清泷桂香", bday: "1109", origin: "龙王的工作！" },
     { name: "清泷钢介", bday: "1101", origin: "龙王的工作！" },
+    { name: "远野贵树", bday: "1223", origin: "秒速5厘米" },
+    { name: "篠原明里", bday: "0719", origin: "秒速5厘米" },
     { name: "明日花绪", bday: "0216", origin: "明日同学的水手服" },
     { name: "木崎江利花", bday: "0323", origin: "明日同学的水手服" },
     { name: "明日小路", bday: "0404", origin: "明日同学的水手服" },
@@ -227,6 +243,7 @@
     { name: "潮井梨奈", bday: "1208", origin: "魔法少女网站" },
     { name: "雫芽纱理奈", bday: "0425", origin: "魔法少女网站" },
     { name: "鹿目圆", bday: "1003", origin: "魔法少女小圆" },
+    { name: "藏野莓", bday: "0331", origin: "魔法少女育成计划" },
     { name: "琪琪", bday: "0202", origin: "魔女宅急便" },
     { name: "一之濑双叶", bday: "0825", origin: "那就是声优！" },
     { name: "萌咲莓", bday: "0505", origin: "那就是声优！" },
@@ -243,6 +260,8 @@
     { name: "泽木桃惠", bday: "0330", origin: "奇蛋物语" },
     { name: "川井璃夏", bday: "1018", origin: "奇蛋物语" },
     { name: "大户爱", bday: "0615", origin: "奇蛋物语" },
+    { name: "山田结衣", bday: "0916", origin: "牵牛花与加濑同学" },
+    { name: "加濑友香", bday: "0501", origin: "牵牛花与加濑同学" },
     { name: "风衣叶冬优", bday: "0124", origin: "请问您今天要来点兔子吗？" },
     { name: "天天座理世", bday: "0214", origin: "请问您今天要来点兔子吗？" },
     { name: "保登摩卡", bday: "0313", origin: "请问您今天要来点兔子吗？" },
@@ -261,6 +280,10 @@
     { name: "羽岛千寻", bday: "0906", origin: "如果有妹妹就好了。" },
     { name: "可儿那由多", bday: "0710", origin: "如果有妹妹就好了。" },
     { name: "白川京", bday: "0429", origin: "如果有妹妹就好了。" },
+    { name: "小桥若叶", bday: "0401", origin: "若叶女孩" },
+    { name: "时田萌子", bday: "1020", origin: "若叶女孩" },
+    { name: "黑川真鱼", bday: "0717", origin: "若叶女孩" },
+    { name: "真柴直", bday: "1212", origin: "若叶女孩" },
     { name: "石田将也", bday: "0208", origin: "声之形" },
     { name: "西宫硝子", bday: "0607", origin: "声之形" },
     { name: "池谷乃乃", bday: "0201", origin: "斯特拉的魔法" },
@@ -282,6 +305,20 @@
     { name: "松本友奈", bday: "0507", origin: "天使降临到了我身边！" },
     { name: "星野千鹤", bday: "0118", origin: "天使降临到了我身边！" },
     { name: "诺艾尔", bday: "1103", origin: "天体的秩序" },
+    { name: "樱之宫莓香", bday: "0404", origin: "调教咖啡厅" },
+    { name: "天野美雨", bday: "0609", origin: "调教咖啡厅" },
+    { name: "神崎日照", bday: "0710", origin: "调教咖啡厅" },
+    { name: "日向夏帆", bday: "0812", origin: "调教咖啡厅" },
+    { name: "星川麻冬", bday: "1223", origin: "调教咖啡厅" },
+    { name: "秋月红叶", bday: "1128", origin: "调教咖啡厅" },
+    { name: "迪诺", bday: "0505", origin: "调教咖啡厅" },
+    { name: "高梨奈绪", bday: "0625", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
+    { name: "土浦彩叶", bday: "0403", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
+    { name: "近藤茧佳", bday: "0511", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
+    { name: "楠原寻乃", bday: "0614", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
+    { name: "加藤春华", bday: "0822", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
+    { name: "高梨修司", bday: "0223", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
+    { name: "高梨菜菜香", bday: "1201", origin: "我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！" },
     { name: "高坂桐乃", bday: "0408", origin: "我的妹妹哪有这么可爱！" },
     { name: "五更琉璃", bday: "0420", origin: "我的妹妹哪有这么可爱！" },
     { name: "新垣绫濑", bday: "0502", origin: "我的妹妹哪有这么可爱！" },
@@ -310,6 +347,7 @@
     { name: "惠飞须泽胡桃", bday: "0807", origin: "学园孤岛" },
     { name: "若狭悠里", bday: "1011", origin: "学园孤岛" },
     { name: "直树美纪", bday: "1210", origin: "学园孤岛" },
+    { name: "亚托莉", bday: "0828", origin: "亚托莉 -我挚爱的时光-" },
     { name: "赤座灯里", bday: "0724", origin: "摇曳百合" },
     { name: "岁纳京子", bday: "0328", origin: "摇曳百合" },
     { name: "船见结衣", bday: "0422", origin: "摇曳百合" },
@@ -332,12 +370,19 @@
     { name: "犬山葵", bday: "0304", origin: "摇曳露营△" },
     { name: "大垣千明", bday: "0831", origin: "摇曳露营△" },
     { name: "齐藤惠那", bday: "0901", origin: "摇曳露营△" },
+    { name: "土岐绫乃", bday: "0725", origin: "摇曳露营△" },
+    { name: "光月真昼", bday: "0330", origin: "夜晚的水母不会游泳" },
+    { name: "山之内花音", bday: "0704", origin: "夜晚的水母不会游泳" },
+    { name: "渡濑季初", bday: "0401", origin: "夜晚的水母不会游泳" },
+    { name: "高梨·金·阿努克·梅", bday: "0913", origin: "夜晚的水母不会游泳" },
     { name: "御庭摘希", bday: "0111", origin: "一起一起这里那里" },
     { name: "戌井榊", bday: "0414", origin: "一起一起这里那里" },
     { name: "春野姬", bday: "0512", origin: "一起一起这里那里" },
     { name: "樱川菊绘", bday: "1204", origin: "一起一起这里那里" },
     { name: "片濑真宵", bday: "0910", origin: "一起一起这里那里" },
     { name: "音无伊御", bday: "1015", origin: "一起一起这里那里" },
+    { name: "空", bday: "0707", origin: "游戏人生" },
+    { name: "白", bday: "1212", origin: "游戏人生" },
     { name: "乔伊·莫奇马兹", bday: "0303", origin: "玉子市场" },
     { name: "朝雾史织", bday: "0402", origin: "玉子市场" },
     { name: "梅查·莫奇马兹", bday: "0406", origin: "玉子市场" },
@@ -368,53 +413,30 @@
     { name: "五月七日茴香", bday: "1014", origin: "中二病也要谈恋爱！" },
     { name: "一色诚", bday: "1207", origin: "中二病也要谈恋爱！" },
     { name: "巫部风铃", bday: "1114", origin: "中二病也要谈恋爱！" },
-    { name: "神前美月", bday: "1221", origin: "最近，妹妹的样子有点怪。" },
-    { name: "藏野莓", bday: "0331", origin: "魔法少女育成计划" },
     { name: "洲崎绫", bday: "1225", origin: "洲崎西" },
     { name: "西明日香", bday: "0210", origin: "洲崎西" },
-    { name: "山田结衣", bday: "0916", origin: "牵牛花与加濑同学" },
-    { name: "加濑友香", bday: "0501", origin: "牵牛花与加濑同学" },
-    { name: "小桥若叶", bday: "0401", origin: "若叶女孩" },
-    { name: "时田萌子", bday: "1020", origin: "若叶女孩" },
-    { name: "黑川真鱼", bday: "0717", origin: "若叶女孩" },
-    { name: "真柴直", bday: "1212", origin: "若叶女孩" },
-    { name: "远野贵树", bday: "1223", origin: "秒速5厘米" },
-    { name: "篠原明里", bday: "0719", origin: "秒速5厘米" },
-    { name: "吉田优子", bday: "0928", origin: "街角魔族" },
-    { name: "千代田桃", bday: "0325", origin: "街角魔族" },
-    { name: "阳夏木蜜柑", bday: "1103", origin: "街角魔族" },
-    { name: "佐田杏里", bday: "0501", origin: "街角魔族" },
-    { name: "小仓紫苑", bday: "1214", origin: "街角魔族" },
-    { name: "吉田良子", bday: "0107", origin: "街角魔族" },
-    { name: "久世政近", bday: "0409", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "艾莉莎·米哈伊罗夫纳·九条", bday: "1107", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "周防有希", bday: "0312", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "玛莉亚·米哈伊罗夫纳·九条", bday: "1224", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "君岛绫乃", bday: "0221", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "更科茅咲", bday: "0910", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "剑崎统也", bday: "0518", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-    { name: "宫前乃乃亚", bday: "0513", origin: "不时轻声地以俄语遮羞的邻座艾莉同学" },
-  ];
+    { name: "神前美月", bday: "1221", origin: "最近，妹妹的样子有点怪。" },
+    ];
 
-  const today = new Date();
-  const date =
-    `${today.getMonth() + 1}`.padStart(2, "0") +
-    `${today.getDate()}`.padStart(2, "0");
+    const today = new Date();
+    const date =
+        `${today.getMonth() + 1}`.padStart(2, "0") +
+        `${today.getDate()}`.padStart(2, "0");
 
-  const result = characterList.filter((item) => item.bday === date);
+    const result = characterList.filter((item) => item.bday === date);
 
-  const outputElement = document.getElementById("result");
-  if (!outputElement) {
-    console.error("Element with id 'result' not found.");
-    return;
-  }
+    const outputElement = document.getElementById("result");
+    if (!outputElement) {
+        console.error("Element with id 'result' not found.");
+        return;
+    }
 
-  if (result.length === 0) {
-    outputElement.innerHTML = "今天没有角色生日...";
-  } else {
-    const output = result
-      .map((role) => `${role.name} [${role.origin}]`)
-      .join("<br>");
-    outputElement.innerHTML = output;
-  }
+    if (result.length === 0) {
+        outputElement.innerHTML = "今天没有角色生日...";
+    } else {
+        const output = result
+            .map((role) => `${role.name} [${role.origin}]`)
+            .join("<br>");
+        outputElement.innerHTML = output;
+    }
 })();
