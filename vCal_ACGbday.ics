@@ -7,6 +7,18 @@ X-APPLE-LANGUAGE:zh
 X-APPLE-REGION:CN
 
 BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:vCal-ACGbday
+DTSTART;VALUE=DATE:20240101
+LOCATION:版本及更新信息
+DESCRIPTION:更新ID：\n20250321.2025.222.33\n\n更新内容：新增了《摇曳露营△第三季》、《大室家 亲爱的姐妹们》、《大室家 亲爱的朋友们》、《夜晚的水母不会游泳》、《亚托莉 我挚爱的时光》、《我才不会喜欢上像哥哥这样的人呢，一点都不喜欢!!》、《继母的拖油瓶是我的前女友》、《败犬女主太多了！》、《游戏人生》中有生日信息的角色，共计22位。\n\n由Vanadiry制作\n详细信息请参考：https://magic.vanadiry.com/wiki/vcal/acgbday/
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:a55b1337-50ed-8e6d-16e7-2db133cf7b29
+END:VEVENT
+
+BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:恋冢小梦 的生日
 DTSTART;VALUE=DATE:20250303
 LOCATION:Comic Girls
@@ -619,6 +631,91 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:温水和彦 的生日
+DTSTART;VALUE=DATE:20251225
+LOCATION:败犬女主太多了！
+DESCRIPTION:温水 和彦／ぬくみず かずひこ\n\n石蕗高中一年生。自认为路人角色的少年。\n缺乏危机感，某种意义上的达观。\n由于没有朋友而被妹妹温水佳树担心着。\n入学时填写加入了文艺部。后续成为部长。\n兴趣是轻小说，虽然有妹妹但也会看妹系小说，为避免误会特别藏了起来但还是被佳树发现。喜欢吃鳕宝。\n由于自认平平无奇，在男女关系及恋爱上非常迟钝，总是会被周遭的人吐槽「就是这点不行」。\n不擅长拒绝自己力所能及内别人的正常请求就算表面上拒绝了实际上还是会心软帮忙但是八奈见的请求大多是一些不切实际的玩笑。\n\n『負けヒロインが多すぎる！』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:bc18ac9d-7d13-e1f6-952b-5df4b7f84018
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:八奈见杏菜 的生日
+DTSTART;VALUE=DATE:20251129
+LOCATION:败犬女主太多了！
+DESCRIPTION:八奈見 杏菜／やなみ あんな\n\n石蕗高中一年生。本作的败犬女主角之一。\n表情丰富，和谁都可以变成好朋友的开朗女子。\n在男生中的人气非常高。不过自己并不知道。\n暗恋着青梅竹马兼邻居的袴田草介，希望草介可以幸福。\n因为某件事与温水和彦认识。\n食量意外的大，没填饱肚子时会很沮丧。只有烧盐柠檬的祖母能够喂饱。\n认为女孩子分为两种，一种是青梅竹马，一种是偷腥猫。\n在一年级结业式那天与温水正式成为朋友。\n\n『負けヒロインが多すぎる！』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:e6d349df-85b3-2c13-fbb4-d07e14017c8b
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:烧盐柠檬 的生日
+DTSTART;VALUE=DATE:20250801
+LOCATION:败犬女主太多了！
+DESCRIPTION:焼塩 檸檬／やきしお れもん\n\n石蕗高中二年生。本作的败犬女主角之一。\n田径部主将。温水和彦的同班同学，初中时也与温水同校。\n有着褐色肌肤的特征，开朗的运动型少女，在班上很有人气。\n超级学渣。不管是挂科还是不写作业都是不分科目的。n暗恋从小学就与自己在一起的绫野光希。\n在全市的新人赛一百米短跑中拿过冠军，也在高中综合体育大会中夺得校预赛奖项。 \n\n『負けヒロインが多すぎる！』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:4b577180-2e0a-f8f9-f8b2-cc24d23a0c9f
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:小鞠知花 的生日
+DTSTART;VALUE=DATE:20250329
+LOCATION:败犬女主太多了！
+DESCRIPTION:小鞠 知花／こまり ちか\n\n温水的同级生，文艺部成员。本作的败犬女主角之一。\n性格极度怕羞，不擅长与人对话，会快速输入智能手机来回复对方。\n喜欢部长玉木慎太郎。在喜欢的人面前也会强忍害羞积极进攻。\n时常用看着水沟般或是看厨余垃圾般的眼神看温水。\n涉及到废部的事是小鞠的地雷。\n对学校饮水台的自来水十分讲究。\n对于自己的外表感到自卑。\n\n『負けヒロインが多すぎる！』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:eb8726e8-11cf-b6f6-0ae8-0dab29140bed
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:温水佳树 的生日
+DTSTART;VALUE=DATE:20250606
+LOCATION:败犬女主太多了！
+DESCRIPTION:温水 佳樹／ぬくみず かじゅ\n\n桃园中学3年生。温水和彦的妹妹。比哥哥小两岁。\n成绩优秀、家事万能，如同漫画里才会出现的人物。\n关心哥哥的交友情况，对于哥哥在高中可以交到朋友感到很讶异。\n在学校是学生会的庶务。与哥哥一样喜欢看轻小说。\n说话使用敬语，称呼哥哥为兄长大人。\n其实对哥哥有着超过兄妹的情感。\n\n『負けヒロインが多すぎる！』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:4e8052a3-9cb9-1cf3-c468-e7b4fd57ed73
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:雾岛翔子 的生日
 DTSTART;VALUE=DATE:20251111
 LOCATION:笨蛋、测验、召唤兽
@@ -884,6 +981,142 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:e6accfab-c931-ca64-dc41-14a66b52c6d9
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:久世政近 的生日
+DTSTART;VALUE=DATE:20250409
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:久世 政近／くぜ まさちか\n\n日常熬夜，基本没有干劲的劣等生兼宅男。成绩中下。其实能听得懂俄语。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:b556c72b-5887-85d3-9404-243499c0bb52
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:艾莉莎·米哈伊罗夫纳·九条 的生日
+DTSTART;VALUE=DATE:20251107
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:アリサ・ミハイロヴナ・くじょう／Alisa Mikhailovna Kujou\n艾莉／アーリャ\n\n位于学年顶层、身为学生会会计的优等生，日俄混血儿，被称为“孤高的公主殿下”。常用俄语对邻桌的久世发牢骚。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:4e8010d4-7a37-52cd-27d4-8ac2da897c89
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:周防有希 的生日
+DTSTART;VALUE=DATE:20250312
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:周防 有希／すおう ゆき\n\n旧华族出身，历代担任外交官的周防家的大小姐。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:b3d4b2e2-776a-6ab1-95eb-03433e9554da
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:玛莉亚·米哈伊罗夫纳·九条 的生日
+DTSTART;VALUE=DATE:20251224
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:マーシャ・ミハイロヴナ・くじょう／Maria Mikhailovna Kujou\n\n艾莉莎·米哈伊罗夫纳·九条的姐姐，日俄混血儿，昵称为“玛夏/玛莎”（Маша）。在学生会担任书记一职。宣称有男友。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:bed396ff-28a0-7928-27c4-7d268ac26df4
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:君岛绫乃 的生日
+DTSTART;VALUE=DATE:20250221
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:君嶋 綾乃／きみしま あやの\n\n周防有希的随从，征岭学园学生会的总务。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:aa564453-e809-7952-8c25-7fec0d0aabb6
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:更科茅咲 的生日
+DTSTART;VALUE=DATE:20250910
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:更科 茅咲／ちさき さらしな\n\n前风纪委员，在女子剑道部担任大将，学生会武斗派副会长。\n与玛莎并列，被称为二年级的二大美女，俗称“学园的征母唐娜”。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:9f532baf-b91f-0beb-2d11-87a588507d77
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:剑崎统也 的生日
+DTSTART;VALUE=DATE:20250518
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:剣崎 統也／とうや けんざき\n\n以堂堂正正的身躯和与之相称的举止，吸引了学生们支持的魅力学生会长。\n和副会长茅咲是恋人，以学园最有名的热恋情侣而闻名。\n因此，即使在学生会业务中也开始毫无顾忌地创造两人世界。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:9f627877-16f3-f02d-1ab4-cbd17a29dffb
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:宫前乃乃亚 的生日
+DTSTART;VALUE=DATE:20250513
+LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
+DESCRIPTION:宮前 乃々亜／みやまえ ののあ\n\n谷山沙也加的儿时玩伴。虽然性格和气质不一样，但感情很好。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:c669ca3f-b8ea-7fda-8093-df98a00cb627
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H
@@ -1639,125 +1872,6 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:樱之宫莓香 的生日
-DTSTART;VALUE=DATE:20250404
-LOCATION:调教咖啡厅
-DESCRIPTION:桜ノ宮 苺香／さくらのみや まいか\n\n性格认真且礼貌，但经常因为不擅长待人而尴尬，天生眼神可怕，然后天然地说了一些“抖S”的话容易导致他人误解而烦恼。\n梦想去海外留学，为了筹备资金而不断面试打工，然而因为其眼神凶狠面试失败而失落万分。\nStile的店长迪诺对包含在此的性格都一见钟情，邀请来他的咖啡厅扮演抖S角色。她自己也没想到她的这种性格在Stile得到了异常发挥...\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:005dc0d4-7733-352d-6694-168299759616
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:天野美雨 的生日
-DTSTART;VALUE=DATE:20250609
-LOCATION:调教咖啡厅
-DESCRIPTION:天野 美雨／あまの みう\n\n发型为粉红色双麻花辫。是个同人画师，笔名为“花园文件夹”。\n起初把自己创作的作品落在了Stile咖啡厅里，去找回之后觉得咖啡厅里的人很适合作为创作素材，就开始在店里一边打工一边收集素材进行创作，平时要用一周时间来赶稿，Comiket前后三天无法上班。\n觉得莓香与店长迪诺的关系很有“萌系”要素，便以这两人为原型绘画出同人志。\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:621d0bab-6e90-506a-32bd-aa88104edf37
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:神崎日照 的生日
-DTSTART;VALUE=DATE:20250710
-LOCATION:调教咖啡厅
-DESCRIPTION:神崎 ひでり／かんざき ひでり\n\n农家出身，外表可爱的伪娘，高一学生，为使得自己的可爱博得他人认同而进入Stile咖啡厅打工。\n本作的偶像担当，具有徒手拍蟑螂的能力，梦想是成为可爱的偶像伪娘店员。\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:42c78a44-ae8b-96bf-8c42-88dbe37841ac
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:日向夏帆 的生日
-DTSTART;VALUE=DATE:20250812
-LOCATION:调教咖啡厅
-DESCRIPTION:日向 夏帆／ひなた かほ\n\n担当角色为傲娇，为了更像傲娇而被迪诺提议改为双马尾。\n对游戏有很大的兴趣，不论是音游、电视游戏还是手机游戏都会玩，就连平板电脑里都是一大堆的游戏应用。\n为了挑战难度经常会到游戏中心玩，亦因此经常缺钱。貌似双亲都很喜欢玩游戏，因此有可能是夏帆游戏成瘾的原因。因为太沉迷于游戏导致现实中的朋友很少，成绩亦很差，经常要补考。\n虽然是傲娇担当，但本性却一点都不傲娇。因为秋月是天然的傲娇，夏帆会把他当作参考对象。和秋月有着共同的游戏兴趣，再加上俩人都是同期的员工，因此相性很合，虽然还未到恋人的程度，但最近俩人的关系似乎有所上升。\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:51f9338c-d9fe-2f4a-2b62-117be2d024d8
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:星川麻冬 的生日
-DTSTART;VALUE=DATE:20251223
-LOCATION:调教咖啡厅
-DESCRIPTION:星川 麻冬／ほしかわ まふゆ\n\n在Stile担任妹妹角色。虽然长得像小学生，但却是20岁的成年大学生。\n虽然有着宅向的兴趣，但跟夏帆和秋月不同，意外的是个室外派。把子供向动画当作神看待，每星期日早上都会准时收看，亦会收藏cosplay的服装（包括自己的幼稚园校服）。\n加入Stile的原因是最初在街上与店长偶遇时被店长发现，结果将店长误认为是诱拐儿童的怪蜀黍，最后被店长以近乎绑架的方式招募到店中。\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:82bfc9af-5e45-f498-8136-52cb46bc7eb1
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:秋月红叶 的生日
-DTSTART;VALUE=DATE:20251128
-LOCATION:调教咖啡厅
-DESCRIPTION:秋月 紅葉／あきづき こうよう\n\n厨房担当。21岁。发色是草绿色。喜欢百合到天天谈论的程度，经常会幻想女性顾客之间的百合。\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:0a350eaf-7094-b76d-4096-bc39f447c635
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:迪诺 的生日
-DTSTART;VALUE=DATE:20250505
-LOCATION:调教咖啡厅
-DESCRIPTION:ディーノ／Dino\n\n店长兼厨房担当。26岁。意大利罗马出身。金发垂眼。是个喜欢美少女动画和手办的重度宅男，经常因为看深夜动画熬夜导致在工作中打瞌睡或者翘班而被麻冬她们玩弄。\n\n『ブレンド・S』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:2c1d4b10-326b-300a-56ef-a2aede92a621
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:里中千惠 的生日
 DTSTART;VALUE=DATE:20250101
 LOCATION:房东妹子青春期
@@ -2455,6 +2569,142 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:伊理户水斗 的生日
+DTSTART;VALUE=DATE:20251103
+LOCATION:继母的拖油瓶是我的前女友
+DESCRIPTION:伊理戸 水斗／いりど みずと\n\n结女的前男友，喜欢读书的节能主义。\n初中二年级时在图书馆读书时遇到了喜欢阅读推理小说的结女，两人在相处之后开始交往，但在进入初中三年级时两人关系出现恶化并大幅减少交流，最终在初中毕业时和结女分手。\n然而命运弄人的是，在两人分手后一周后因水斗的父亲峰秋和结女的母亲由仁再婚，从前男女友关系转为了义理的姐弟。\n\n『継母の連れ子が元カノだった』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:3492e6f8-8816-407d-7c4c-85febaac1c6a
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:伊理户结女 的生日
+DTSTART;VALUE=DATE:20251103
+LOCATION:继母的拖油瓶是我的前女友
+DESCRIPTION:伊理戸 結女／いりど ゆめ\n绫井结女／綾井結女\n\n水斗的前女友，中学时期是个成天与书为友，极其怕生的少女，但升入高中后，以美少女优等生的形象实现了高中出道。\n\n『継母の連れ子が元カノだった』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:b3a7f08d-f764-9c94-874b-598c914afc45
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:吉田优子 的生日
+DTSTART;VALUE=DATE:20250928
+LOCATION:街角魔族
+DESCRIPTION:吉田 優子／よしだ ゆうこ\nShadow Mistress 优子\n\n魔族后裔，家庭受着“每月生活费仅有4万日元”的诅咒。\n在15岁的一天觉醒了魔族血脉产生了返祖现象，而长出了魔族的角和尾巴。\n以同校的魔法少女桃作为宿敌，想方设法夺取桃的血液以解除诅咒。\n\n「别……别以为这就算赢了！！」\n\n『まちカドまぞく』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:fc14249e-8a99-c210-2cbf-6060aecc13d5
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:千代田桃 的生日
+DTSTART;VALUE=DATE:20250325
+LOCATION:街角魔族
+DESCRIPTION:千代田 桃／ちよだ もも\n\n一名15岁的魔法少女（已退役），领航员为梅塔子。\n同时也是一名就读于樱之丘高等学校1年A班的高中生，与夏美子等人同级。\n\n『まちカドまぞく』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:b36fe8dc-eaee-a736-e0c6-6af779fdd7e6
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:阳夏木蜜柑 的生日
+DTSTART;VALUE=DATE:20251103
+LOCATION:街角魔族
+DESCRIPTION:陽夏木 ミカン／ひなつき ミカン\n\n因为千代田桃损失了力量而被桃叫到小镇帮忙。\n乐于助人，待人有礼，很快就和吉田优子成为了朋友。\n喜欢柑橘类水果。在超市买东西的时候会不自觉地拿大量的柑橘，做料理的时候也会因为放了大量的柠檬而变成黑暗料理。\n\n『まちカドまぞく』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:5d1d1c3c-5ec5-f890-7c20-01c6ba8b466b
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:佐田杏里 的生日
+DTSTART;VALUE=DATE:20250501
+LOCATION:街角魔族
+DESCRIPTION:佐田 杏里／さた あんり\n\n夏美子等人的同学，高一生。\n家里是在商店街开肉店的，经常帮家里打工卖肉，情报相当广。\n由于总是暴露夏美子的痛处，经常被夏美子称为“刺客”。\n\n『まちカドまぞく』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:9eddf540-1ff3-59b8-a5de-cbfae38c9696
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:小仓紫苑 的生日
+DTSTART;VALUE=DATE:20251214
+LOCATION:街角魔族
+DESCRIPTION:小倉 しおん／おぐら しおん\n\n夏美子的同学。疯狂科学家。\n黑魔术研究部的部长。\n\n『まちカドまぞく』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:e0961471-2bb5-f877-e52b-16ba6ab8788d
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:吉田良子 的生日
+DTSTART;VALUE=DATE:20250107
+LOCATION:街角魔族
+DESCRIPTION:吉田 良子／よしだ りょうこ\n\n吉田优子的妹妹，和母亲吉田清子一同居住。\n和笨蛋的姐姐不同，非常聪明，擅长分析。\n十分关心姐姐，轻度姐控，更多是尊敬，处处为姐姐着想。\n\n『まちカドまぞく』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:28580bb1-2510-21b7-c04b-1b3e11b58f60
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:栗山未来 的生日
 DTSTART;VALUE=DATE:20250331
 LOCATION:境界的彼方
@@ -3026,6 +3276,40 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:5a83ddf7-b4c8-3295-1626-b1029bbcabac
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:远野贵树 的生日
+DTSTART;VALUE=DATE:20251223
+LOCATION:秒速5厘米
+DESCRIPTION:遠野 貴樹／とおの たかき\n\n三年级时，贵树从长野转学到东京。明里转学到4年3班。二人因相似的经历与爱好结识，并逐渐亲密。\n1995年春天，转学到鹿儿岛南种子中学。2004年，大学毕业。\n工作后，与水野理纱交往3年，后因为一些生活上和过去的原因，和水野分手。\n\n『秒速5センチメートル』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:7ae9f485-b426-1dab-5a36-efdea21d9233
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:篠原明里 的生日
+DTSTART;VALUE=DATE:20250719
+LOCATION:秒速5厘米
+DESCRIPTION:篠原 明里／しのはら あかり\n\n由于父亲工作的原因，常常转学。后来搬家到东京。\n由于以往经常转学，几乎没有朋友。变得比较孤僻，喜欢在图书馆看书。\n在这里，遇到了远野贵树。由于相似的经历、彼此的深度理解，二人逐渐变得亲密。\n但因父亲工作的关系，父母打算搬回栃木。未能和贵树上同样的初中，两人从此分离。\n从初一开始与贵树保持书信联系，在贵树转学到鹿儿岛之前，二人约定相见告别。\n之后，两人失去了联系。\n多年后，与他人结婚。\n\n『秒速5センチメートル』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:a7648ae2-d183-8782-35e4-9722441cc764
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H
@@ -3815,6 +4099,23 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:藏野莓 的生日
+DTSTART;VALUE=DATE:20250331
+LOCATION:魔法少女育成计划
+DESCRIPTION:森林音乐家库兰贝莉／森の音楽家くかクラムベリー\n\n花朵包围的妖精音乐家装束的魔法少女。老手组的魔法少女之一。\n\n『魔法少女育成計画』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:528799ab-03fe-7163-90dc-b6f0f7bb1d99
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:琪琪 的生日
 DTSTART;VALUE=DATE:20250202
 LOCATION:魔女宅急便
@@ -4080,6 +4381,40 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:9bf5e7ec-0ecc-d1b5-0ccb-94f7bc27d13b
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:山田结衣 的生日
+DTSTART;VALUE=DATE:20250916
+LOCATION:牵牛花与加濑同学
+DESCRIPTION:山田 结衣／やまだ ゆい\n\n内向老实的高中生。 对于绿化委员的活动有很强烈的热情，放学后以及休息时间都在除杂草和看护花坛。\n\n『あさがおと加瀬さん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:6df13182-672e-1886-3827-ac8cf197e7d8
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:加濑友香 的生日
+DTSTART;VALUE=DATE:20250501
+LOCATION:牵牛花与加濑同学
+DESCRIPTION:加瀬 友香／かせ ともか\n\n高中二年级学生，学校田径部的主力选手，在学校有着较高的人气和100米能跑12秒8的实力。\n\n『あさがおと加瀬さん』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:f1d0c13f-a534-1c1a-4879-a091af317680
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H
@@ -4386,6 +4721,74 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:19bf4c2c-ba4d-092f-232a-7dd554abbffa
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:小桥若叶 的生日
+DTSTART;VALUE=DATE:20250401
+LOCATION:若叶女孩
+DESCRIPTION:小橋 若葉／こはし わかば\n\n高中1年级。非常有钱的大小姐，对人会用大小姐语调讲话。本来想读大小姐学校水莲女学院，但因为成绩原因来到白诘女子高中。\n\n『わかば＊ガール』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:cc6cd9d7-73a7-e996-fd01-a6a2d5d42972
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:时田萌子 的生日
+DTSTART;VALUE=DATE:20251020
+LOCATION:若叶女孩
+DESCRIPTION:時田 萌子／ときた もえこ\n\n有着娇小的身体和直率的心的高中一年生。\n有时会突然说出脱线的话，令周围的气氛变得放松。\n特技是制作点心。\n\n『わかば＊ガール』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:5c952d86-ad7f-56e5-178a-eba7e95aa41c
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:黑川真鱼 的生日
+DTSTART;VALUE=DATE:20250717
+LOCATION:若叶女孩
+DESCRIPTION:黒川 真魚／くろかわ まお\n\n随心所欲又奔放的高一生。被若叶说“很有时髦的辣妹的感觉呢”。\n\n『わかば＊ガール』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:7e74071a-e6fd-915c-c4da-9d287ac7d3ce
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:真柴直 的生日
+DTSTART;VALUE=DATE:20251212
+LOCATION:若叶女孩
+DESCRIPTION:真柴 直／ましば なお\n\n是一个有着像男生的性格的腐女，不过对于像男生的地方感到自卑，有着憧憬像女生的事的一面。另外，在新学期作自我介绍的时候害怕因为第一人称乱了套等而引起恐慌。\n\n『わかば＊ガール』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:588893fa-4bef-7559-44d4-9e6adfc41590
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H
@@ -4743,6 +5146,244 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:3a6ace9e-1a75-dd95-af97-2a62698fe389
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:樱之宫莓香 的生日
+DTSTART;VALUE=DATE:20250404
+LOCATION:调教咖啡厅
+DESCRIPTION:桜ノ宮 苺香／さくらのみや まいか\n\n性格认真且礼貌，但经常因为不擅长待人而尴尬，天生眼神可怕，然后天然地说了一些“抖S”的话容易导致他人误解而烦恼。\n梦想去海外留学，为了筹备资金而不断面试打工，然而因为其眼神凶狠面试失败而失落万分。\nStile的店长迪诺对包含在此的性格都一见钟情，邀请来他的咖啡厅扮演抖S角色。她自己也没想到她的这种性格在Stile得到了异常发挥...\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:005dc0d4-7733-352d-6694-168299759616
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:天野美雨 的生日
+DTSTART;VALUE=DATE:20250609
+LOCATION:调教咖啡厅
+DESCRIPTION:天野 美雨／あまの みう\n\n发型为粉红色双麻花辫。是个同人画师，笔名为“花园文件夹”。\n起初把自己创作的作品落在了Stile咖啡厅里，去找回之后觉得咖啡厅里的人很适合作为创作素材，就开始在店里一边打工一边收集素材进行创作，平时要用一周时间来赶稿，Comiket前后三天无法上班。\n觉得莓香与店长迪诺的关系很有“萌系”要素，便以这两人为原型绘画出同人志。\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:621d0bab-6e90-506a-32bd-aa88104edf37
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:神崎日照 的生日
+DTSTART;VALUE=DATE:20250710
+LOCATION:调教咖啡厅
+DESCRIPTION:神崎 ひでり／かんざき ひでり\n\n农家出身，外表可爱的伪娘，高一学生，为使得自己的可爱博得他人认同而进入Stile咖啡厅打工。\n本作的偶像担当，具有徒手拍蟑螂的能力，梦想是成为可爱的偶像伪娘店员。\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:42c78a44-ae8b-96bf-8c42-88dbe37841ac
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:日向夏帆 的生日
+DTSTART;VALUE=DATE:20250812
+LOCATION:调教咖啡厅
+DESCRIPTION:日向 夏帆／ひなた かほ\n\n担当角色为傲娇，为了更像傲娇而被迪诺提议改为双马尾。\n对游戏有很大的兴趣，不论是音游、电视游戏还是手机游戏都会玩，就连平板电脑里都是一大堆的游戏应用。\n为了挑战难度经常会到游戏中心玩，亦因此经常缺钱。貌似双亲都很喜欢玩游戏，因此有可能是夏帆游戏成瘾的原因。因为太沉迷于游戏导致现实中的朋友很少，成绩亦很差，经常要补考。\n虽然是傲娇担当，但本性却一点都不傲娇。因为秋月是天然的傲娇，夏帆会把他当作参考对象。和秋月有着共同的游戏兴趣，再加上俩人都是同期的员工，因此相性很合，虽然还未到恋人的程度，但最近俩人的关系似乎有所上升。\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:51f9338c-d9fe-2f4a-2b62-117be2d024d8
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:星川麻冬 的生日
+DTSTART;VALUE=DATE:20251223
+LOCATION:调教咖啡厅
+DESCRIPTION:星川 麻冬／ほしかわ まふゆ\n\n在Stile担任妹妹角色。虽然长得像小学生，但却是20岁的成年大学生。\n虽然有着宅向的兴趣，但跟夏帆和秋月不同，意外的是个室外派。把子供向动画当作神看待，每星期日早上都会准时收看，亦会收藏cosplay的服装（包括自己的幼稚园校服）。\n加入Stile的原因是最初在街上与店长偶遇时被店长发现，结果将店长误认为是诱拐儿童的怪蜀黍，最后被店长以近乎绑架的方式招募到店中。\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:82bfc9af-5e45-f498-8136-52cb46bc7eb1
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:秋月红叶 的生日
+DTSTART;VALUE=DATE:20251128
+LOCATION:调教咖啡厅
+DESCRIPTION:秋月 紅葉／あきづき こうよう\n\n厨房担当。21岁。发色是草绿色。喜欢百合到天天谈论的程度，经常会幻想女性顾客之间的百合。\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:0a350eaf-7094-b76d-4096-bc39f447c635
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:迪诺 的生日
+DTSTART;VALUE=DATE:20250505
+LOCATION:调教咖啡厅
+DESCRIPTION:ディーノ／Dino\n\n店长兼厨房担当。26岁。意大利罗马出身。金发垂眼。是个喜欢美少女动画和手办的重度宅男，经常因为看深夜动画熬夜导致在工作中打瞌睡或者翘班而被麻冬她们玩弄。\n\n『ブレンド・S』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:2c1d4b10-326b-300a-56ef-a2aede92a621
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:高梨奈绪 的生日
+DTSTART;VALUE=DATE:20250625
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:高梨 奈緒／たかなし なお\n\n高梨家的长女，高中一年B班学生，男主角高梨修辅的妹妹，比修辅小一岁。\n土浦彩叶的同班同学。与楠原寻乃和加藤春华是好友。\n“腹黑、妹妹、控兄”，喜欢哥哥修辅，对哥哥的一切了如指掌，特别是哥哥偷藏的各种工口游戏和书籍，并时常会“帮助”他清理掉其中“非妹系”的部分。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:c831ea5f-d23e-2938-d6d9-092c3146f329
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:土浦彩叶 的生日
+DTSTART;VALUE=DATE:20250403
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:土浦 彩葉／つちうら いろは\n\n突然转学到奈绪的班的少女，特征为双马尾与贫乳，胸部甚至比奈绪的还要小。\n是修辅小时候的青梅竹马，为了履行和修辅的“医生游戏”的约定而回来；不过修辅对此印象模糊。\n对修辅主动展开猛烈的追求攻势，甚至在家中架设高性能望远镜对准高梨家，观察著修辅的一举一动。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:aa85f218-3375-6619-2f1a-44896a5889d8
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:近藤茧佳 的生日
+DTSTART;VALUE=DATE:20250511
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:近藤 繭佳／こんどう まゆか\n\n修辅的同学，从原作第15话起登场，是修辅班上的班级干部。\n通称X小姐，短发，身长172cm。\n常穿黑色裤袜上学。曾在深夜去买BL书籍被修辅抓到。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:b0cfe7da-e8e4-9a6d-9bc0-89b75c0ed56d
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:楠原寻乃 的生日
+DTSTART;VALUE=DATE:20250614
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:楠原 尋乃／くすはら ひろの\n\n奈绪和春华的同学和好友。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:11a8de81-be65-0d5e-0f83-f391e1d8d956
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:加藤春华 的生日
+DTSTART;VALUE=DATE:20250822
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:加藤 春華／かとう はるか\n\n奈绪和寻乃的同学和好友。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:fc16ddee-b0d7-2c1a-9ec5-cdd2b799e5a1
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:高梨修司 的生日
+DTSTART;VALUE=DATE:20250223
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:高梨 修司／たかなし しゅうじ\n\n修辅的父亲，奈绪的养父。\n很疼爱奈绪，不愿意她将来出嫁。\n同样十分色情，可以说修辅正是得到了他的遗传。\n对SM系特别感兴趣，还试图将没收而来的修辅的SM书籍秘密据为己有。\n年轻时拉着菜菜香去看色情电影，被菜菜香认为是人生中最尴尬的事情。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:9a01a7d0-900a-f446-c7e4-2d7cb1254d32
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:高梨菜菜香 的生日
+DTSTART;VALUE=DATE:20251201
+LOCATION:我才不会喜欢上像哥哥这样的人呢，一点都不喜欢！！
+DESCRIPTION:高梨 菜々香／たかなし ななか\n\n修辅的母亲，奈绪的养母。可以说是本作中最正常的角色。\n对修辅沉迷于色情十分担心，不时会去没收修辅的收藏物。\n同样很疼爱奈绪，还一直害怕修辅会对奈绪做出不轨行为，不过对奈绪和异性交往一事的态度比较开明。\n\n『お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:57da03f4-1de2-77ee-7081-89b6998500a6
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H
@@ -5226,6 +5867,23 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:亚托莉 的生日
+DTSTART;VALUE=DATE:20250828
+LOCATION:亚托莉 -我挚爱的时光-
+DESCRIPTION:アトリ／Atori\n萝卜子／ロボ子\n\n有着少女外表的笨蛋高性能机器人，原为斑鸠夏生的祖母八千草乃音子博士所持有，在祖母被淹没的旧房子仓库里沉睡了8年。\n是山崎制造厂的第四代型号，虽然是有一定缺陷的被召回型号，但仍是当年人类科技顶峰时的技术结晶，价格不菲。同时与当时市面上的大多数型号设计理念不同，设计者致力于将其设计成与人类别无二致，拥有“心”的机器人。\nAtri，游戏写明是燕雀，一种季节性候鸟。\n\n『ATRI -My Dear Moments-』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:33b3c017-fb29-9a05-7105-cebc4ed25cb4
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:赤座灯里 的生日
 DTSTART;VALUE=DATE:20250724
 LOCATION:摇曳百合
@@ -5600,6 +6258,91 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:土岐绫乃 的生日
+DTSTART;VALUE=DATE:20250725
+LOCATION:摇曳露营△
+DESCRIPTION:土岐 綾乃／とき あやの\n\n住在滨松的抚子的青梅竹马。被抚子称为“小绫”，认识中学时代的抚子。\n特征是以略显懒洋洋的气氛说话。\n\n『ゆるキャン△』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:a51b5896-384f-075c-012b-86678f13bd47
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:光月真昼 的生日
+DTSTART;VALUE=DATE:20250330
+LOCATION:夜晚的水母不会游泳
+DESCRIPTION:光月 まひる／こうづき まひる\n\n崇尚自由主义的量产型女高中生。\n有感受性太强的倾向，能从心里贴近别人，但也容易因为一点小事而受伤。\n幼年时期以插画家“海月夜”的身份活动，但因某件事而被迫停止活动。\n因此对这种特别的感觉产生了心理阴影，每天都尽可能地保持普通。\n但是，以与花音的相遇为契机，她的日常生活又走向了特别的方向。\n\n『夜のクラゲは泳げない』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:eeadb27c-eb98-bf0d-79ac-d4abea900484
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:山之内花音 的生日
+DTSTART;VALUE=DATE:20250704
+LOCATION:夜晚的水母不会游泳
+DESCRIPTION:山ノ内 花音／やまのうち かの\n\n对想做的事一门心思的前偶像。\n坚持己见，不被他人的意见所左右的类型。\n曾经作为偶像组合“Sunflower Dolls”的中心成员“橘野乃花”进行活动，但因为某次炎上而毕业。\n为了做真正想做的事，开始摸索那条道路。\n在这个过程中，她遇到了改变自己价值观的水母壁画的作者——海月夜，并发现了自己能做的事情。\n\n『夜のクラゲは泳げない』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:675ba314-6ca1-e8c1-e708-a4a046a67710
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:渡濑季初 的生日
+DTSTART;VALUE=DATE:20250401
+LOCATION:夜晚的水母不会游泳
+DESCRIPTION:渡瀬 キウイ／わたせ きうい\n\n真昼的青梅竹马。\n作为Vtuber“龙崎诺克丝”活动着，不断发出自己是最强存在的信条。\n是那种很快就能做到的什么都不差的类型，在Vtuber中展示的技术全部都是她本人的。\n但是，这种偏差是她无法适应周围环境的原因之一。\n是唯一能让真昼不介意过去的人，为了她这个重要的朋友，不惜一切帮助。\n\n『夜のクラゲは泳げない』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:6d6aef7f-598d-b70c-20b6-2841af7e9843
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:高梨·金·阿努克·梅 的生日
+DTSTART;VALUE=DATE:20250913
+LOCATION:夜晚的水母不会游泳
+DESCRIPTION:高梨・キム・アヌーク・めい／たかなし・きむ・あぬーく・めい\n\n自信坚强，具有强烈的责任感和领导才能。\n在音乐创作上表现出极高的天赋，并且是JELEE的主要作曲人。\n对朋友非常忠诚，是团队中的支柱和灵魂人物。\n\n『夜のクラゲは泳げない』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:a7f5eeb3-76ae-ef72-c898-2d05c8373f5d
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:御庭摘希 的生日
 DTSTART;VALUE=DATE:20250111
 LOCATION:一起一起这里那里
@@ -5637,7 +6380,7 @@ BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:春野姬 的生日
 DTSTART;VALUE=DATE:20250512
 LOCATION:一起一起这里那里
-DESCRIPTION:春野 姫／はるの ひめ\n\n天然呆的温柔少女，5人中最有常识最正常的人你管大出血叫正常？\n常常被真宵随便说出的谎话骗到，胆小且有些害羞。\n虽然是运动白痴，但滑冰却非常好。\n\n『あっちこっち』
+DESCRIPTION:春野 姫／はるの ひめ\n\n天然呆的温柔少女，5人中最有常识最正常的人\n常常被真宵随便说出的谎话骗到，胆小且有些害羞。\n虽然是运动白痴，但滑冰却非常好。\n\n『あっちこっち』
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
@@ -5695,6 +6438,40 @@ RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
 UID:ca97472a-25f9-ba4c-2034-ca36efa4b761
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:空 的生日
+DTSTART;VALUE=DATE:20250707
+LOCATION:游戏人生
+DESCRIPTION:空／そら\n\n妹控，是白的哥哥。十八岁，无职，比任何人都渴望现充，即脱离处男。\n沟通障碍、游戏废人、离开白变成独自一人时就会变成无可救药的社会不适应者。\n因为先天能力缺陷，擅长心理分析、行为预测（对战局变化的预先把握已经近乎预知未来）从而制定出超乎想象的破解方法。\n\n『ノーゲーム・ノーライフ』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:52f629b6-a897-6ad7-af51-57c99276d87b
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=zh_CN:白 的生日
+DTSTART;VALUE=DATE:20251212
+LOCATION:游戏人生
+DESCRIPTION:白／しろ\n\n兄控，宣称等上七年到自己十八岁时就让空童贞毕业。当然在此之前全力守护哥哥的第一次。看到空和别的女性关系好会不高兴。\n十一岁萌萝莉。拒绝上学、没有朋友、沟通障碍、游戏废人、讨厌阳光。空的妹妹，特征是雪白的头发和红色的眼睛。\n具有超乎常人的语言及数理能力，是与众不同的天才少女，不被常人理解而被孤立。\n懂得十八国的语言及文字，于三岁时便能运用多种语言。特技是完全记忆能力，快速运算，快速分析，应用知识涵盖全人类所有知识。能在短时间内学会一种语言，此举被史蒂芬妮称为“解读”语言而非“学习”。\n\n『ノーゲーム・ノーライフ』
+DTSTAMP;VALUE=DATE:20230101
+CATEGORIES:二次元角色生日
+RRULE:FREQ=YEARLY
+CLASS:PUBLIC
+TRANSP:TRANSPARENT
+UID:bf9aa5d3-3cdb-22e4-a07b-e5fbdf7178a4
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H
@@ -6212,40 +6989,6 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:神前美月 的生日
-DTSTART;VALUE=DATE:20251221
-LOCATION:最近，妹妹的样子有点怪。
-DESCRIPTION:神前 美月／かんざき みつき\n\n美樱高中一年级生，对因母亲再婚而突然多出来的哥哥夕哉态度冷淡，但经过共同生活后因为受到夕哉的照顾，慢慢的也对夕哉比较友善，但是在哥哥面前十分不率直。\n\n『最近、妹のようすがちょっとおかしいんだが。』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:f631abd7-13d5-7779-c8a5-6243522a667c
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:藏野莓 的生日
-DTSTART;VALUE=DATE:20250331
-LOCATION:魔法少女育成计划
-DESCRIPTION:森林音乐家库兰贝莉／森の音楽家くかクラムベリー\n\n花朵包围的妖精音乐家装束的魔法少女。老手组的魔法少女之一。\n\n『魔法少女育成計画』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:528799ab-03fe-7163-90dc-b6f0f7bb1d99
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:洲崎绫 的生日
 DTSTART;VALUE=DATE:20251225
 LOCATION:洲崎西
@@ -6280,373 +7023,16 @@ END:VALARM
 END:VEVENT
 
 BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:山田结衣 的生日
-DTSTART;VALUE=DATE:20250916
-LOCATION:牵牛花与加濑同学
-DESCRIPTION:山田 结衣／やまだ ゆい\n\n内向老实的高中生。 对于绿化委员的活动有很强烈的热情，放学后以及休息时间都在除杂草和看护花坛。\n\n『あさがおと加瀬さん』
+SUMMARY;LANGUAGE=zh_CN:神前美月 的生日
+DTSTART;VALUE=DATE:20251221
+LOCATION:最近，妹妹的样子有点怪。
+DESCRIPTION:神前 美月／かんざき みつき\n\n美樱高中一年级生，对因母亲再婚而突然多出来的哥哥夕哉态度冷淡，但经过共同生活后因为受到夕哉的照顾，慢慢的也对夕哉比较友善，但是在哥哥面前十分不率直。\n\n『最近、妹のようすがちょっとおかしいんだが。』
 DTSTAMP;VALUE=DATE:20230101
 CATEGORIES:二次元角色生日
 RRULE:FREQ=YEARLY
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
-UID:6df13182-672e-1886-3827-ac8cf197e7d8
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:加濑友香 的生日
-DTSTART;VALUE=DATE:20250501
-LOCATION:牵牛花与加濑同学
-DESCRIPTION:加瀬 友香／かせ ともか\n\n高中二年级学生，学校田径部的主力选手，在学校有着较高的人气和100米能跑12秒8的实力。\n\n『あさがおと加瀬さん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:f1d0c13f-a534-1c1a-4879-a091af317680
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:小桥若叶 的生日
-DTSTART;VALUE=DATE:20250401
-LOCATION:若叶女孩
-DESCRIPTION:小橋 若葉／こはし わかば\n\n高中1年级。非常有钱的大小姐，对人会用大小姐语调讲话。本来想读大小姐学校水莲女学院，但因为成绩原因来到白诘女子高中。\n\n『わかば＊ガール』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:cc6cd9d7-73a7-e996-fd01-a6a2d5d42972
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:时田萌子 的生日
-DTSTART;VALUE=DATE:20251020
-LOCATION:若叶女孩
-DESCRIPTION:時田 萌子／ときた もえこ\n\n有着娇小的身体和直率的心的高中一年生。\n有时会突然说出脱线的话，令周围的气氛变得放松。\n特技是制作点心。\n\n『わかば＊ガール』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:5c952d86-ad7f-56e5-178a-eba7e95aa41c
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:黑川真鱼 的生日
-DTSTART;VALUE=DATE:20250717
-LOCATION:若叶女孩
-DESCRIPTION:黒川 真魚／くろかわ まお\n\n随心所欲又奔放的高一生。被若叶说“很有时髦的辣妹的感觉呢”。\n\n『わかば＊ガール』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:7e74071a-e6fd-915c-c4da-9d287ac7d3ce
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:真柴直 的生日
-DTSTART;VALUE=DATE:20251212
-LOCATION:若叶女孩
-DESCRIPTION:真柴 直／ましば なお\n\n是一个有着像男生的性格的腐女，不过对于像男生的地方感到自卑，有着憧憬像女生的事的一面。另外，在新学期作自我介绍的时候害怕因为第一人称乱了套等而引起恐慌。\n\n『わかば＊ガール』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:588893fa-4bef-7559-44d4-9e6adfc41590
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:远野贵树 的生日
-DTSTART;VALUE=DATE:20251223
-LOCATION:秒速5厘米
-DESCRIPTION:遠野 貴樹／とおの たかき\n\n三年级时，贵树从长野转学到东京。明里转学到4年3班。二人因相似的经历与爱好结识，并逐渐亲密。\n1995年春天，转学到鹿儿岛南种子中学。2004年，大学毕业。\n工作后，与水野理纱交往3年，后因为一些生活上和过去的原因，和水野分手。\n\n『秒速5センチメートル』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:7ae9f485-b426-1dab-5a36-efdea21d9233
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:篠原明里 的生日
-DTSTART;VALUE=DATE:20250719
-LOCATION:秒速5厘米
-DESCRIPTION:篠原 明里／しのはら あかり\n\n由于父亲工作的原因，常常转学。后来搬家到东京。\n由于以往经常转学，几乎没有朋友。变得比较孤僻，喜欢在图书馆看书。\n在这里，遇到了远野贵树。由于相似的经历、彼此的深度理解，二人逐渐变得亲密。\n但因父亲工作的关系，父母打算搬回栃木。未能和贵树上同样的初中，两人从此分离。\n从初一开始与贵树保持书信联系，在贵树转学到鹿儿岛之前，二人约定相见告别。\n之后，两人失去了联系。\n多年后，与他人结婚。\n\n『秒速5センチメートル』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:a7648ae2-d183-8782-35e4-9722441cc764
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:吉田优子 的生日
-DTSTART;VALUE=DATE:20250928
-LOCATION:街角魔族
-DESCRIPTION:吉田 優子／よしだ ゆうこ\nShadow Mistress 优子\n\n魔族后裔，家庭受着“每月生活费仅有4万日元”的诅咒。\n在15岁的一天觉醒了魔族血脉产生了返祖现象，而长出了魔族的角和尾巴。\n以同校的魔法少女桃作为宿敌，想方设法夺取桃的血液以解除诅咒。\n\n「别……别以为这就算赢了！！」\n\n『まちカドまぞく』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:fc14249e-8a99-c210-2cbf-6060aecc13d5
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:千代田桃 的生日
-DTSTART;VALUE=DATE:20250325
-LOCATION:街角魔族
-DESCRIPTION:千代田 桃／ちよだ もも\n\n一名15岁的魔法少女（已退役），领航员为梅塔子。\n同时也是一名就读于樱之丘高等学校1年A班的高中生，与夏美子等人同级。\n\n『まちカドまぞく』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:b36fe8dc-eaee-a736-e0c6-6af779fdd7e6
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:阳夏木蜜柑 的生日
-DTSTART;VALUE=DATE:20251103
-LOCATION:街角魔族
-DESCRIPTION:陽夏木 ミカン／ひなつき ミカン\n\n因为千代田桃损失了力量而被桃叫到小镇帮忙。\n乐于助人，待人有礼，很快就和吉田优子成为了朋友。\n喜欢柑橘类水果。在超市买东西的时候会不自觉地拿大量的柑橘，做料理的时候也会因为放了大量的柠檬而变成黑暗料理。\n\n『まちカドまぞく』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:5d1d1c3c-5ec5-f890-7c20-01c6ba8b466b
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:佐田杏里 的生日
-DTSTART;VALUE=DATE:20250501
-LOCATION:街角魔族
-DESCRIPTION:佐田 杏里／さた あんり\n\n夏美子等人的同学，高一生。\n家里是在商店街开肉店的，经常帮家里打工卖肉，情报相当广。\n由于总是暴露夏美子的痛处，经常被夏美子称为“刺客”。\n\n『まちカドまぞく』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:9eddf540-1ff3-59b8-a5de-cbfae38c9696
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:小仓紫苑 的生日
-DTSTART;VALUE=DATE:20251214
-LOCATION:街角魔族
-DESCRIPTION:小倉 しおん／おぐら しおん\n\n夏美子的同学。疯狂科学家。\n黑魔术研究部的部长。\n\n『まちカドまぞく』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:e0961471-2bb5-f877-e52b-16ba6ab8788d
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:吉田良子 的生日
-DTSTART;VALUE=DATE:20250107
-LOCATION:街角魔族
-DESCRIPTION:吉田 良子／よしだ りょうこ\n\n吉田优子的妹妹，和母亲吉田清子一同居住。\n和笨蛋的姐姐不同，非常聪明，擅长分析。\n十分关心姐姐，轻度姐控，更多是尊敬，处处为姐姐着想。\n\n『まちカドまぞく』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:28580bb1-2510-21b7-c04b-1b3e11b58f60
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:久世政近 的生日
-DTSTART;VALUE=DATE:20250409
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:久世 政近／くぜ まさちか\n\n日常熬夜，基本没有干劲的劣等生兼宅男。成绩中下。其实能听得懂俄语。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:b556c72b-5887-85d3-9404-243499c0bb52
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:艾莉莎·米哈伊罗夫纳·九条 的生日
-DTSTART;VALUE=DATE:20251107
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:アリサ・ミハイロヴナ・くじょう／Alisa Mikhailovna Kujou\n艾莉／アーリャ\n\n位于学年顶层、身为学生会会计的优等生，日俄混血儿，被称为“孤高的公主殿下”。常用俄语对邻桌的久世发牢骚。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:4e8010d4-7a37-52cd-27d4-8ac2da897c89
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:周防有希 的生日
-DTSTART;VALUE=DATE:20250312
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:周防 有希／すおう ゆき\n\n旧华族出身，历代担任外交官的周防家的大小姐。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:b3d4b2e2-776a-6ab1-95eb-03433e9554da
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:玛莉亚·米哈伊罗夫纳·九条 的生日
-DTSTART;VALUE=DATE:20251224
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:マーシャ・ミハイロヴナ・くじょう／Maria Mikhailovna Kujou\n\n艾莉莎·米哈伊罗夫纳·九条的姐姐，日俄混血儿，昵称为“玛夏/玛莎”（Маша）。在学生会担任书记一职。宣称有男友。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:bed396ff-28a0-7928-27c4-7d268ac26df4
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:君岛绫乃 的生日
-DTSTART;VALUE=DATE:20250221
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:君嶋 綾乃／きみしま あやの\n\n周防有希的随从，征岭学园学生会的总务。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:aa564453-e809-7952-8c25-7fec0d0aabb6
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:更科茅咲 的生日
-DTSTART;VALUE=DATE:20250910
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:更科 茅咲／ちさき さらしな\n\n前风纪委员，在女子剑道部担任大将，学生会武斗派副会长。\n与玛莎并列，被称为二年级的二大美女，俗称“学园的征母唐娜”。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:9f532baf-b91f-0beb-2d11-87a588507d77
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:剑崎统也 的生日
-DTSTART;VALUE=DATE:20250518
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:剣崎 統也／とうや けんざき\n\n以堂堂正正的身躯和与之相称的举止，吸引了学生们支持的魅力学生会长。\n和副会长茅咲是恋人，以学园最有名的热恋情侣而闻名。\n因此，即使在学生会业务中也开始毫无顾忌地创造两人世界。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:9f627877-16f3-f02d-1ab4-cbd17a29dffb
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-PT4H
-END:VALARM
-END:VEVENT
-
-BEGIN:VEVENT
-SUMMARY;LANGUAGE=zh_CN:宫前乃乃亚 的生日
-DTSTART;VALUE=DATE:20250513
-LOCATION:不时轻声地以俄语遮羞的邻座艾莉同学
-DESCRIPTION:宮前 乃々亜／みやまえ ののあ\n\n谷山沙也加的儿时玩伴。虽然性格和气质不一样，但感情很好。\n\n『時々ボソッとロシア語でデレる隣のアーリャさん』
-DTSTAMP;VALUE=DATE:20230101
-CATEGORIES:二次元角色生日
-RRULE:FREQ=YEARLY
-CLASS:PUBLIC
-TRANSP:TRANSPARENT
-UID:c669ca3f-b8ea-7fda-8093-df98a00cb627
+UID:f631abd7-13d5-7779-c8a5-6243522a667c
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-PT4H

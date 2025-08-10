@@ -1,8 +1,8 @@
 // vCal_ACGbday_ja-JP
-//By Vanadiry
+// By Vanadiry
 
 (function () {
-  const characterList = [
+    const characterList = [
     { name: "恋塚 小夢", bday: "0303", origin: "こみっくがーるず" },
     { name: "萌田 薫子", bday: "0401", origin: "こみっくがーるず" },
     { name: "勝木 翼", bday: "0504", origin: "こみっくがーるず" },
@@ -39,6 +39,11 @@
     { name: "色井 佐久", bday: "0801", origin: "うらら迷路帖" },
     { name: "棗 ノノ", bday: "1216", origin: "うらら迷路帖" },
     { name: "和泉 紗霧", bday: "1210", origin: "エロマンガ先生" },
+    { name: "温水 和彦", bday: "1225", origin: "負けヒロインが多すぎる！" },
+    { name: "八奈見 杏菜", bday: "1129", origin: "負けヒロインが多すぎる！" },
+    { name: "焼塩 檸檬", bday: "0801", origin: "負けヒロインが多すぎる！" },
+    { name: "小鞠 知花", bday: "0329", origin: "負けヒロインが多すぎる！" },
+    { name: "温水 佳樹", bday: "0606", origin: "負けヒロインが多すぎる！" },
     { name: "霧島 翔子", bday: "1111", origin: "バカとテストと召喚獣" },
     { name: "工藤 愛子", bday: "0211", origin: "バカとテストと召喚獣" },
     { name: "木下 優子", bday: "1006", origin: "バカとテストと召喚獣" },
@@ -55,6 +60,14 @@
     { name: "穂月 かえで", bday: "0912", origin: "お兄ちゃんはおしまい！" },
     { name: "穂月 もみじ", bday: "1020", origin: "お兄ちゃんはおしまい！" },
     { name: "天川  なゆた", bday: "1123", origin: "お兄ちゃんはおしまい！" },
+    { name: "久世 政近", bday: "0409", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "アリサ・ミハイロヴナ・くじょう", bday: "1107", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "周防 有希", bday: "0312", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "マーシャ・ミハイロヴナ・くじょう", bday: "1224", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "君嶋 綾乃", bday: "0221", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "更科 茅咲", bday: "0910", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "剣崎 統也", bday: "0518", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
+    { name: "宮前 乃々亜", bday: "0513", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
     { name: "愛城 恋太郎", bday: "0501", origin: "君のことが大大大大大好きな100人の彼女" },
     { name: "花園 羽香里", bday: "0622", origin: "君のことが大大大大大好きな100人の彼女" },
     { name: "院田 唐音", bday: "0909", origin: "君のことが大大大大大好きな100人の彼女" },
@@ -99,13 +112,6 @@
     { name: "大神 さくら", bday: "0913", origin: "ダンガンロンパ" },
     { name: "葉隱 康比呂", bday: "0725", origin: "ダンガンロンパ" },
     { name: "江ノ島 盾子", bday: "1224", origin: "ダンガンロンパ" },
-    { name: "桜ノ宮 苺香", bday: "0404", origin: "ブレンド・S" },
-    { name: "天野 美雨", bday: "0609", origin: "ブレンド・S" },
-    { name: "神崎 ひでり", bday: "0710", origin: "ブレンド・S" },
-    { name: "日向 夏帆", bday: "0812", origin: "ブレンド・S" },
-    { name: "星川 麻冬", bday: "1223", origin: "ブレンド・S" },
-    { name: "秋月 紅葉", bday: "1128", origin: "ブレンド・S" },
-    { name: "ディーノ", bday: "0505", origin: "ブレンド・S" },
     { name: "里中 チエ", bday: "0101", origin: "大家さんは思春期！" },
     { name: "本場 切絵", bday: "0315", origin: "干物妹！うまるちゃん" },
     { name: "土間 タイヘイ", bday: "0602", origin: "干物妹！うまるちゃん" },
@@ -147,6 +153,14 @@
     { name: "大宮 勇", bday: "0202", origin: "きんいろモザイク" },
     { name: "烏丸 さくら", bday: "1019", origin: "きんいろモザイク" },
     { name: "久世橋 朱里", bday: "0724", origin: "きんいろモザイク" },
+    { name: "伊理戸 水斗", bday: "1103", origin: "継母の連れ子が元カノだった" },
+    { name: "伊理戸 結女", bday: "1103", origin: "継母の連れ子が元カノだった" },
+    { name: "吉田 優子", bday: "0928", origin: "まちカドまぞく" },
+    { name: "千代田 桃", bday: "0325", origin: "まちカドまぞく" },
+    { name: "陽夏木 ミカン", bday: "1103", origin: "まちカドまぞく" },
+    { name: "佐田 杏里", bday: "0501", origin: "まちカドまぞく" },
+    { name: "小倉 しおん", bday: "1214", origin: "まちカドまぞく" },
+    { name: "吉田 良子", bday: "0107", origin: "まちカドまぞく" },
     { name: "栗山 未来", bday: "0331", origin: "境界の彼方" },
     { name: "神原 秋人", bday: "1007", origin: "境界の彼方" },
     { name: "名瀬 美月", bday: "1101", origin: "境界の彼方" },
@@ -181,6 +195,8 @@
     { name: "夜叉神 天衣", bday: "1210", origin: "りゅうおうのおしごと！" },
     { name: "清滝 桂香", bday: "1109", origin: "りゅうおうのおしごと！" },
     { name: "清滝 鋼介", bday: "1101", origin: "りゅうおうのおしごと！" },
+    { name: "遠野 貴樹", bday: "1223", origin: "秒速5センチメートル" },
+    { name: "篠原 明里", bday: "0719", origin: "秒速5センチメートル" },
     { name: "明日 花緒", bday: "0216", origin: "明日ちゃんのセーラー服" },
     { name: "木崎 江利花", bday: "0323", origin: "明日ちゃんのセーラー服" },
     { name: "明日 小路", bday: "0404", origin: "明日ちゃんのセーラー服" },
@@ -227,6 +243,7 @@
     { name: "潮井 梨ナ", bday: "1208", origin: "魔法少女サイト" },
     { name: "雫芽 纱理奈", bday: "0425", origin: "魔法少女サイト" },
     { name: "鹿目 まどか", bday: "1003", origin: "魔法少女まどか☆マギカ" },
+    { name: "森林音乐家库兰贝莉", bday: "0331", origin: "魔法少女育成計画" },
     { name: "キキ", bday: "0202", origin: "魔女の宅急便" },
     { name: "一ノ瀬 双葉", bday: "0825", origin: "それが声優！" },
     { name: "萌咲 いちご", bday: "0505", origin: "それが声優！" },
@@ -243,6 +260,8 @@
     { name: "沢木 桃恵", bday: "0330", origin: "ワンダーエッグ・プライオリティ" },
     { name: "川井 リカ", bday: "1018", origin: "ワンダーエッグ・プライオリティ" },
     { name: "大戸 アイ", bday: "0615", origin: "ワンダーエッグ・プライオリティ" },
+    { name: "山田 结衣", bday: "0916", origin: "あさがおと加瀬さん" },
+    { name: "加瀬 友香", bday: "0501", origin: "あさがおと加瀬さん" },
     { name: "風衣葉 冬優", bday: "0124", origin: "ご注文はうさぎですか？" },
     { name: "天々座 理世", bday: "0214", origin: "ご注文はうさぎですか？" },
     { name: "保登 モカ", bday: "0313", origin: "ご注文はうさぎですか？" },
@@ -261,6 +280,10 @@
     { name: "羽島 千尋", bday: "0906", origin: "妹さえいればいい。" },
     { name: "可児 那由多", bday: "0710", origin: "妹さえいればいい。" },
     { name: "白川 京", bday: "0429", origin: "妹さえいればいい。" },
+    { name: "小橋 若葉", bday: "0401", origin: "わかば＊ガール" },
+    { name: "時田 萌子", bday: "1020", origin: "わかば＊ガール" },
+    { name: "黒川 真魚", bday: "0717", origin: "わかば＊ガール" },
+    { name: "真柴 直", bday: "1212", origin: "わかば＊ガール" },
     { name: "石田 将也", bday: "0208", origin: "聲の形" },
     { name: "西宮 硝子", bday: "0607", origin: "聲の形" },
     { name: "池谷 乃々", bday: "0201", origin: "ステラのまほう" },
@@ -282,6 +305,20 @@
     { name: "松本 友奈", bday: "0507", origin: "私に天使が舞い降りた！" },
     { name: "星野 千鶴", bday: "0118", origin: "私に天使が舞い降りた！" },
     { name: "ノエル", bday: "1103", origin: "天体のメソッド" },
+    { name: "桜ノ宮 苺香", bday: "0404", origin: "ブレンド・S" },
+    { name: "天野 美雨", bday: "0609", origin: "ブレンド・S" },
+    { name: "神崎 ひでり", bday: "0710", origin: "ブレンド・S" },
+    { name: "日向 夏帆", bday: "0812", origin: "ブレンド・S" },
+    { name: "星川 麻冬", bday: "1223", origin: "ブレンド・S" },
+    { name: "秋月 紅葉", bday: "1128", origin: "ブレンド・S" },
+    { name: "ディーノ", bday: "0505", origin: "ブレンド・S" },
+    { name: "高梨 奈緒", bday: "0625", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
+    { name: "土浦 彩葉", bday: "0403", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
+    { name: "近藤 繭佳", bday: "0511", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
+    { name: "楠原 尋乃", bday: "0614", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
+    { name: "加藤 春華", bday: "0822", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
+    { name: "高梨 修司", bday: "0223", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
+    { name: "高梨 菜々香", bday: "1201", origin: "お兄ちゃんのことなんかぜんぜん好きじゃないんだからねっ!!" },
     { name: "高坂 桐乃", bday: "0408", origin: "俺の妹がこんなに可愛いわけがない" },
     { name: "五更 瑠璃", bday: "0420", origin: "俺の妹がこんなに可愛いわけがない" },
     { name: "新垣 あやせ", bday: "0502", origin: "俺の妹がこんなに可愛いわけがない" },
@@ -310,6 +347,7 @@
     { name: "恵飛須沢 胡桃", bday: "0807", origin: "がっこうぐらし！" },
     { name: "若狭 悠里", bday: "1011", origin: "がっこうぐらし！" },
     { name: "直樹 美紀", bday: "1210", origin: "がっこうぐらし！" },
+    { name: "アトリ", bday: "0828", origin: "ATRI -My Dear Moments-" },
     { name: "赤座 あかり", bday: "0724", origin: "ゆるゆり" },
     { name: "歳納 京子", bday: "0328", origin: "ゆるゆり" },
     { name: "船見 結衣", bday: "0422", origin: "ゆるゆり" },
@@ -332,12 +370,19 @@
     { name: "犬山 あおい", bday: "0304", origin: "ゆるキャン△" },
     { name: "大垣 千明", bday: "0831", origin: "ゆるキャン△" },
     { name: "斉藤 恵那", bday: "0901", origin: "ゆるキャン△" },
+    { name: "土岐 綾乃", bday: "0725", origin: "ゆるキャン△" },
+    { name: "光月 まひる", bday: "0330", origin: "夜のクラゲは泳げない" },
+    { name: "山ノ内 花音", bday: "0704", origin: "夜のクラゲは泳げない" },
+    { name: "渡瀬 キウイ", bday: "0401", origin: "夜のクラゲは泳げない" },
+    { name: "高梨・キム・アヌーク・めい", bday: "0913", origin: "夜のクラゲは泳げない" },
     { name: "御庭 つみき", bday: "0111", origin: "あっちこっち" },
     { name: "戌井 榊", bday: "0414", origin: "あっちこっち" },
     { name: "春野 姫", bday: "0512", origin: "あっちこっち" },
     { name: "桜川 キクヱ", bday: "1204", origin: "あっちこっち" },
     { name: "片濑 真宵", bday: "0910", origin: "あっちこっち" },
     { name: "音無 伊御", bday: "1015", origin: "あっちこっち" },
+    { name: "空", bday: "0707", origin: "ノーゲーム・ノーライフ" },
+    { name: "白", bday: "1212", origin: "ノーゲーム・ノーライフ" },
     { name: "チョイ・モチマッヅィ", bday: "0303", origin: "たまこまーけっと" },
     { name: "朝霧 史織", bday: "0402", origin: "たまこまーけっと" },
     { name: "メチャ・モチマッヅィ", bday: "0406", origin: "たまこまーけっと" },
@@ -368,53 +413,30 @@
     { name: "五月七日 くみん", bday: "1014", origin: "中二病でも恋がしたい！" },
     { name: "一色 誠", bday: "1207", origin: "中二病でも恋がしたい！" },
     { name: "巫部 風鈴", bday: "1114", origin: "中二病でも恋がしたい！" },
-    { name: "神前 美月", bday: "1221", origin: "最近、妹のようすがちょっとおかしいんだが。" },
-    { name: "森林音乐家库兰贝莉", bday: "0331", origin: "魔法少女育成計画" },
     { name: "洲崎 綾", bday: "1225", origin: "洲崎西" },
     { name: "西 明日香", bday: "0210", origin: "洲崎西" },
-    { name: "山田 结衣", bday: "0916", origin: "あさがおと加瀬さん" },
-    { name: "加瀬 友香", bday: "0501", origin: "あさがおと加瀬さん" },
-    { name: "小橋 若葉", bday: "0401", origin: "わかば＊ガール" },
-    { name: "時田 萌子", bday: "1020", origin: "わかば＊ガール" },
-    { name: "黒川 真魚", bday: "0717", origin: "わかば＊ガール" },
-    { name: "真柴 直", bday: "1212", origin: "わかば＊ガール" },
-    { name: "遠野 貴樹", bday: "1223", origin: "秒速5センチメートル" },
-    { name: "篠原 明里", bday: "0719", origin: "秒速5センチメートル" },
-    { name: "吉田 優子", bday: "0928", origin: "まちカドまぞく" },
-    { name: "千代田 桃", bday: "0325", origin: "まちカドまぞく" },
-    { name: "陽夏木 ミカン", bday: "1103", origin: "まちカドまぞく" },
-    { name: "佐田 杏里", bday: "0501", origin: "まちカドまぞく" },
-    { name: "小倉 しおん", bday: "1214", origin: "まちカドまぞく" },
-    { name: "吉田 良子", bday: "0107", origin: "まちカドまぞく" },
-    { name: "久世 政近", bday: "0409", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "アリサ・ミハイロヴナ・くじょう", bday: "1107", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "周防 有希", bday: "0312", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "マーシャ・ミハイロヴナ・くじょう", bday: "1224", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "君嶋 綾乃", bday: "0221", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "更科 茅咲", bday: "0910", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "剣崎 統也", bday: "0518", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-    { name: "宮前 乃々亜", bday: "0513", origin: "時々ボソッとロシア語でデレる隣のアーリャさん" },
-  ];
+    { name: "神前 美月", bday: "1221", origin: "最近、妹のようすがちょっとおかしいんだが。" },
+    ];
 
-  const today = new Date();
-  const date =
-    `${today.getMonth() + 1}`.padStart(2, "0") +
-    `${today.getDate()}`.padStart(2, "0");
+    const today = new Date();
+    const date =
+        `${today.getMonth() + 1}`.padStart(2, "0") +
+        `${today.getDate()}`.padStart(2, "0");
 
-  const result = characterList.filter((item) => item.bday === date);
+    const result = characterList.filter((item) => item.bday === date);
 
-  const outputElement = document.getElementById("result");
-  if (!outputElement) {
-    console.error("Element with id 'result' not found.");
-    return;
-  }
+    const outputElement = document.getElementById("result");
+    if (!outputElement) {
+        console.error("Element with id 'result' not found.");
+        return;
+    }
 
-  if (result.length === 0) {
-    outputElement.innerHTML = "今日はキャラクターの誕生日がない...";
-  } else {
-    const output = result
-      .map((role) => `${role.name} [${role.origin}]`)
-      .join("<br>");
-    outputElement.innerHTML = output;
-  }
+    if (result.length === 0) {
+        outputElement.innerHTML = "今日はキャラクターの誕生日がない...";
+    } else {
+        const output = result
+            .map((role) => `${role.name} [${role.origin}]`)
+            .join("<br>");
+        outputElement.innerHTML = output;
+    }
 })();
