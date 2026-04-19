@@ -1,4 +1,4 @@
-// vCal_ACGbday_zh-CN
+// vCal_ACGbday_zh-CN (Fallback to Original if empty)
 // By Vanadiry
 
 (function () {
@@ -76,10 +76,32 @@
     { name: "药膳楠莉", bday: "0418", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "花园羽羽里", bday: "0512", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "原贺胡桃", bday: "0903", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "铭户芽衣", bday: "0510", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "须藤育", bday: "0109", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "美杉美美美", bday: "0303", origin: "超超超超超喜欢你的100个女朋友" },
     { name: "华暮爱爱", bday: "1010", origin: "超超超超超喜欢你的100个女朋友" },
-    { name: "铭户芽衣", bday: "0510", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "伊院知与", bday: "1001", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "娜迪", bday: "0211", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "优敷山女", bday: "0811", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "茂见红叶", bday: "0408", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "药膳屋久", bday: "0809", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "土吕瀞骑士华", bday: "1010", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "毛樽井亚爱子衣", bday: "0205", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "中二诗人", bday: "0516", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "女井户妹", bday: "0906", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "盆能寺百八", bday: "1008", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "灰尾凛", bday: "0810", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "一二三数", bday: "0123", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "火保耶拉", bday: "0803", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "猫成珠", bday: "0222", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "才奇姬歌", bday: "1031", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "出井祭李", bday: "0815", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "宇佐美椎奈", bday: "0417", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "雪房田梦留", bday: "1130", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "辈先", bday: "0401", origin: "超超超超超喜欢你的100个女朋友" },
+    { name: "根向井宁梦", bday: "0903", origin: "超超超超超喜欢你的101个女朋友" },
+    { name: "端须莲叶", bday: "0521", origin: "超超超超超喜欢你的102个女朋友" },
+    { name: "守北季鞠", bday: "1001", origin: "超超超超超喜欢你的103个女朋友" },
     { name: "柊舞缇娜", bday: "1114", origin: "憧憬成为魔法少女" },
     { name: "阿良河基维", bday: "0706", origin: "憧憬成为魔法少女" },
     { name: "杜乃可莉丝", bday: "0208", origin: "憧憬成为魔法少女" },
@@ -416,6 +438,48 @@
     { name: "洲崎绫", bday: "1225", origin: "洲崎西" },
     { name: "西明日香", bday: "0210", origin: "洲崎西" },
     { name: "神前美月", bday: "1221", origin: "最近，妹妹的样子有点怪。" },
+    { name: "浅村悠太", bday: "1213", origin: "义妹生活" },
+    { name: "绫濑沙季", bday: "1220", origin: "义妹生活" },
+    { name: "奈良坂真绫", bday: "1021", origin: "义妹生活" },
+    { name: "甘织玲奈子", bday: "0303", origin: "我怎么可能成为你的恋人，不行不行！" },
+    { name: "王冢真唯", bday: "0831", origin: "我怎么可能成为你的恋人，不行不行！" },
+    { name: "濑名紫阳花", bday: "1212", origin: "我怎么可能成为你的恋人，不行不行！" },
+    { name: "琴纱月", bday: "0726", origin: "我怎么可能成为你的恋人，不行不行！" },
+    { name: "小柳香穗", bday: "0410", origin: "我怎么可能成为你的恋人，不行不行！" },
+    { name: "上井草美咲", bday: "0522", origin: "樱花庄的宠物女孩" },
+    { name: "三鹰仁", bday: "0412", origin: "樱花庄的宠物女孩" },
+    { name: "安迪", bday: "0415", origin: "不死不幸" },
+    { name: "出云风子", bday: "0707", origin: "不死不幸" },
+    { name: "沈希安", bday: "1127", origin: "不死不幸" },
+    { name: "朱易丝", bday: "0106", origin: "不死不幸" },
+    { name: "比利", bday: "1123", origin: "不死不幸" },
+    { name: "吉娜", bday: "0428", origin: "不死不幸" },
+    { name: "山冈一心", bday: "0327", origin: "不死不幸" },
+    { name: "塔蒂亚娜", bday: "1027", origin: "不死不幸" },
+    { name: "菲尔", bday: "0412", origin: "不死不幸" },
+    { name: "托普", bday: "0821", origin: "不死不幸" },
+    { name: "尼柯", bday: "0710", origin: "不死不幸" },
+    { name: "梅", bday: "0407", origin: "不死不幸" },
+    { name: "白崎绪美", bday: "0329", origin: "大图书馆的牧羊人" },
+    { name: "樱庭玉藻", bday: "1101", origin: "大图书馆的牧羊人" },
+    { name: "铃木佳奈", bday: "0616", origin: "大图书馆的牧羊人" },
+    { name: "小太刀凪", bday: "1231", origin: "大图书馆的牧羊人" },
+    { name: "嬉野纱弓实", bday: "0919", origin: "大图书馆的牧羊人" },
+    { name: "白崎纱依", bday: "0509", origin: "大图书馆的牧羊人" },
+    { name: "珈百璃", bday: "0420", origin: "珈百璃的堕落" },
+    { name: "薇奈特", bday: "1010", origin: "珈百璃的堕落" },
+    { name: "萨塔妮亚", bday: "0815", origin: "珈百璃的堕落" },
+    { name: "拉菲尔", bday: "0319", origin: "珈百璃的堕落" },
+    { name: "塔普莉丝", bday: "0604", origin: "珈百璃的堕落" },
+    { name: "叶曦", bday: "0306", origin: "呼唤少女" },
+    { name: "白小桃", bday: "0724", origin: "呼唤少女" },
+    { name: "孙芝雅", bday: "1111", origin: "呼唤少女" },
+    { name: "李照", bday: "1229", origin: "呼唤少女" },
+    { name: "宫内莲华", bday: "1203", origin: "悠哉日常大王" },
+    { name: "一条萤", bday: "0528", origin: "悠哉日常大王" },
+    { name: "越谷夏海", bday: "0124", origin: "悠哉日常大王" },
+    { name: "越谷小鞠", bday: "0914", origin: "悠哉日常大王" },
+    { name: "越谷卓", bday: "0411", origin: "悠哉日常大王" }
     ];
 
     const today = new Date();
@@ -435,7 +499,7 @@
         outputElement.innerHTML = "今天没有角色生日...";
     } else {
         const output = result
-            .map((role) => `${role.name} [${role.origin}]`)
+            .map((role) => `${role.name} <span style="color:#888">[${role.origin}]</span>`)
             .join("<br>");
         outputElement.innerHTML = output;
     }
