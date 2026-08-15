@@ -5,6 +5,7 @@ import argparse
 import os
 import sys
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
@@ -88,19 +89,25 @@ def main():
         cn = p.stem
 
         srcs = {}  # 'month'/'day'/'year' -> [(src, value)]
+        tasks = []
         for sname, getter in (("bangumi", bangumi.fetch), ("moegirl", moegirl.fetch)):
             sid = refs.get("bangumi") if sname == "bangumi" else refs.get("moegirl")
             if sid is None:
                 continue
             key = int(sid) if sname == "bangumi" else sid
-            res = getter(key)
-            if not res["found"] or res["birth"] is None:
-                counts["source_unavailable"] += 1
-                continue
-            for k in ("month", "day", "year"):
-                v = res["birth"][k]
-                if v is not None:
-                    srcs.setdefault(k, []).append((sname, v))
+            tasks.append((sname, getter, key))
+
+        if tasks:
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                results = pool.map(lambda t: (t[0], t[1](t[2])), tasks)
+                for sname, res in results:
+                    if not res["found"] or res["birth"] is None:
+                        counts["source_unavailable"] += 1
+                        continue
+                    for k in ("month", "day", "year"):
+                        v = res["birth"][k]
+                        if v is not None:
+                            srcs.setdefault(k, []).append((sname, v))
 
         # 月/日分开判定（yml 键 m/d ↔ 逻辑键 month/day）
         entry = {"work": work, "character": cn, "sources": {}}
