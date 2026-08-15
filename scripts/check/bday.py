@@ -30,10 +30,9 @@ def str_rep(dumper, data):
 # 判定
 
 
-def judge_field(src_values, local_value):
-    """单个字段（month/day/year）判定。
-    src_values: 有效源（有数据）列表 [(src, value)]。
-    返回 (code, note)。code: Y/X/?/patch"""
+def judge_field(
+    src_values, local_value
+):  # 单字段判定。src_values: 有效源[(src,value)]，返回 (code, note)
     if not src_values:
         # 无有效源
         if local_value is None:
@@ -69,8 +68,7 @@ def judge_field(src_values, local_value):
 # 主流程
 
 
-def process_one(p, idx, total):
-    """处理单个角色。返回 (entry, issues, line)。"""
+def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, line, counts)
     d = yaml.safe_load(p.read_text(encoding="utf-8"))
     refs = d.get("refs") or {}
     bday = d.get("bday") or {}
