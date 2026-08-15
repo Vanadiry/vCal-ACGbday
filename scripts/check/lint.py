@@ -9,7 +9,8 @@ from pathlib import Path
 
 import yaml
 
-from ..lib.color import bold, error, info, ok, warn
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from lib.color import bold, error, info, ok, warn
 
 # 常量
 
@@ -141,6 +142,8 @@ def check_bday(bday, result, path):
             result.errors.append(f"{path}: bday.y 为 null，应删除该键")
         elif not isinstance(v, int) or isinstance(v, bool) or v < 1:
             result.errors.append(f"{path}: bday.y 应为正整数，实际 {v!r}")
+    if "verified" in bday and not isinstance(bday["verified"], bool):
+        result.errors.append(f"{path}: bday.verified 应为布尔值，实际 {bday['verified']!r}")
 
 
 def check_refs(refs, result, path):
@@ -377,20 +380,12 @@ def scan_files(data_dir: Path):
     return char_files, info_files
 
 
-def main():
-    parser = argparse.ArgumentParser(description="vCal-ACGbday data lint")
-    parser.add_argument("--data", default="data", help="数据目录（默认 data）")
-    parser.add_argument("--report", default="report/lint_report.yml", help="报告输出路径")
-    parser.add_argument("--no-color", action="store_true", help="关闭彩色输出")
-    args = parser.parse_args()
-
-    if args.no_color:
-        os.environ["NO_COLOR"] = "1"
-
-    data_dir = Path(args.data)
+def run_lint(data_dir, report_path):
+    """执行 lint 检查。返回错误数（0 = 通过）。"""
+    data_dir = Path(data_dir)
     if not data_dir.is_dir():
         print(error(f"数据目录不存在: {data_dir}"))
-        sys.exit(2)
+        return -1
 
     char_files, info_files = scan_files(data_dir)
     print(info(f"扫描: 角色 {len(char_files)} 个, _info {len(info_files)} 个"))
@@ -458,7 +453,7 @@ def main():
         "errors": all_errors,
         "warnings": all_warnings,
     }
-    report_path = Path(args.report)
+    report_path = Path(report_path)
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(
         yaml.safe_dump(report, allow_unicode=True, sort_keys=False, default_flow_style=False),
@@ -466,7 +461,21 @@ def main():
     )
     print(f"\n{info(f'报告已写入: {report_path}')}")
 
-    sys.exit(1 if all_errors else 0)
+    return len(all_errors)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="vCal-ACGbday data lint")
+    parser.add_argument("--data", default="data", help="数据目录（默认 data）")
+    parser.add_argument("--report", default="report/lint_report.yml", help="报告输出路径")
+    parser.add_argument("--no-color", action="store_true", help="关闭彩色输出")
+    args = parser.parse_args()
+
+    if args.no_color:
+        os.environ["NO_COLOR"] = "1"
+
+    errs = run_lint(args.data, args.report)
+    sys.exit(0 if errs == 0 else 1)
 
 
 if __name__ == "__main__":

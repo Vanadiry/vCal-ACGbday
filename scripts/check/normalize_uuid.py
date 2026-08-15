@@ -9,7 +9,8 @@ from pathlib import Path
 
 import yaml
 
-from ..lib.color import error, info, ok, warn
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from lib.color import error, info, ok, warn
 
 UUID_FMT_RE = re.compile(
     r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",

@@ -53,13 +53,14 @@
       "additionalProperties": false
     },
     "bday": {
-      "description": "生日。只有月日必填，年份选填（部分角色为架空纪年）。",
+      "description": "生日。只有月日必填，年份选填（部分角色为架空纪年）。verified=true 时跳过联网检查。",
       "type": "object",
       "required": ["m", "d"],
       "properties": {
         "y": { "type": "integer", "minimum": 1 },
         "m": { "type": "integer", "minimum": 1, "maximum": 12 },
-        "d": { "type": "integer", "minimum": 1, "maximum": 31 }
+        "d": { "type": "integer", "minimum": 1, "maximum": 31 },
+        "verified": { "type": "boolean" }
       },
       "additionalProperties": false
     },
