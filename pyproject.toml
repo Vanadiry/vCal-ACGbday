@@ -9,8 +9,9 @@ dependencies = [
 ]
 
 [project.scripts]
-vcal-lint = "scripts.check.lint:main"
-vcal-uuid = "scripts.check.normalize_uuid:main"
+vc-lint = "scripts.check.lint:main"
+vc-uuid = "scripts.check.normalize_uuid:main"
+vc-bday = "scripts.check.bday:main"
 
 [project.optional-dependencies]
 dev = [
