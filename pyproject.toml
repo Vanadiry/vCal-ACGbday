@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vcal-acgbday"
+version = "0.1.0"
+description = "二次元角色生日日历数据生成与检查工具"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0",
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.6",
+]
+
+[project.scripts]
+vcal-lint = "scripts.check.lint:main"
+vcal-uuid = "scripts.check.normalize_uuid:main"
+
+[tool.setuptools]
+packages = ["scripts", "scripts.lib", "scripts.check"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = [
+    "E501",  # 行长度交给 line-length，脚本可读性优先
+]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/check/*.py" = [
+    "B008",  # argparse 在默认参数里调用
+]
+
