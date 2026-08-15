@@ -1,0 +1,14 @@
+name:
+  orig: Victor
+  zh: 安迪
+  ja-kana: ヴィクトル
+  ja: 0
+desc:
+  extra:
+  - 不死／UNDEAD自对象，强制发动型
+  main: 把可能让自身接近死亡的一切事物全部否定。再生基本全自动。但经过长年的练习后可有意识地让再生速度加快或变慢。
+bday:
+  y:
+  m: 4
+  d: 15
+uuid: 90550bfd-7515-b19b-86e1-bf00b025fcd9

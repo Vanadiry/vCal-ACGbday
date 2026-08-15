@@ -1,0 +1,17 @@
+name:
+  orig: 薬膳 ヤク
+  zh: 药膳屋久
+  ja-kana: やくぜん ヤク
+  ja: 0
+desc:
+  extra:
+  - No.016
+  main: |-
+    药膳楠莉的奶奶年龄89岁，因楠莉的药而变成8岁萝莉无法复原。
+    内心老成，很会撩人。
+    对现代科技一窍不通。
+bday:
+  y:
+  m: 8
+  d: 9
+uuid: 028e6dfb-f979-3acd-7a12-bde3b1ecef0b

@@ -1,0 +1,14 @@
+name:
+  orig: 出雲 風子
+  zh: 出云风子
+  ja-kana: いずも ふうこ
+  ja: 0
+desc:
+  extra:
+  - 不幸／UNLUCK他对象，强制发动型
+  main: 给身体直接接触到的对象带去不幸。规模依好感度、接触方式、面积、时间等决定。
+bday:
+  y:
+  m: 7
+  d: 7
+uuid: a09bc333-9a4b-6961-cff9-113bd85181dd
