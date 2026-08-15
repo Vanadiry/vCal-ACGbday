@@ -34,8 +34,9 @@
       "additionalProperties": false
     },
     "id": {
-      "description": "作品唯一标识。bangumi 与 custom 至少其一。",
+      "description": "作品唯一标识。bangumi / custom / moegirl 至少其一。bangumi 与 moegirl 支持多个值。",
       "type": "object",
+      "minProperties": 1,
       "properties": {
         "bangumi": {
           "description": "Bangumi subject id 数组（支持多季）。排序与合并检测以首个为键。",
@@ -45,13 +46,22 @@
           "minItems": 1
         },
         "custom": {
-          "description": "自定义 id（bgm 上没有的作品）。",
-          "type": ["integer", "string"]
+          "description": "自定义 id（bgm 上没有的作品）。仅允许数值。",
+          "type": "integer",
+          "minimum": 1
+        },
+        "moegirl": {
+          "description": "萌娘百科页面名数组。仅允许字符串。",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "anyOf": [
         { "required": ["bangumi"] },
-        { "required": ["custom"] }
+        { "required": ["custom"] },
+        { "required": ["moegirl"] }
       ],
       "additionalProperties": false
     }

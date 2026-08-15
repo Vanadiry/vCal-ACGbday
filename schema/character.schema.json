@@ -4,7 +4,7 @@
   "title": "角色条目 (Character Entry)",
   "description": "data/<作品>/<角色>.yml 的完整结构。",
   "type": "object",
-  "required": ["name", "bday", "uuid"],
+  "required": ["name", "bday", "uuid", "refs"],
   "properties": {
     "name": { "$ref": "#/$defs/name" },
     "desc": { "$ref": "#/$defs/desc" },
@@ -68,8 +68,9 @@
       "format": "uuid"
     },
     "refs": {
-      "description": "外部数据源引用，用于爬虫与错误检查。均选填。",
+      "description": "外部数据源引用，用于爬虫与错误检查。至少需要一项。",
       "type": "object",
+      "minProperties": 1,
       "properties": {
         "bangumi": {
           "description": "Bangumi 角色 id，拼接为 https://bgm.tv/character/<id>",
