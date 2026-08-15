@@ -1,7 +1,16 @@
+# macOS Shit
 .DS_Store
+
+# Python
 .venv/
-report/
-TODO/
 __pycache__/
 *.egg-info/
+
+# Cache
 .ruff_cache/
+report/
+
+# Dev
+/import/
+todo.dev.md
+TODO/
