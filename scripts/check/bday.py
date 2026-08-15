@@ -13,6 +13,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib import bangumi, moegirl
+from lib.status import status_mark
 
 
 class BlockDumper(yaml.SafeDumper):
@@ -59,6 +60,117 @@ def judge(
 # 主流程
 
 
+def process_one(p, idx, total):
+    """处理单个角色。返回 (entry, issues, line)。"""
+    d = yaml.safe_load(p.read_text(encoding="utf-8"))
+    refs = d.get("refs") or {}
+    bday = d.get("bday") or {}
+    work = p.parent.name
+    cn = p.stem
+
+    srcs = {}  # 'month'/'day'/'year' -> [(src, value)]
+    unavailable = []  # [(src, detail)] 源不可用
+    tasks = []
+    for sname, getter in (("bangumi", bangumi.fetch), ("moegirl", moegirl.fetch)):
+        sid = refs.get("bangumi") if sname == "bangumi" else refs.get("moegirl")
+        if sid is None:
+            continue
+        key = int(sid) if sname == "bangumi" else sid
+        tasks.append((sname, getter, key))
+
+    if tasks:
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            results = pool.map(lambda t: (t[0], t[1](t[2])), tasks)
+            for sname, res in results:
+                if not res["found"] or res["birth"] is None:
+                    unavailable.append((sname, res.get("detail") or "无生日数据"))
+                    continue
+                for k in ("month", "day", "year"):
+                    v = res["birth"][k]
+                    if v is not None:
+                        srcs.setdefault(k, []).append((sname, v))
+
+    entry = {"work": work, "character": cn, "sources": {}}
+    issues = []
+    counts = Counter()
+    local_map = {"month": bday.get("m"), "day": bday.get("d"), "year": bday.get("y")}
+
+    if unavailable:
+        entry["unavailable"] = [{"source": s, "detail": d} for s, d in unavailable]
+        for sname, detail in unavailable:
+            issues.append((f"src:{sname}", "?", detail))
+
+    for k in ("month", "day"):
+        status, note = judge(srcs.get(k, []), local_map[k])
+        counts[status] += 1
+        if status == "pass":
+            continue
+        entry["sources"][k] = {"local": local_map[k], "status": status, "note": note}
+        issues.append((k, "X", ""))
+
+    y_status, y_note = judge(srcs.get("year", []), local_map["year"])
+    if y_status == "patch":
+        assert isinstance(y_note, tuple) and len(y_note) == 2
+        src_name, val = y_note
+        year_srcs = [s for s, _ in srcs.get("year", [])]
+        src_count = len(year_srcs)
+        if local_map["year"] is None:
+            bday["y"] = val
+            d["bday"] = bday
+            p.write_text(
+                yaml.dump(
+                    d,
+                    Dumper=BlockDumper,
+                    allow_unicode=True,
+                    sort_keys=False,
+                    default_flow_style=False,
+                ),
+                encoding="utf-8",
+            )
+            counts["patched_year"] += 1
+            src_desc = f"源({'/'.join(year_srcs)})" if src_count >= 2 else f"源({src_name})"
+            entry["sources"]["year"] = {
+                "local": None,
+                "patched": val,
+                "status": "patched",
+                "note": f"补全年份 {val} from {src_desc}",
+            }
+            issues.append(("year", "?", src_desc))
+        else:
+            counts[y_status] += 1
+            if y_status != "pass":
+                entry["sources"]["year"] = {
+                    "local": local_map["year"],
+                    "status": y_status,
+                    "note": y_note,
+                }
+                issues.append(("year", "X", ""))
+    elif y_status != "pass":
+        counts[y_status] += 1
+        entry["sources"]["year"] = {
+            "local": local_map["year"],
+            "status": y_status,
+            "note": y_note,
+        }
+        issues.append(("year", "X", ""))
+    else:
+        counts["pass"] += 1
+
+    name_col = f"{work}/{cn}"
+    if not issues:
+        code = "Y"
+        detail = ""
+    else:
+        codes = {c for _, c, _ in issues}
+        code = "?" if "?" in codes else "X"
+        parts = []
+        for key, _c, src_desc in issues:
+            parts.append(f"{key}{'+' + src_desc if src_desc else ''}")
+        detail = " " + ", ".join(parts)
+    line = f"  [{idx + 1}/{total}] {status_mark(code)} {name_col}{detail}"
+    return entry, issues, line, counts
+
+
 def main():
     BlockDumper.add_representer(str, str_rep)
 
@@ -81,116 +193,40 @@ def main():
 
     items = []
     counts = Counter()
-    for i, p in enumerate(files):
-        d = yaml.safe_load(p.read_text(encoding="utf-8"))
-        refs = d.get("refs") or {}
-        bday = d.get("bday") or {}
-        work = p.parent.name
-        cn = p.stem
-
-        srcs = {}  # 'month'/'day'/'year' -> [(src, value)]
-        tasks = []
-        for sname, getter in (("bangumi", bangumi.fetch), ("moegirl", moegirl.fetch)):
-            sid = refs.get("bangumi") if sname == "bangumi" else refs.get("moegirl")
-            if sid is None:
-                continue
-            key = int(sid) if sname == "bangumi" else sid
-            tasks.append((sname, getter, key))
-
-        if tasks:
-            with ThreadPoolExecutor(max_workers=2) as pool:
-                results = pool.map(lambda t: (t[0], t[1](t[2])), tasks)
-                for sname, res in results:
-                    if not res["found"] or res["birth"] is None:
-                        counts["source_unavailable"] += 1
-                        continue
-                    for k in ("month", "day", "year"):
-                        v = res["birth"][k]
-                        if v is not None:
-                            srcs.setdefault(k, []).append((sname, v))
-
-        # 月/日分开判定（yml 键 m/d ↔ 逻辑键 month/day）
-        entry = {"work": work, "character": cn, "sources": {}}
-        issues = []
-        local_map = {"month": bday.get("m"), "day": bday.get("d"), "year": bday.get("y")}
-        for k in ("month", "day"):
-            status, note = judge(srcs.get(k, []), local_map[k])
-            counts[status] += 1
-            if status == "pass":
-                continue
-            entry["sources"][k] = {"local": local_map[k], "status": status, "note": note}
-            issues.append(k)
-
-        # 年份：判定 + 补全
-        y_status, y_note = judge(srcs.get("year", []), local_map["year"])
-        if y_status == "patch":
-            assert isinstance(y_note, tuple) and len(y_note) == 2
-            src_name, val = y_note
-            if local_map["year"] is None:
-                bday["y"] = val
-                d["bday"] = bday
-                p.write_text(
-                    yaml.dump(
-                        d,
-                        Dumper=BlockDumper,
-                        allow_unicode=True,
-                        sort_keys=False,
-                        default_flow_style=False,
-                    ),
-                    encoding="utf-8",
-                )
-                counts["patched_year"] += 1
-                entry["sources"]["year"] = {
-                    "local": None,
-                    "patched": val,
-                    "status": "patched",
-                    "note": f"补全年份 from {src_name}",
-                }
-                issues.append("year")
-            else:
-                counts[y_status] += 1
-                if y_status != "pass":
-                    entry["sources"]["year"] = {
-                        "local": local_map["year"],
-                        "status": y_status,
-                        "note": y_note,
-                    }
-                    issues.append("year")
-        elif y_status != "pass":
-            counts[y_status] += 1
-            entry["sources"]["year"] = {
-                "local": local_map["year"],
-                "status": y_status,
-                "note": y_note,
-            }
-            issues.append("year")
-        else:
-            counts["pass"] += 1
-
-        if issues:
-            items.append(entry)
-        print(
-            f"  [{i + 1}/{len(files)}] {work}/{cn}: {','.join(issues) if issues else 'PASS'}",
-            flush=True,
-        )
+    total = len(files)
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        results = pool.map(process_one, files, range(total), [total] * total)
+        for i, (entry, issues, line, c) in enumerate(results):
+            counts.update(c)
+            if issues:
+                items.append(entry)
+            print(line, flush=True)
+            write_report(args.report, files, items, counts, i + 1)
 
     # 汇总
     print("\n== 汇总 ==")
     for k, v in counts.items():
         print(f"  {k}: {v}")
+    write_report(args.report, files, items, counts, total)
+    print(f"\n报告已写入: {args.report}")
 
+
+def write_report(report_path, files, items, counts, processed):
     report = {
         "generated": datetime.now().isoformat(timespec="seconds"),
-        "summary": dict(counts),
+        "summary": {
+            "total": len(files),
+            "processed": processed,
+            **dict(counts),
+        },
         "items": items,
     }
-    report_path = Path(args.report)
-    report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(
+    p = Path(report_path)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(
         yaml.safe_dump(report, allow_unicode=True, sort_keys=False, default_flow_style=False),
         encoding="utf-8",
     )
-    print(f"\n报告已写入: {report_path}")
 
 
 if __name__ == "__main__":
