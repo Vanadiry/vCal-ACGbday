@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vanadiry.com/vcal/acgbday/schema/info.schema.json",
+  "title": "作品元信息 (Work Info)",
+  "description": "data/<作品>/_info.yaml 的结构。",
+  "type": "object",
+  "required": ["name", "id"],
+  "properties": {
+    "name": { "$ref": "#/$defs/name" },
+    "id": { "$ref": "#/$defs/id" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "name": {
+      "description": "名称。orig 必填，其余为各语言名称；值为 0 表示等同于 orig，字符串为自定义名，缺省表示该语言无名称。",
+      "type": "object",
+      "required": ["orig"],
+      "properties": {
+        "orig": {
+          "description": "源语言原名，必填。",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "patternProperties": {
+        "^[a-z]{2}(-[a-z]+)?$": {
+          "description": "各语言名称。0=等同于 orig，非空字符串=自定义名。",
+          "anyOf": [
+            { "const": 0 },
+            { "type": "string", "minLength": 1 }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "id": {
+      "description": "作品唯一标识。bangumi 与 custom 至少其一。",
+      "type": "object",
+      "properties": {
+        "bangumi": {
+          "description": "Bangumi subject id 数组（支持多季）。排序与合并检测以首个为键。",
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "custom": {
+          "description": "自定义 id（bgm 上没有的作品）。",
+          "type": ["integer", "string"]
+        }
+      },
+      "anyOf": [
+        { "required": ["bangumi"] },
+        { "required": ["custom"] }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

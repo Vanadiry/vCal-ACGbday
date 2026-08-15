@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vanadiry.com/vcal/acgbday/schema/character.schema.json",
+  "title": "角色条目 (Character Entry)",
+  "description": "data/<作品>/<角色>.yml 的完整结构。",
+  "type": "object",
+  "required": ["name", "bday", "uuid"],
+  "properties": {
+    "name": { "$ref": "#/$defs/name" },
+    "desc": { "$ref": "#/$defs/desc" },
+    "bday": { "$ref": "#/$defs/bday" },
+    "uuid": { "$ref": "#/$defs/uuid" },
+    "refs": { "$ref": "#/$defs/refs" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "name": {
+      "description": "名称。orig 必填，其余为各语言名称；值为 0 表示等同于 orig，字符串为自定义名，缺省表示该语言无名称。",
+      "type": "object",
+      "required": ["orig"],
+      "properties": {
+        "orig": {
+          "description": "源语言原名，必填。",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "patternProperties": {
+        "^[a-z]{2}(-[a-z]+)?$": {
+          "description": "各语言名称。0=等同于 orig，非空字符串=自定义名。",
+          "anyOf": [
+            { "const": 0 },
+            { "type": "string", "minLength": 1 }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "desc": {
+      "description": "描述。均可缺省。",
+      "type": "object",
+      "properties": {
+        "extra": {
+          "description": "附加行（代号、小名、名台词等），每行一项。",
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "main": {
+          "description": "简介。",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "bday": {
+      "description": "生日。只有月日必填，年份选填（部分角色为架空纪年）。",
+      "type": "object",
+      "required": ["m", "d"],
+      "properties": {
+        "y": { "type": "integer", "minimum": 1 },
+        "m": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "d": { "type": "integer", "minimum": 1, "maximum": 31 }
+      },
+      "additionalProperties": false
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "refs": {
+      "description": "外部数据源引用，用于爬虫与错误检查。均选填。",
+      "type": "object",
+      "properties": {
+        "bangumi": {
+          "description": "Bangumi 角色 id，拼接为 https://bgm.tv/character/<id>",
+          "type": ["integer", "string"],
+          "minimum": 1,
+          "pattern": "^\\d+$"
+        },
+        "moegirl": {
+          "description": "萌娘百科页面名，拼接为 https://zh.moegirl.org.cn/<page>。空串表示暂无。",
+          "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^wikipedia-[a-z]+(-[a-z0-9]+)*$": {
+          "description": "各语言维基百科页面名，- 后为子域前缀，拼接为 https://<lang>.wikipedia.org/wiki/<page>。空串表示该语言暂无。",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
