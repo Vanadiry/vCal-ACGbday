@@ -21,6 +21,10 @@ def main():
 
     sub.add_parser("build", help="构建产物")
 
+    imp = sub.add_parser("import", help="数据导入")
+    imp_sub = imp.add_subparsers(dest="import_target", required=True)
+    imp_sub.add_parser("fill", help="从 bangumi 补全缺失角色")
+
     args, rest = parser.parse_known_args()
 
     handlers = {
@@ -29,11 +33,14 @@ def main():
         ("check", "bday"): ("scripts.check.bday", "main"),
         ("check", "dist"): ("scripts.check.dist_ics", "main"),
         ("build",): ("scripts.build.build", "main"),
+        ("import", "fill"): ("scripts.import.fill", "main"),
     }
 
     key = (args.command,)
     if args.command == "check":
         key = (args.command, args.check_target)
+    elif args.command == "import":
+        key = (args.command, args.import_target)
 
     if key not in handlers:
         parser.print_help()
