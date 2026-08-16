@@ -40,7 +40,16 @@ def build_js(works, version, version_name, global_info, global_config):
     grouped = build_grouped(works, version["character"], version["location"])
 
     header = f"// {global_info['name']} - {version_name}\n// By {global_info['author']}\n\n"
-    body = json.dumps(grouped, ensure_ascii=False, separators=(",", ":"))
+
+    lines = ["const works = {"]
+    for origin, chars in grouped.items():
+        lines.append(f"  {json.dumps(origin, ensure_ascii=False)}: [")
+        for name, bday in chars:
+            lines.append(f"    [{json.dumps(name, ensure_ascii=False)}, {json.dumps(bday)}],")
+        lines.append("  ],")
+    lines.append("};")
+    body = "\n".join(lines)
+
     notfound = global_config["js"]["notfound"]
     footer = f"""
 
@@ -61,4 +70,4 @@ def build_js(works, version, version_name, global_info, global_config):
     el.innerHTML = out.length ? out.join("<br>") : "{notfound}";
 }})();
 """
-    return header + "const works = " + body + ";" + footer
+    return header + body + footer
