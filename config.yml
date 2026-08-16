@@ -1,0 +1,58 @@
+global:
+  info:
+    author: "Vanadiry"
+    name: "V Calendar ACG Birthday"
+    aname: "V Calendar"
+    website: "https://vanadiry.com/wiki/vcal/acgbday/"
+    contributors:
+      - "Vanadiry"
+  ics:
+    file: "vCal_ACGbday"
+    dtstamp: 2025
+    dtstart: 2026
+    loop: "YEARLY"
+    alarm: "-PT4H"
+    update:
+      dtstart: 2025
+      summary: "V Calendar ACG Birthday"
+      version: "20260419.2026.235.5"
+      uuid: "1c86d0a1-4039-4251-b561-d5cda16db352"
+
+ics:
+  zh-full:
+    info:
+      name: "二次元角色生日"
+      language: "zh"
+      region: "CN"
+    summary: { field: "@name.zh", suffix: "的生日" }
+    location: "@info.name.zh"
+    desc:
+      - block:
+        - line:
+          - "@name.orig"
+          - "@name.ja-kana"
+        - line:
+          - "@name.zh-pinyin"
+        - line:
+          - "@desc.extra"
+      - block:
+        - "@desc.main"
+      - block:
+        - { field: "@info.name.orig", bracket: "《》" }
+  zh-safe:
+    info:
+      name: "二次元角色生日"
+      file: "_safe"
+      language: "zh"
+      region: "CN"
+    summary: { field: "@name.zh", suffix: "的生日" }
+    location: "@info.name.zh"
+    desc:
+      - block:
+        - line:
+          - "@name.orig"
+          - "@name.ja-kana"
+        - line:
+          - "@name.zh-pinyin"
+      - block:
+        - { field: "@info.name.orig", bracket: "《》" }

@@ -13,6 +13,7 @@ dependencies = [
 vc-lint = "scripts.check.lint:main"
 vc-uuid = "scripts.check.normalize_uuid:main"
 vc-bday = "scripts.check.bday:main"
+vb-build = "scripts.build.build:main"
 
 [project.optional-dependencies]
 dev = [
@@ -40,4 +41,4 @@ ignore = [
 ]
 
 [tool.setuptools]
-packages = ["scripts", "scripts.lib", "scripts.check"]
+packages = ["scripts", "scripts.lib", "scripts.check", "scripts.build"]
