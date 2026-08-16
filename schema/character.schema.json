@@ -15,14 +15,21 @@
   "additionalProperties": false,
   "$defs": {
     "name": {
-      "description": "名称。orig 必填，其余为各语言名称；值为 0 表示等同于 orig，字符串为自定义名，缺省表示该语言无名称。",
+      "description": "名称。orig 与 zh 必填，其余为各语言名称；值为 0 表示等同于 orig，字符串为自定义名，缺省表示该语言无名称。",
       "type": "object",
-      "required": ["orig"],
+      "required": ["orig", "zh"],
       "properties": {
         "orig": {
           "description": "源语言原名，必填。",
           "type": "string",
           "minLength": 1
+        },
+        "zh": {
+          "description": "中文名，必填（中文项目）。0=等同于 orig，非空字符串=自定义名。",
+          "anyOf": [
+            { "const": 0 },
+            { "type": "string", "minLength": 1 }
+          ]
         }
       },
       "patternProperties": {
