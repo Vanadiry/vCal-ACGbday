@@ -8,15 +8,9 @@ global:
       - "Vanadiry"
   ics:
     file: "vCal_ACGbday"
-    dtstamp: 2025
     dtstart: 2026
     loop: "YEARLY"
     alarm: "-PT4H"
-    update:
-      dtstart: 2025
-      summary: "V Calendar ACG Birthday"
-      version: "20260419.2026.235.5"
-      uuid: "1c86d0a1-4039-4251-b561-d5cda16db352"
 
 ics:
   zh-full:
@@ -43,6 +37,7 @@ ics:
     info:
       name: "二次元角色生日"
       file: "_safe"
+      suffix: "Safe"
       language: "zh"
       region: "CN"
     summary: { field: "@name.zh", suffix: "的生日" }
@@ -56,3 +51,17 @@ ics:
           - "@name.zh-pinyin"
       - block:
         - { field: "@info.name.orig", bracket: "《》" }
+  original:
+    info:
+      name: "二次元角色生日"
+      file: "_original"
+      suffix: "Original"
+      language: "zh"
+      region: "CN"
+    summary: { field: "@name.orig", suffix: "的生日" }
+    location: "@info.name.orig"
+    desc:
+      - block:
+        - line:
+          - "@name.zh-pinyin"
+          - "@name.ja-kana"

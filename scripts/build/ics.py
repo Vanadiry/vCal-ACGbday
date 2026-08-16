@@ -13,12 +13,15 @@ def _strip_name(name):
 
 
 def build_header(global_info, version_info, ics_config):
+    suffix = version_info.get("suffix", "")
+    prodid_name = f"{global_info['name']} {suffix}".strip()
+    calname_name = f"{version_info['name']} {suffix}".strip()
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        f"PRODID:-//{global_info['author']}//{global_info['name']}//{version_info['language']}_{version_info['region']}",
+        f"PRODID:-//{global_info['author']}//{prodid_name}//{version_info['language']}_{version_info['region']}",
         "CALSCALE:GREGORIAN",
-        f"X-WR-CALNAME:{version_info['name']} - {global_info['aname']}",
+        f"X-WR-CALNAME:{calname_name} - {global_info['aname']}",
         f"X-APPLE-LANGUAGE:{version_info['language']}",
         f"X-APPLE-REGION:{version_info['region']}",
         "",
@@ -26,11 +29,10 @@ def build_header(global_info, version_info, ics_config):
     return "\n".join(lines)
 
 
-def build_update_event(global_info, ics_config, category):
-    update = ics_config["update"]
+def build_update_event(global_info, ics_config, category, build_meta):
     desc_parts = [
         "version:",
-        update["version"],
+        build_meta["version"],
         "",
         "website:",
         global_info["website"],
@@ -41,20 +43,20 @@ def build_update_event(global_info, ics_config, category):
     desc = "\\n".join(desc_parts)
     lines = [
         "BEGIN:VEVENT",
-        f"SUMMARY;LANGUAGE=zh_CN:{update['summary']}",
-        f"DTSTART;VALUE=DATE:{update['dtstart']}0101",
+        f"SUMMARY;LANGUAGE=zh_CN:{build_meta['summary']}",
+        f"DTSTART;VALUE=DATE:{build_meta['update_dtstart']}0101",
         f"DESCRIPTION:{desc}",
-        f"DTSTAMP;VALUE=DATE:{ics_config['dtstamp']}0101",
+        f"DTSTAMP;VALUE=DATE:{build_meta['dtstamp']}",
         f"CATEGORIES:{category}",
         "CLASS:PUBLIC",
         "TRANSP:TRANSPARENT",
-        f"UID:{update['uuid']}",
+        f"UID:{build_meta['uuid']}",
         "END:VEVENT",
     ]
     return "\n".join(lines)
 
 
-def build_character_event(character, info, version, ics_config):
+def build_character_event(character, info, version, ics_config, dtstamp=None):
     category = version["info"]["name"]
     name = _val(version["summary"]["field"], character, info)
     summary = f"{_strip_name(name)}{version['summary']['suffix']}"
@@ -74,7 +76,7 @@ def build_character_event(character, info, version, ics_config):
         f"DTSTART;VALUE=DATE:{date}",
         f"LOCATION:{location}",
         f"DESCRIPTION:{desc}",
-        f"DTSTAMP;VALUE=DATE:{ics_config['dtstamp']}0101",
+        f"DTSTAMP;VALUE=DATE:{dtstamp}",
         f"CATEGORIES:{category}",
         f"RRULE:FREQ={ics_config['loop']}",
         "CLASS:PUBLIC",
