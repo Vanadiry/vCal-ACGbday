@@ -13,11 +13,13 @@ dependencies = [
 vc-lint = "scripts.check.lint:main"
 vc-uuid = "scripts.check.normalize_uuid:main"
 vc-bday = "scripts.check.bday:main"
+vc-dist-ics = "scripts.check.dist_ics:main"
 vb-build = "scripts.build.build:main"
 
 [project.optional-dependencies]
 dev = [
   "ruff>=0.6",
+  "icalendar>=7.0",
 ]
 
 [build-system]
