@@ -20,15 +20,15 @@ def build_list(works):
         work_orig = _strip((info.get("name") or {}).get("orig"))
         blocks.append(f"#### {work_zh}")
         if work_orig:
-            blocks.append(f"**《{work_orig}》**")
+            blocks.append(f"**《{work_orig}》**  ")
         for char in work["characters"]:
             zh = _char_name(char, "zh")
             orig = _char_name(char, "orig")
             if zh and orig:
-                blocks.append(f"{zh} - {orig}")
+                blocks.append(f"{zh} - {orig}  ")
             elif zh:
-                blocks.append(zh)
+                blocks.append(f"{zh}  ")
             elif orig:
-                blocks.append(orig)
+                blocks.append(f"{orig}  ")
         blocks.append("")
     return "\n".join(blocks)

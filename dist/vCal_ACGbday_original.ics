@@ -10,12 +10,12 @@ X-APPLE-REGION:CN
 BEGIN:VEVENT
 SUMMARY;LANGUAGE=zh_CN:V Calendar ACG Birthday
 DTSTART;VALUE=DATE:20250101
-DESCRIPTION:version:\n2026.0816.220832\n\nwebsite:\nhttps://vanadiry.com/wiki/vcal/acgbday/\n\ncontributors:\nVanadiry
+DESCRIPTION:version:\n2026.0816.223109\n\nwebsite:\nhttps://vanadiry.com/wiki/vcal/acgbday/\n\ncontributors:\nVanadiry
 DTSTAMP;VALUE=DATE:20260816
 CATEGORIES:二次元角色生日
 CLASS:PUBLIC
 TRANSP:TRANSPARENT
-UID:12b8a77c-214f-4f8b-b464-dab1570af9d3
+UID:998d76c7-1f6c-4cf8-9ef1-b2fed3a1ac2d
 END:VEVENT
 
 BEGIN:VEVENT
