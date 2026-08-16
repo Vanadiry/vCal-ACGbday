@@ -11,6 +11,8 @@ global:
     dtstart: 2026
     loop: "YEARLY"
     alarm: "-PT4H"
+  js:
+    notfound: "今天没有角色生日..."
 
 ics:
   zh-full:
@@ -65,3 +67,12 @@ ics:
         - line:
           - "@name.zh-pinyin"
           - "@name.ja-kana"
+
+js:
+  zh:
+    character: "@name.zh"
+    location: "@info.name.zh"
+  original:
+    file: "_original"
+    character: "@name.orig"
+    location: "@info.name.orig"

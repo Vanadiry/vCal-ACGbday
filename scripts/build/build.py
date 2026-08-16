@@ -13,6 +13,7 @@ from check.lint import run_lint
 
 from .config import load_config
 from .ics import build_character_event, build_header, build_update_event
+from .js import build_js
 from .list import build_list
 from .loader import load_data
 
@@ -48,6 +49,7 @@ def main():
     works = load_data(args.data)
     global_info = config["global"]["info"]
     ics_config = config["global"]["ics"]
+    global_config = config["global"]
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
 
@@ -89,6 +91,13 @@ def main():
 
     (out / "list.md").write_text(build_list(works), encoding="utf-8")
     print(f"已生成 {out / 'list.md'}")
+
+    for version_name, version in config.get("js", {}).items():
+        content = build_js(works, version, version_name, global_info, global_config)
+        suffix = version.get("file", "")
+        filename = f"{ics_config['file']}{suffix}.js"
+        (out / filename).write_text(content, encoding="utf-8")
+        print(f"已生成 {out / filename}")
 
 
 if __name__ == "__main__":
