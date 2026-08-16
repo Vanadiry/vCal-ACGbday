@@ -6,6 +6,7 @@ import json
 import re
 import sys
 import time
+from urllib.parse import quote
 
 import requests
 
@@ -45,7 +46,7 @@ def _extract_birth(text):
 
 def fetch(name):  # 返回 {found, birth:{year,month,day}, name, detail}
     result = {"found": False, "birth": None, "name": None, "detail": None}
-    url = BASE.format(name=requests.utils.quote(name))
+    url = BASE.format(name=quote(name))
     for attempt in range(MAX_RETRY):
         try:
             r = requests.get(url, timeout=20, headers={"User-Agent": UA})

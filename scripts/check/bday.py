@@ -30,9 +30,8 @@ def str_rep(dumper, data):
 # 判定
 
 
-def judge_field(
-    src_values, local_value
-):  # 单字段判定。src_values: 有效源[(src,value)]，返回 (code, note)
+def judge_field(src_values, local_value) -> tuple[str, str | tuple[str, int] | None]:
+    # 单字段判定。src_values: 有效源[(src,value)]，返回 (code, note)
     if not src_values:
         # 无有效源
         if local_value is None:
@@ -151,6 +150,7 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
         counts["none"] += 1
     elif y_code == "patch":
         # 允许自动补全
+        assert isinstance(y_note, tuple) and len(y_note) == 2
         src_name, val = y_note
         bday["y"] = val
         d["bday"] = bday
