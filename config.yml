@@ -1,19 +1,35 @@
+# vCal-ACGbday 构建配置
+
+# 字段引用：@ 开头表示读取数据字段（如 @name.zh 读取角色中文名，@info.name.orig 读取作品原名）
+# 无 @ 的字符串为字面量
+
+# 全局配置
 global:
   info:
-    author: "Vanadiry"
-    name: "V Calendar ACG Birthday"
-    aname: "V Calendar"
-    website: "https://vanadiry.com/wiki/vcal/acgbday/"
-    contributors:
+    author: "Vanadiry"                # 作者（用于 PRODID 和 JS 头部注释）
+    name: "V Calendar ACG Birthday"   # 日历全名（用于 PRODID 和 update 事件 SUMMARY）
+    aname: "V Calendar"               # 缩写名（X-WR-CALNAME 后缀）
+    website: "https://vanadiry.com/wiki/vcal/acgbday/" # 网站（update 事件 DESC 记录）
+    contributors:                     # 贡献者列表（update 事件 DESC 记录，每个一行）
       - "Vanadiry"
   ics:
-    file: "vCal_ACGbday"
-    dtstart: 2026
-    loop: "YEARLY"
-    alarm: "-PT4H"
+    file: "vCal_ACGbday"              # 基础文件名，产物为 <file><版本后缀>.ics
+    dtstart: 2026                     # 角色生日 DTSTART 的年份（固定，RRULE 每年循环）
+    loop: "YEARLY"                    # RRULE 循环规则
+    alarm: "-PT4H"                    # VALARM 提醒提前量
   js:
-    notfound: "今天没有角色生日..."
+    notfound: "今天没有角色生日..."      # JS 中"今天没有生日"的显示文案
 
+# ICS 版本定义：每个版本生成一个 ICS 文件
+# 支持的写法：
+#   info.name        # X-WR-CALNAME 和 CATEGORIES 用
+#   info.file        # 可选，文件名后缀
+#   info.suffix      # 可选，元数据后缀（PRODID 和 X-WR-CALNAME 追加，如 Safe）
+#   info.language    # PRODID 语言
+#   info.region      # PRODID 地区
+#   summary          # { field: 字段引用, suffix: 名字后的文字 }，字段值去空格
+#   location         # 字段引用（LOCATION 用）
+#   desc             # DESCRIPTION 组织，见下方 desc 说明
 ics:
   zh-full:
     info:
@@ -23,18 +39,22 @@ ics:
     summary: { field: "@name.zh", suffix: "的生日" }
     location: "@info.name.zh"
     desc:
+      # desc 由 block（块）组成，块之间空一行（\n\n）
+      # block 内为 line（行），行之间换行（\n）
+      # 一行内的多个字段用“全角斜杠／”连接；字段无值则跳过
+      # 数组字段（如 @desc.extra）展开为多行，每值一行
       - block:
         - line:
-          - "@name.orig"
-          - "@name.ja-kana"
+          - "@name.orig"      # 角色原名
+          - "@name.ja-kana"   # 角色假名读法
         - line:
-          - "@name.zh-pinyin"
+          - "@name.zh-pinyin" # 角色拼音
         - line:
-          - "@desc.extra"
+          - "@desc.extra"     # 附加行（数组，多值每行一个）
       - block:
-        - "@desc.main"
+        - "@desc.main"        # 简介
       - block:
-        - { field: "@info.name.orig", bracket: "《》" }
+        - { field: "@info.name.orig", bracket: "《》" }  # 作品原名，用《》包裹
   zh-safe:
     info:
       name: "二次元角色生日"
@@ -68,6 +88,10 @@ ics:
           - "@name.zh-pinyin"
           - "@name.ja-kana"
 
+# JS 版本定义：每个版本生成一个 JS 文件
+#   character  # 字段引用，角色的显示名
+#   location   # 字段引用，作品名（分组 key）
+#   file       # 可选，文件名后缀
 js:
   zh:
     character: "@name.zh"
