@@ -13,6 +13,7 @@ from check.lint import run_lint
 
 from .config import load_config
 from .ics import build_character_event, build_header, build_update_event
+from .list import build_list
 from .loader import load_data
 
 
@@ -85,6 +86,9 @@ def main():
         content = "\n\n".join([header, update, *events]) + "\nEND:VCALENDAR"
         out_path.write_text(content, encoding="utf-8")
         print(f"已生成 {out_path}")
+
+    (out / "list.md").write_text(build_list(works), encoding="utf-8")
+    print(f"已生成 {out / 'list.md'}")
 
 
 if __name__ == "__main__":
