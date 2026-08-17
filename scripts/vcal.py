@@ -24,6 +24,7 @@ def main():
     imp = sub.add_parser("import", help="数据导入")
     imp_sub = imp.add_subparsers(dest="import_target", required=True)
     imp_sub.add_parser("fill", help="从 bangumi 补全缺失角色")
+    imp_sub.add_parser("tracker", help="从 tracker.yml 拉取整部作品")
 
     args, rest = parser.parse_known_args()
 
@@ -34,6 +35,7 @@ def main():
         ("check", "dist"): ("scripts.check.dist_ics", "main"),
         ("build",): ("scripts.build.build", "main"),
         ("import", "fill"): ("scripts.import.fill", "main"),
+        ("import", "tracker"): ("scripts.import.tracker", "main"),
     }
 
     key = (args.command,)

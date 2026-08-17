@@ -29,6 +29,11 @@ def _get(path):
     return None
 
 
+def fetch_subject(sid):
+    """拉取 subject 主数据。返回 {name, name_cn, ...}"""
+    return _get(f"/subjects/{sid}")
+
+
 def fetch_subject_characters(sid):
     """拉取 subject 的角色列表。返回 [{id, name, relation}]"""
     data = _get(f"/subjects/{sid}/characters")
