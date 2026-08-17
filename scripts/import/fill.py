@@ -105,11 +105,55 @@ def get_cn_name(detail):
     return None
 
 
+def get_aliases(detail):
+    """返回别名列表：[(k, v)]，k 可能为 None"""
+    result = []
+    for item in detail.get("infobox", []) or []:
+        if item.get("key") != "别名":
+            continue
+        for alias in item.get("value", []) or []:
+            if isinstance(alias, dict):
+                result.append((alias.get("k"), alias.get("v")))
+    return result
+
+
+def get_name(detail, key):
+    for k, v in get_aliases(detail):
+        if k == key:
+            return v
+    return None
+
+
 def make_character(detail):
-    name = {"orig": detail.get("name") or ""}
+    orig = detail.get("name") or ""
+    name = {"orig": orig}
     cn = get_cn_name(detail)
     if cn:
-        name["zh"] = cn
+        name["zh"] = _strip(cn)
+    jp_name = get_name(detail, "日文名")
+    name["ja"] = jp_name if jp_name else None
+    kana = get_name(detail, "纯假名")
+    if kana:
+        name["ja-kana"] = kana
+
+    # 注释记录其他名字
+    comments = []
+    if jp_name and jp_name != orig:
+        comments.append(f"日文名: {jp_name}")
+    roman = get_name(detail, "罗马字")
+    if roman:
+        comments.append(f"罗马字: {roman}")
+    second_cn = get_name(detail, "第二中文名")
+    if second_cn:
+        comments.append(f"第二中文名: {second_cn}")
+    for k, v in get_aliases(detail):
+        if k is None and v:
+            comments.append(f"别名: {v}")
+    if not jp_name:
+        comments.append("待补充日文名")
+    if not kana:
+        comments.append("待补充假名")
+
     char = {"name": name, "uuid": str(uuid_mod.uuid4())}
     birth_mon, birth_day = detail.get("birth_mon"), detail.get("birth_day")
     if birth_mon and birth_day:
@@ -118,8 +162,11 @@ def make_character(detail):
             bday["y"] = detail["birth_year"]
         char["bday"] = bday
     if detail.get("summary"):
-        char["desc"] = {"main": detail["summary"]}
+        main = detail["summary"].replace("\r\n", "\n").replace("\r", "\n")
+        main = "\n".join(line.rstrip() for line in main.split("\n")).strip()
+        char["desc"] = {"main": main}
     char["refs"] = {"bangumi": detail["id"]}
+    char["_comments"] = comments
     return char
 
 
@@ -215,20 +262,22 @@ def main():
             log(work, name, "?", "无生日")
             return
         char = make_character(detail)
+        comments = char.pop("_comments", [])
         out_dir = import_dir / work["folder"]
         out_dir.mkdir(parents=True, exist_ok=True)
         filename = _strip(char["name"].get("zh") or char["name"]["orig"])
         out = out_dir / f"{filename}.yml"
-        out.write_text(
-            yaml.dump(
-                char,
-                Dumper=BlockDumper,
-                allow_unicode=True,
-                sort_keys=False,
-                default_flow_style=False,
-            ),
-            encoding="utf-8",
+        body = yaml.dump(
+            char,
+            Dumper=BlockDumper,
+            allow_unicode=True,
+            sort_keys=False,
+            default_flow_style=False,
         )
+        if comments:
+            comment_text = "\n".join(f"# {c}" for c in comments)
+            body = comment_text + "\n" + body
+        out.write_text(body, encoding="utf-8")
         log(work, name, "Y", "新增")
 
     def process_subject(work, sid):
