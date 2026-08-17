@@ -19,8 +19,17 @@ pip install -e ".[dev]"
 使用 `vcal check lint` 来执行格式验证，提交前，需确保 Lint 通过。  
 此外，还有一些方便的校验工具，参考 [check](doc/check.md) 和 [check-online](doc/check-online.md)。
 
-**改动角色数据，必须修改 uuid。**  
+### 改动数据
+
+要改动数据，只需要修改 `data/` 的数据即可。
+
+**改动角色数据，必须修改 uuid。**（改动 `refs` 无须修改）  
 因为 uuid 同时是角色的版本标识。构建脚本会判断 uuid 是否变化，来自动处理 ics 文件中条目的改动日期。
+
+### 添加数据
+
+要手动添加数据，在 `data/` 直接添加即可。  
+不过，有一些方便的补全和添加工具，详见 [import](doc/import.md)。
 
 ## 提交 Pull Request
 
