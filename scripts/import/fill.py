@@ -1,4 +1,4 @@
-# 补全已有数据：遍历 data/ 的 _info.yaml，从 bangumi 拉取缺失角色
+# 补全已有数据：遍历 data/ 的 _info.yml，从 bangumi 拉取缺失角色
 # 有生日 → 建 import/<作品名>/<角色>.yml；无生日 → 记录 import/report.yml
 
 import argparse
@@ -81,14 +81,14 @@ def load_works(data_dir):
     for folder in sorted(Path(data_dir).iterdir()):
         if not folder.is_dir():
             continue
-        info_file = folder / "_info.yaml"
+        info_file = folder / "_info.yml"
         if not info_file.exists():
             continue
         with open(info_file, encoding="utf-8") as f:
             info = yaml.safe_load(f)
         existing = set()
         for p in folder.glob("*.yml"):
-            if p.name == "_info.yaml":
+            if p.name == "_info.yml":
                 continue
             d = yaml.safe_load(p.read_text(encoding="utf-8"))
             bid = (d.get("refs") or {}).get("bangumi")

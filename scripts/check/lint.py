@@ -104,9 +104,9 @@ def scan_files(data_dir: Path):
     char_files = []
     info_files = []
     for p in sorted(data_dir.rglob("*")):
-        if not p.is_file() or p.suffix not in (".yml", ".yaml"):
+        if not p.is_file() or p.suffix != ".yml":
             continue
-        if p.name in ("_info.yaml", "_info.yml"):
+        if p.name == "_info.yml":
             info_files.append(p)
         else:
             char_files.append(p)

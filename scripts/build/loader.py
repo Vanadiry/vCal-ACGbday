@@ -22,14 +22,14 @@ def load_data(data_dir="data"):
     for folder in data_dir.iterdir():
         if not folder.is_dir():
             continue
-        info_file = folder / "_info.yaml"
+        info_file = folder / "_info.yml"
         if not info_file.exists():
             continue
         with open(info_file, encoding="utf-8") as f:
             info = yaml.safe_load(f)
         characters = []
         for p in folder.glob("*.yml"):
-            if p.name == "_info.yaml":
+            if p.name == "_info.yml":
                 continue
             with open(p, encoding="utf-8") as f:
                 characters.append(yaml.safe_load(f))

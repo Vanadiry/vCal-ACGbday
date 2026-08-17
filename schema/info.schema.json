@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://vanadiry.com/vcal/acgbday/schema/info.schema.json",
   "title": "作品元信息 (Work Info)",
-  "description": "data/<作品>/_info.yaml 的结构。",
+  "description": "data/<作品>/_info.yml 的结构。",
   "type": "object",
   "required": ["name", "id"],
   "properties": {

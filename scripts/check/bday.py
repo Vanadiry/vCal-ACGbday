@@ -294,7 +294,7 @@ def main():
         print(f"数据目录不存在: {data_dir}")
         sys.exit(2)
 
-    files = [p for p in data_dir.rglob("*.yml") if p.is_file() and p.name != "_info.yaml"]
+    files = [p for p in data_dir.rglob("*.yml") if p.is_file() and p.name != "_info.yml"]
     print(f"扫描: {len(files)} 个角色", flush=True)
 
     # 前置 lint 检查，不通过则终止

@@ -45,7 +45,7 @@ def main():
         sys.exit(2)
 
     invalid = []
-    files = [p for p in data_dir.rglob("*.yml") if p.is_file() and p.name != "_info.yaml"]
+    files = [p for p in data_dir.rglob("*.yml") if p.is_file() and p.name != "_info.yml"]
 
     for p in files:
         try:
