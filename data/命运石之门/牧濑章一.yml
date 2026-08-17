@@ -1,0 +1,17 @@
+name:
+  orig: 牧瀬 章一
+  # 剧透
+  zh: 牧濑章一
+  ja: 0
+  ja-kana: まきせ しょういち
+bday:
+  m: 1
+  d: 13
+  y: 1967
+desc:
+  main: |-
+    中钵博士是秋叶幸高的大学同学，在早年由幸高出资支持他的研究。
+uuid: c226d98c-0e1b-4ae6-8c2d-6f7e6729e898
+refs:
+  bangumi: 55538
+  moegirl: 中钵博士

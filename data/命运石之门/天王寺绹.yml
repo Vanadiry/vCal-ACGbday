@@ -1,0 +1,17 @@
+name:
+  orig: 天王寺 綯
+  zh: 天王寺绹
+  ja: 0
+  ja-kana: てんのうじ なえ
+bday:
+  m: 11
+  d: 9
+  y: 1998
+desc:
+  main: |-
+    电器店店长兼Rounder指挥官天王寺裕吾的女儿，十一岁。
+    有点害怕冈部和桥田，被两人称作“小动物”。
+uuid: 2d0a8011-7392-41e6-9c01-9df7f48ad6ad
+refs:
+  bangumi: 17778
+  moegirl: 天王寺绹

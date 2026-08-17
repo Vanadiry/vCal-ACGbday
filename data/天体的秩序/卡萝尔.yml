@@ -1,0 +1,14 @@
+name:
+  orig: キャロル
+  zh: 卡萝尔
+  ja: 0
+bday:
+  m: 11
+  d: 3
+desc:
+  main: |-
+    出现在作为后日谈剧情的第17话中。
+    与诺艾尔一样，是圆盘少女。
+uuid: 68fc0d40-6e10-48fc-9a91-698b73c04dff
+refs:
+  bangumi: 70646

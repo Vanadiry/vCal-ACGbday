@@ -1,0 +1,14 @@
+name:
+  orig: 乙女 サクラ
+  zh: 乙女樱
+  ja: 0
+  ja-kana: おとめ さくら
+bday:
+  m: 3
+  d: 6
+desc:
+  main: |-
+      DA东京支部的二号Lycoris。代替泷奈成为风希的搭档。
+uuid: 3505e1ed-66b5-4222-858f-cd1b3347e1e5
+refs:
+  bangumi: 115238
