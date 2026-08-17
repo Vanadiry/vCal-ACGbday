@@ -36,7 +36,7 @@ ics:
       name: "二次元角色生日"
       language: "zh"
       region: "CN"
-    summary: { field: "@name.zh", suffix: "的生日" }
+    summary: { field: "@name.zh", suffix: " 的生日" }
     location: "@info.name.zh"
     desc:
       # desc 由 block（块）组成，块之间空一行（\n\n）
@@ -62,7 +62,7 @@ ics:
       suffix: "Safe"
       language: "zh"
       region: "CN"
-    summary: { field: "@name.zh", suffix: "的生日" }
+    summary: { field: "@name.zh", suffix: " 的生日" }
     location: "@info.name.zh"
     desc:
       - block:
@@ -80,7 +80,7 @@ ics:
       suffix: "Original"
       language: "zh"
       region: "CN"
-    summary: { field: "@name.orig", suffix: "的生日" }
+    summary: { field: "@name.orig", suffix: " 的生日" }
     location: "@info.name.orig"
     desc:
       - block:
