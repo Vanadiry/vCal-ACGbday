@@ -18,7 +18,6 @@ vcal = "scripts.vcal:main"
 [dependency-groups]
 dev = [
     "icalendar>=7.2.2",
-    "ruff>=0.16.3",
 ]
 
 [build-system]
