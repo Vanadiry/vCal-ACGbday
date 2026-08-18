@@ -1,0 +1,16 @@
+name:
+  orig: 小川 こころ
+  zh: 小川心
+  ja: 0
+  ja-kana: おがわ こころ
+bday:
+  m: 7
+  d: 7
+desc:
+  main: |-
+    花子的同学，就读于小学二年级。
+    眼睛好像半闭着没睡醒的样子。
+    性格比较脱线，经常跟随未来行动。 
+uuid: 7c4f8f16-640b-4662-b78a-256ad2cecc2f
+refs:
+  bangumi: 126087

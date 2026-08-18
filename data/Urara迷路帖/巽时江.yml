@@ -1,0 +1,18 @@
+name:
+  orig: 巽 時江
+  zh: 巽时江
+  ja: 0
+  ja-kana: たつみ ときえ
+bday:
+  m: 1
+  d: 28
+desc:
+  main: |-
+    巽屋的主人，绀的母亲。
+    二番占，受到许多人尊敬。
+    是绀相当憧憬的对象。
+    擅长的占卜是水晶占卜。
+uuid: 0a848621-c89b-46f9-b567-d80b67d100d8
+refs:
+  bangumi: 51997
+  morgirl: 巽时江

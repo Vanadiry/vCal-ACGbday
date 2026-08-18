@@ -1,0 +1,15 @@
+name:
+  orig: 高崎 みさき
+  zh: 高崎美咲
+  ja: 0
+  ja-kana: たかさき みさき
+bday:
+  m: 10
+  d: 15
+desc:
+  main: |-
+    花子的同学，就读于小学二年级。
+    妒忌花子，试图表现得比她优秀，但实际上没一样能赶得上。
+uuid: 13df459d-b1d4-496c-a9eb-da7241fd0eb6
+refs:
+  bangumi: 126088

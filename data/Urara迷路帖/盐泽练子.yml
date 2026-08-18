@@ -1,0 +1,14 @@
+name:
+  orig: 塩沢練子
+  zh: 盐泽练子
+  ja: 0
+  ja-kana: しおざわ
+bday:
+  m: 6
+  d: 2
+desc:
+  main: |-
+    佐久的部下。和大岛一样，溺爱着佐久。
+uuid: 418a204e-a657-403a-80fd-81c76e11b4d3
+refs:
+  bangumi: 49924

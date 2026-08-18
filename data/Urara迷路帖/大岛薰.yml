@@ -1,0 +1,14 @@
+name:
+  orig: 大島薫
+  zh: 大岛薰
+  ja: 0
+  ja-kana: おおしま
+bday:
+  m: 6
+  d: 1
+desc:
+  main: |-
+    佐久的部下。对佐久怀着近乎崇拜的尊敬与溺爱。
+uuid: 8a59e04a-b4be-4ee7-a9b6-477cde8c53c8
+refs:
+  bangumi: 49923

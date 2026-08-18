@@ -1,0 +1,15 @@
+name:
+  orig: 三輪 藍
+  zh: 三轮蓝
+  ja: 0
+  ja-kana: みわ あい
+bday:
+  m: 5
+  d: 19
+desc:
+  main: |-
+    抚子的同学，就读于高三。
+    拥有长发，右眼下有颗泪痣。性格温柔。
+uuid: 1c1ab228-cef8-402c-bd0e-88a84268136f
+refs:
+  bangumi: 126083
