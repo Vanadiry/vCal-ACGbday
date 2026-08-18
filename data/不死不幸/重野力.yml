@@ -1,0 +1,16 @@
+name:
+  orig: 重野力
+  zh: 重野力
+  ja: 0
+bday:
+  m: 11
+  d: 30
+desc:
+  extra:
+    - 不动／UNMOVE
+  main: |-
+    否定能力者，性格怯懦的高中生少年。
+    被黑帮绑架、险些被送到否定者的黑市拍卖会上拍卖时，被安迪和风子所救。
+uuid: cc293c17-741c-4cd9-8ae8-967a29e30b1d
+refs:
+  bangumi: 143072

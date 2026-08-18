@@ -1,0 +1,16 @@
+name:
+  orig: リップ=トリスタン
+  zh: 利普
+  ja: 0
+bday:
+  m: 9
+  d: 17
+desc:
+  extra:
+    - 不治／UNREPAIR
+  main: |-
+    戴着单眼罩的金发青年。
+    隶属与UNION敌对的UNDER组织的否定能力者。主要武器是手术刀和双腿上的神器。
+uuid: d2d3e001-cc63-4beb-b9b5-1b27c33165a5
+refs:
+  bangumi: 143073

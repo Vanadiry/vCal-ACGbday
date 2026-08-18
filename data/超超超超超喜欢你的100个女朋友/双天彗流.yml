@@ -1,0 +1,18 @@
+name:
+  orig:  双天 彗流
+  zh: 双天彗流
+  ja-kana: ふたて える
+  ja: 0
+desc:
+  extra:
+  - No.034
+  main: |-
+    花之蜜大学附属初中1年级1班。与伊院知与、出井祭李同班。
+    留着醒目双马尾的朋克萝莉。
+    对自己的双马尾发型有着异乎寻常的执着。
+bday:
+  m: 2
+  d: 2
+uuid: aff70d59-4077-44e1-b05f-d9ecadc816db
+refs:
+  moegirl: 双天彗流
