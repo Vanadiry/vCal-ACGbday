@@ -1,0 +1,18 @@
+name:
+  orig: 逆蔵 十三
+  zh: 逆藏十三
+  ja: 0
+  ja-kana: さかくら じゅうぞう
+bday:
+  m: 4
+  d: 14
+desc:
+  extra:
+    - 原·超高校级的拳击手
+  main: |-
+    未来机关第六支部支部长。希望之峰学园第74期生。
+    性格粗暴，有着异常高的自尊心。
+uuid: 3243e904-8ded-4c79-851d-92cfbf129334
+refs:
+  bangumi: 40672
+  moegirl: 逆藏十三

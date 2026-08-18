@@ -1,0 +1,18 @@
+name:
+  orig: 狛枝 凪斗
+  zh: 狛枝凪斗
+  ja: 0
+  ja-kana: こまえだ なぎと
+bday:
+  m: 4
+  d: 28
+desc:
+  extra:
+    - 超高校级的幸运
+  main: |-
+    认为自己的才能无足轻重，将其戏谑为“不幸”。
+    但实际上十分信任自己的强运，十分崇拜拥有超高校级的才能的同学们。
+uuid: 2a22382d-c76a-46ee-b99c-2642bcad748a
+refs:
+  moegirl: 狛枝凪斗
+  bangumi: 18041

@@ -1,0 +1,16 @@
+name:
+  orig: 煙 蛇太郎
+  zh: 烟蛇太郎
+  ja: 0
+  ja-kana: ケムリ ジャタロウ
+bday:
+  m: 2
+  d: 29
+desc:
+  extra:
+    - 超小学级的工程的时间
+  main: 僧侣担当，熟知工程。是被自己和他人都认同的招人嫌的人，被其他人讨厌的话会很安心。
+uuid: 035f1452-f5e2-43c0-8e6b-dd2886684742
+refs:
+  moegirl: 烟蛇太郎
+  bangumi: 25918

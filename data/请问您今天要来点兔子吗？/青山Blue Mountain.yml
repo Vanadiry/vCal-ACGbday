@@ -1,9 +1,11 @@
 name:
   orig: 青山 翠
   zh: 青山Blue Mountain
-  ja-kana: あおやま みどり\n青山 ブルーマウンテン
+  ja-kana: あおやま みどり
   ja: 0
 desc:
+  extra:
+    - 青山 ブルーマウンテン
   main: Blue Mountain的名字源自蓝山咖啡（Blue Mountain Coffee）。
 bday:
   m: 10

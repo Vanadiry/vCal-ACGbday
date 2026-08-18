@@ -1,0 +1,16 @@
+name:
+  orig: 新月 渚
+  zh: 新月渚
+  ja: 0
+  ja-kana: シンゲツ ナギサ
+bday:
+  m: 10
+  d: 23
+desc:
+  extra:
+    - 超小学级的社会的时间
+  main: 贤者担当副领队，非常认真发言很像大人，被期待将来会有作为。
+uuid: 56229ed7-b0fe-49ad-ab73-e1cce036498a
+refs:
+  moegirl: 新月渚
+  bangumi: 25919

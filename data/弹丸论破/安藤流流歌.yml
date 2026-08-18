@@ -1,0 +1,17 @@
+name:
+  orig: 安藤 流流歌
+  zh: 安藤流流歌
+  ja: 0
+  ja-kana: あんどう るるか
+bday:
+  m: 11
+  d: 20
+desc:
+  extra:
+    - 超高校级的点心师
+  main: |-
+    第八支部支部长。曾经是希望之峰学园第76期生，后因事故被劝退。 
+uuid: 0c501b2b-d3d0-4f21-aefe-71c6ca9c4264
+refs:
+  bangumi: 40665
+  moegirl: 安藤流流歌

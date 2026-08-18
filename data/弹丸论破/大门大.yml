@@ -1,0 +1,16 @@
+name:
+  orig: 大門 大
+  zh: 大门大
+  ja: 0
+  ja-kana: ダイモン マサル
+bday:
+  m: 5
+  d: 7
+desc:
+  extra:
+    - 超小学级的体育时间
+  main: 擅长运动，性格开朗。在过去长期处于受到家暴的状态而憎恨大人。 
+uuid: 8d5be52c-a1e8-4559-9acc-ccc3c9a66d9c
+refs:
+  moegirl: 大门大(弹丸论破)
+  bangumi: 25916

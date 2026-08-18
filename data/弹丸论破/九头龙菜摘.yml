@@ -1,0 +1,17 @@
+name:
+  orig: 九頭龍 菜摘
+  zh: 九头龙菜摘
+  ja: 0
+  ja-kana: くずりゅう なつみ
+bday:
+  m: 3
+  d: 27
+desc:
+  extra:
+    - 超高校级的妹妹（自称）
+  main: |-
+    九头龙冬彦的妹妹。
+uuid: 8b6b96ed-3324-4e4c-92ef-b1140ea6b4b7
+refs:
+  moegirl: 九头龙菜摘
+  bangumi: 43584

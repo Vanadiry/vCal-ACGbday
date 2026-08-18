@@ -1,0 +1,16 @@
+name:
+  orig: 塔和 モナカ
+  zh: 塔和最中
+  ja: 0
+  ja-kana: とうわ モナカ
+bday:
+  m: 4
+  d: 1
+desc:
+  extra:
+    - 超小学级的班级活动
+  main: 魔法师担当的欢乐气氛制造者，喜欢与大家交换意见的年级活动时间，因此被称做“超小学级的学活的时间”。
+uuid: 8a8b279c-2d27-4eb5-a6f6-52b58b51ed89
+refs:
+  moegirl: 塔和最中
+  bangumi: 25920

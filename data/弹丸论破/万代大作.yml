@@ -1,0 +1,18 @@
+name:
+  orig: 万代 大作
+  zh: 万代大作
+  ja: 0
+  ja-kana: ばんだい だいさく
+bday:
+  m: 4
+  d: 10
+desc:
+  extra:
+    - 超高校级的农民
+  main: |-
+    第十一支部支部长。希望之峰学园第66期生。
+    外表滑稽，声音可爱的温柔男子。 
+uuid: abd987b3-d74f-4e90-9922-70e9e3654c2b
+refs:
+  bangumi: 40675
+  moegirl: 万代大作
