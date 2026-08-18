@@ -3,6 +3,9 @@ name = "vcal-acgbday"
 version = "0.1.0"
 description = "二次元角色生日日历数据生成与检查工具"
 requires-python = ">=3.10"
+authors = [
+    {name = "Vanadiry", email = "v@vanadiry.com"},
+]
 dependencies = [
     "jsonschema>=4.26.0",
     "pyyaml>=6.0.3",
