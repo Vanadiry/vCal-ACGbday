@@ -3,11 +3,17 @@ name:
   zh: 沈希安
   ja: 0
 desc:
-  main: 一位使用武术进行战斗的肌肉发达的人。
+  extra:
+    - 不真实／Untruth
+  main: |-
+    UNION的一员。
+    使用中国武术的肌肉男。
+    喜欢和强者战斗。
+    虽然收到了处决安迪和风子的命令，但因为对他们感兴趣，故劝他们加入UNION。
 bday:
   m: 11
   d: 27
-uuid: ac4bd1a5-c750-47e8-b1cd-41c6cfbd0eb8
+uuid: 922b3ce7-37e4-42d1-9714-46defc92ea35
 refs:
   bangumi: 121953
   moegirl: 沈希安
