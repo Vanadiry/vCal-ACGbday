@@ -1,0 +1,17 @@
+name:
+  orig: 神戸 しお
+  zh: 神户盐
+  ja: 0
+  ja-kana: こうべ しお
+bday:
+  m: 1
+  d: 1
+desc:
+  main: |-
+    在一个雨天被松坂砂糖发现并带回家的小女孩。
+    砂糖因为与她相遇而觉醒了“爱”，而她也对砂糖怀有依恋般的爱。
+    经常对砂糖说出像是婚礼誓词一样的爱的誓言。
+uuid: edaf8ff9-ec56-44c5-a4c0-7fd2ccc16774
+refs:
+  bangumi: 53678
+  moegirl: 神户盐

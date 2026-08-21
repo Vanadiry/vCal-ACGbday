@@ -1,0 +1,14 @@
+name:
+  orig: 神戸 あさひ
+  zh: 神户旭
+  ja: 0
+  ja-kana: こうべ あさひ
+bday:
+  m: 6
+  d: 30
+desc:
+  main: 带兜帽的少年，四处张贴告示寻找神户盐。
+uuid: 9ee3801e-7709-4799-8844-f5569e4154d3
+refs:
+  bangumi: 61902
+  moegirl: 神户旭

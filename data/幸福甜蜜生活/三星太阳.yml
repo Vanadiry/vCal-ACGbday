@@ -1,0 +1,14 @@
+name:
+  orig: 三星 太陽
+  zh: 三星太阳
+  ja: 0
+  ja-kana: みつぼし たいよう
+bday:
+  m: 10
+  d: 4
+desc:
+  main: 对砂糖有好感，向她告白却被拒绝。
+uuid: e4d79b3c-9462-4ae2-9225-c65200317880
+refs:
+  bangumi: 53680
+  moegirl: 三星太阳
