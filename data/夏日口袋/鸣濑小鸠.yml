@@ -1,0 +1,17 @@
+name:
+  orig: 鳴瀬 小鳩
+  zh: 鸣濑小鸠
+  ja: 0
+  ja-kana: なるせ こばと
+bday:
+  m: 12
+  d: 2
+desc:
+  main: |-
+    白羽的祖父。被人称作鸣濑翁。
+    身体上刻着历战的伤痕。
+    最让他感到疼痛的是奶奶的攻击。
+uuid: 5af24676-0972-4e18-adab-a534d0f87b29
+refs:
+  bangumi: 61458
+  moegirl: 鸣濑小鸠

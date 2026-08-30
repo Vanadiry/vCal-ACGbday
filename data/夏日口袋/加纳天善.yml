@@ -1,0 +1,17 @@
+name:
+  orig: 加納 天善
+  zh: 加纳天善
+  ja: 0
+  ja-kana: かの てんぜん
+bday:
+  m: 10
+  d: 10
+desc:
+  main: |-
+    住在岛上的少年2号。
+    有着认真又很酷的外表，却将自己的全部都奉献给了乒乓球，
+    在各种方面的言行举止都很奇怪。 
+uuid: bf8c394a-0708-4961-bd2e-e9dc1f580c6a
+refs:
+  bangumi: 61416
+  moegirl: 加纳天善

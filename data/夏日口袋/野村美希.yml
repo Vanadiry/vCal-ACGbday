@@ -1,0 +1,16 @@
+name:
+  orig: 野村 美希
+  zh: 野村美希
+  ja: 0
+  ja-kana: のむら みき
+bday:
+  m: 2
+  d: 2
+desc:
+  main: |-
+    隶属于鸟白岛少年团治安维护执行部的少女。
+    是岛上的风纪委员。
+uuid: f81c8b88-8441-4d89-97bb-07e6d9e9c464
+refs:
+  bangumi: 61417
+  moegirl: 野村美希

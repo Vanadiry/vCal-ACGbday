@@ -1,0 +1,16 @@
+name:
+  orig: 水織 静久
+  zh: 水织静久
+  ja: 0
+  ja-kana: みずおり しずく
+bday:
+  m: 4
+  d: 29
+desc:
+  main: |-
+    住在岛上的女主角们所就读的本地学校的学生会长。
+    在暑假会为了见䌷而来到岛上。
+uuid: 19d8dac8-d05b-4aa5-a2b1-aa9c580b3b92
+refs:
+  bangumi: 61418
+  moegirl: 水织静久
