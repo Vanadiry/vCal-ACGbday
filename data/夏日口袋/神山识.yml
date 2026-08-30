@@ -4,12 +4,13 @@ name:
   ja: 0
   ja-kana: かみやま しき
 bday:
-  m: 9
-  d: 1
+  m: 7
+  d: 4
 desc:
   main: |-
     来到鸟白岛的喜欢旅行的少女。
     听说鸟白岛也流传着鬼怪传说后，她前来拜访此地。
 uuid: 32ecc097-63ba-4f59-af01-f8a3b1c6213f
 refs:
-  bangumi: 61419
+  bangumi: 73834
+  moegirl: 神山识
