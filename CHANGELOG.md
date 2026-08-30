@@ -4,6 +4,10 @@
 
 ## 历史版本
 
+### 2026.0830.180640
+
+- 修正“神山识”数据错误。[fixed issue #5](https://github.com/Vanadiry/vCal-ACGbday/issues/5)
+
 ### 2026.0830.162131
 
 - 添加了《金牌得主》、《时光流逝，饭菜依旧美味》、《夏日口袋》、《樱之诗》、《樱之刻》中的共计 69 位角色。[completed issue #4](https://github.com/Vanadiry/vCal-ACGbday/issues/4)。
