@@ -10,13 +10,14 @@
 ### 用法
 
 ```text
-vcal check bday [--data DIR] [--report PATH]
+vcal check bday [--data DIR] [--report PATH] [--auth TOKEN]
 ```
 
 | 参数 | 默认 | 说明 |
 | --- |--- | --- |
 | `--data` | `data` | 数据目录 |
 | `--report` | `report/bday_report.yml` | 报告输出路径 |
+| `--auth` | 匿名 | bangumi 访问令牌，用于拉取受限条目 |
 
 执行 `vcal check bday` 时，会自动执行 `vcal check lint`，若不通过，将终止检查。  
 建议手动指定需要检查的目录，因为默认全量检查，非常慢。

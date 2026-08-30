@@ -31,6 +31,11 @@ pip install -e ".[dev]"
 要手动添加数据，在 `data/` 直接添加即可。  
 不过，有一些方便的补全和添加工具，详见 [import](doc/import.md)。
 
+### 番组计划 API
+
+使用番组计划 API 的调用，均支持使用 `--auth` 传入你的令牌。  
+部分受限条目，对于匿名请求会返回 404。令牌可以在[这里](https://next.bgm.tv/demo/access-token)创建。
+
 ## 提交 Pull Request
 
 修改数据之后，在 [CHANGELOG.md](CHANGELOG.md) 的“未发版变更”小节中，记录本次的变化。  

@@ -283,8 +283,12 @@ def main():
     parser = argparse.ArgumentParser(description="生日数据全面检查")
     parser.add_argument("--data", default="data", help="数据目录（默认 data）")
     parser.add_argument("--report", default="report/bday_report.yml", help="报告输出路径")
+    parser.add_argument("--auth", default=None, help="bangumi 访问令牌，用于拉取受限条目")
     parser.add_argument("--no-color", action="store_true", help="关闭彩色输出")
     args = parser.parse_args()
+
+    if args.auth:
+        bangumi.set_token(args.auth)
 
     if args.no_color:
         os.environ["NO_COLOR"] = "1"

@@ -1,21 +1,31 @@
 # bgm API 角色数据抓取。import 或单独运行。
 # 单独运行: python scripts/lib/bangumi.py <character_id>
 
+import argparse
 import json
-import sys
 import time
 
 import requests
 
-UA = "vCal-ACGbday/1.0 (data check; github.com/Vanadiry)"
+UA = "Vanadiry/vCal-ACGbday (https://github.com/Vanadiry/vCal-ACGbday)"
 BASE = "https://api.bgm.tv/v0"
 MAX_RETRY = 3
+TOKEN = None
+
+
+def set_token(token):
+    """设置 bangumi 访问令牌。传入 None/空串 则清除（恢复匿名请求）。"""
+    global TOKEN
+    TOKEN = (token or "").strip() or None
 
 
 def _get(path):
+    headers = {"User-Agent": UA}
+    if TOKEN:
+        headers["Authorization"] = f"Bearer {TOKEN}"
     for attempt in range(MAX_RETRY):
         try:
-            r = requests.get(f"{BASE}{path}", timeout=15, headers={"User-Agent": UA})
+            r = requests.get(f"{BASE}{path}", timeout=15, headers=headers)
             if r.status_code == 200:
                 return r.json()
             if r.status_code == 404:
@@ -71,12 +81,9 @@ def fetch(cid):  # 返回 {found, birth:{year,month,day}, name, detail}
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("用法: python scripts/lib/bangumi.py <character_id>")
-        sys.exit(2)
-    try:
-        cid = int(sys.argv[1])
-    except ValueError:
-        print("character_id 应为整数")
-        sys.exit(2)
-    print(json.dumps(fetch(cid), ensure_ascii=False))
+    parser = argparse.ArgumentParser(description="抓取 bgm 角色数据")
+    parser.add_argument("character_id", type=int, help="角色 id")
+    parser.add_argument("--auth", default=None, help="bangumi 访问令牌，用于拉取受限条目")
+    args = parser.parse_args()
+    set_token(args.auth)
+    print(json.dumps(fetch(args.character_id), ensure_ascii=False))

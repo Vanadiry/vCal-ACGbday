@@ -8,7 +8,7 @@
 ### 用法
 
 ```text
-vcal import fill [--data DIR] [--import-dir DIR] [--report PATH]
+vcal import fill [--data DIR] [--import-dir DIR] [--report PATH] [--auth TOKEN]
 ```
 
 | 参数 | 默认 | 说明 |
@@ -16,6 +16,7 @@ vcal import fill [--data DIR] [--import-dir DIR] [--report PATH]
 | `--data` | `data` | 数据目录 |
 | `--import-dir` | `import` | 输出目录（生成的角色放这里） |
 | `--report` | `import/report.yml` | 无生日/失败角色的报告 |
+| `--auth` | 匿名 | bangumi 访问令牌，用于拉取受限条目 |
 
 ### 流程
 
@@ -45,13 +46,16 @@ vcal import fill [--data DIR] [--import-dir DIR] [--report PATH]
 ### 用法
 
 ```text
-vcal import tracker [--tracker PATH] [--import-dir DIR]
+vcal import tracker [--tracker PATH] [--import-dir DIR] [--auth TOKEN]
 ```
 
 | 参数 | 默认 | 说明 |
 | --- | --- | --- |
 | `--tracker` | `import/tracker.yml` | tracker 文件路径 |
 | `--import-dir` | `import` | 输出目录 |
+| `--auth` | 匿名 | bangumi 访问令牌，用于拉取受限条目 |
+
+> 受限条目需要 `--auth` 提供访问令牌，否则会被当作 404 跳过。
 
 ### 流程
 
