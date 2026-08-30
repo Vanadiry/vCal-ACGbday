@@ -1,0 +1,15 @@
+name:
+  orig: 栗尾根 茉莉花
+  zh: 栗尾根茉莉花
+  ja: 0
+  ja-kana: くりおね まりか
+bday:
+  m: 5
+  d: 15
+desc:
+  main: |-
+    名城Crown FSC的高中生。
+    是中部地区B级强化选手之一，一副千金小姐的样子，但性格有点天然呆。对后辈们很温柔。
+uuid: cd5af36c-92e7-47f2-968f-02ad22c33a09
+refs:
+  bangumi: 193787

@@ -1,0 +1,17 @@
+name:
+  orig: 夜鷹 純
+  zh: 夜鹰纯
+  ja: 夜鷹 純
+  ja-kana: よだか じゅん
+bday:
+  m: 12
+  d: 30
+desc:
+  main: |-
+    男子花滑天才选手，初次参加奥运会就获得了冠军。
+    担任狼崎光的教练，但是外界鲜有人知。
+    性格很差，多次言语打击小祈和司。 
+uuid: 43c031f9-aed5-4f6b-b21a-a6dbde6fef30
+refs:
+  bangumi: 112480
+  moegirl: 夜鹰纯

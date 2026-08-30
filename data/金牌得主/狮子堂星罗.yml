@@ -1,0 +1,13 @@
+name:
+  orig: 獅子堂 星羅
+  zh: 狮子堂星罗
+  ja: 0
+  ja-kana: ししどう せいら
+bday:
+  m: 5
+  d: 7
+desc:
+  main: 五年级。来自广岛之星花滑俱乐部。其父是日本前速滑代表选手。
+uuid: 6c4eebcb-4b0f-4bbb-8f7c-e8caae9eb69a
+refs:
+  bangumi: 112483

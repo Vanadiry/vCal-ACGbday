@@ -1,0 +1,15 @@
+name:
+  orig: 炉場 まなか
+  zh: 炉场爱花
+  ja: 0
+  ja-kana: ろば まなか
+bday:
+  m: 2
+  d: 3
+desc:
+  main: |-
+    爱西骑乘（爱西凌驰）FSC的小学六年级学生。
+    性格开朗，不畏教练五里和前辈海豚，擅长运用舞蹈编排作为武器。
+uuid: 36f33e93-f07f-4f8e-96d8-cf59b1f5b481
+refs:
+  bangumi: 112502
