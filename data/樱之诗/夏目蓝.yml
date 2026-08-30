@@ -1,0 +1,16 @@
+name:
+  orig: 夏目 藍
+  zh: 夏目蓝
+  ja: 0
+  ja-kana: なつめ あい
+bday:
+  m: 8
+  d: 25
+desc:
+  main: |-
+    如今夏目家的长女。
+    教师&美术部的顾问。作为现国语教师就任于主人公们就读的学园。 
+uuid: 35da7126-8635-4dfe-9847-2464aeec1252
+refs:
+  bangumi: 23611
+  moegirl: 夏目蓝
