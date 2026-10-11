@@ -31,7 +31,7 @@ def normalize_event(block):
 
 
 def read_existing_events(path):
-    """读取已有 ICS，返回 UID -> (DTSTAMP, 事件内容)。"""
+    """读取已有 ICS，返回 UID -> (DTSTAMP, 事件内容, 原始内容)。"""
     mapping = {}
     if not path.exists():
         return mapping
@@ -42,7 +42,7 @@ def read_existing_events(path):
         # 兼容迁移前的 VALUE=DATE 写法
         stamp = re.search(r"^DTSTAMP(?:;VALUE=DATE)?:(\d{8}(?:T\d{6}Z)?)$", block, re.M)
         if uid and stamp:
-            mapping[uid.group(1)] = (stamp.group(1), normalize_event(block))
+            mapping[uid.group(1)] = (stamp.group(1), normalize_event(block), block)
     return mapping
 
 
@@ -83,6 +83,7 @@ def main():
         old_events = read_existing_events(out_path)
 
         events = []
+        changed = False
         for work in works:
             info = work["info"]
             for character in work["characters"]:
@@ -100,10 +101,19 @@ def main():
                 old = old_events.get(uid)
                 if old and normalize_event(ev) == old[1]:
                     ev = ev.replace(f"DTSTAMP:{build_meta['dtstamp']}", f"DTSTAMP:{old[0]}", 1)
+                else:
+                    changed = True
                 events.append(ev)
 
         header = build_header(global_info, version["info"], ics_config)
-        update = build_update_event(global_info, ics_config, version["info"]["name"], build_meta)
+        old_update = old_events.get(build_meta["uuid"])
+        if changed or old_update is None:
+            update = build_update_event(
+                global_info, ics_config, version["info"]["name"], build_meta
+            )
+        else:
+            # 无任何条目变化时不发新版本号，原样沿用上次构建的 update 事件
+            update = f"BEGIN:VEVENT\n{old_update[2]}\nEND:VEVENT"
         content = "\n\n".join([header, update, *events]) + "\nEND:VCALENDAR"
         out_path.write_text(content, encoding="utf-8")
         print(f"已生成 {out_path}")
