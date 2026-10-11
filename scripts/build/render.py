@@ -7,6 +7,13 @@ def _join_line(parts):
     return "／".join(p for p in parts if p)
 
 
+def _wrap(bracket, value):
+    # bracket 取首尾两字作开闭符号，不足两字则原样输出
+    if isinstance(bracket, str) and len(bracket) >= 2:
+        return f"{bracket[0]}{value}{bracket[1]}"
+    return str(value)
+
+
 def render_desc(desc_config, character, info):
     """按 config 渲染角色描述。返回多行字符串（行间 \n，块间 \n\n）。"""
     blocks = []
@@ -39,15 +46,15 @@ def render_desc(desc_config, character, info):
                         block_lines.append(_join_line(parts))
                 elif "field" in item:
                     val = resolve(item["field"], character, info)
-                    bracket = item.get("bracket", "")
+                    bracket = item.get("bracket")
                     if val is None:
                         continue
                     if isinstance(val, list):
                         for v in val:
                             if v:
-                                block_lines.append(f"{bracket[0]}{v}{bracket[1]}")
+                                block_lines.append(_wrap(bracket, v))
                     elif val:
-                        block_lines.append(f"{bracket[0]}{val}{bracket[1]}")
+                        block_lines.append(_wrap(bracket, val))
         if block_lines:
             blocks.append("\n".join(block_lines))
     return "\n\n".join(blocks)
