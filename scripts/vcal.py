@@ -14,17 +14,19 @@ def main():
     check = sub.add_parser("check", help="检查数据与产物")
     check_sub = check.add_subparsers(dest="check_target", required=True)
 
-    check_sub.add_parser("lint", help="结构检查")
-    check_sub.add_parser("uuid", help="uuid 标准化")
-    check_sub.add_parser("bday", help="生日数据检查")
-    check_sub.add_parser("dist", help="检查 dist 产物")
+    # 叶子子命令本身不带参数，其自动添加的 -h/--help 会遮蔽真实命令的 --help，
+    # 故关闭，让 --help 透传给实际处理该命令的模块。
+    check_sub.add_parser("lint", help="结构检查", add_help=False)
+    check_sub.add_parser("uuid", help="uuid 标准化", add_help=False)
+    check_sub.add_parser("bday", help="生日数据检查", add_help=False)
+    check_sub.add_parser("dist", help="检查 dist 产物", add_help=False)
 
-    sub.add_parser("build", help="构建产物")
+    sub.add_parser("build", help="构建产物", add_help=False)
 
     imp = sub.add_parser("import", help="数据导入")
     imp_sub = imp.add_subparsers(dest="import_target", required=True)
-    imp_sub.add_parser("fill", help="从 bangumi 补全缺失角色")
-    imp_sub.add_parser("tracker", help="从 tracker.yml 拉取整部作品")
+    imp_sub.add_parser("fill", help="从 bangumi 补全缺失角色", add_help=False)
+    imp_sub.add_parser("tracker", help="从 tracker.yml 拉取整部作品", add_help=False)
 
     args, rest = parser.parse_known_args()
 
