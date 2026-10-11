@@ -125,20 +125,17 @@ def check_ics(path):
     return problems
 
 
-def main():
-    parser = argparse.ArgumentParser(description="检查 dist 下 ICS 合法性")
-    parser.add_argument("--dist", default="dist", help="dist 目录")
-    args = parser.parse_args()
-
-    dist = Path(args.dist)
+def check_dist(dist):
+    """检查目录下所有 ICS，返回问题总数。"""
+    dist = Path(dist)
     if not dist.is_dir():
         print(error(f"目录不存在: {dist}"))
-        sys.exit(2)
+        return 1
 
     ics_files = sorted(dist.glob("*.ics"))
     if not ics_files:
         print(warn("没有找到 .ics 文件"))
-        sys.exit(0)
+        return 0
 
     total_problems = 0
     for p in ics_files:
@@ -154,7 +151,14 @@ def main():
     print()
     print(bold("== 结果 =="))
     print(f"  文件: {len(ics_files)}, 问题: {total_problems}")
-    sys.exit(1 if total_problems else 0)
+    return total_problems
+
+
+def main():
+    parser = argparse.ArgumentParser(description="检查 dist 下 ICS 合法性")
+    parser.add_argument("--dist", default="dist", help="dist 目录")
+    args = parser.parse_args()
+    sys.exit(1 if check_dist(args.dist) else 0)
 
 
 if __name__ == "__main__":

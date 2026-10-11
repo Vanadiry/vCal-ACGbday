@@ -8,6 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.check.dist_ics import check_dist
 from scripts.check.lint import run_lint
 
 from .config import load_config
@@ -133,6 +134,11 @@ def main():
         suffix = version.get("file", "")
         filename = f"{ics_config['file']}{suffix}.js"
         report(out / filename, content)
+
+    dist_errs = check_dist(args.output)
+    if dist_errs != 0:
+        print("\n产物检查未通过，请修正后重新构建")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
