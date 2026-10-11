@@ -23,6 +23,16 @@ from scripts.lib.import_common import (
 )
 from scripts.lib.status import status_mark
 
+TRACKER_TEMPLATE = """\
+- name: "作品文件夹名1"
+  subject: # bangumi subject id 数组，多季作品应当全部记录
+    - 111
+    - 222
+- name: "作品文件夹名2"
+  subject:
+    - 333
+"""
+
 
 def load_tracker(path):
     items = yaml.safe_load(path.read_text(encoding="utf-8"))
@@ -62,7 +72,10 @@ def main():
 
     tracker_path = Path(args.tracker)
     if not tracker_path.exists():
-        print(f"{info('tracker 不存在')}: {tracker_path}")
+        tracker_path.parent.mkdir(parents=True, exist_ok=True)
+        tracker_path.write_text(TRACKER_TEMPLATE, encoding="utf-8")
+        print(f"{info('已创建示例 tracker')}: {tracker_path}")
+        print("请编辑后重新执行")
         sys.exit(1)
     works = load_tracker(tracker_path)
     if not works:
