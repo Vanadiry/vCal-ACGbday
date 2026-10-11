@@ -46,6 +46,15 @@ def read_existing_events(path):
     return mapping
 
 
+def report(path, content):
+    """写入产物。内容与已有文件相同时不重写，并如实告知。"""
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        print(f"无变化 {path}")
+        return
+    path.write_text(content, encoding="utf-8")
+    print(f"已生成 {path}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="构建 ICS 文件")
     parser.add_argument("--config", default="config.yml")
@@ -115,18 +124,15 @@ def main():
             # 无任何条目变化时不发新版本号，原样沿用上次构建的 update 事件
             update = f"BEGIN:VEVENT\n{old_update[2]}\nEND:VEVENT"
         content = "\n\n".join([header, update, *events]) + "\nEND:VCALENDAR"
-        out_path.write_text(content, encoding="utf-8")
-        print(f"已生成 {out_path}")
+        report(out_path, content)
 
-    (out / "list.md").write_text(build_list(works), encoding="utf-8")
-    print(f"已生成 {out / 'list.md'}")
+    report(out / "list.md", build_list(works))
 
     for version_name, version in config.get("js", {}).items():
         content = build_js(works, version, version_name, global_info, global_config)
         suffix = version.get("file", "")
         filename = f"{ics_config['file']}{suffix}.js"
-        (out / filename).write_text(content, encoding="utf-8")
-        print(f"已生成 {out / filename}")
+        report(out / filename, content)
 
 
 if __name__ == "__main__":
