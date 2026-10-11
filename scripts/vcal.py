@@ -52,6 +52,10 @@ def main():
     imp_sub.add_parser("fill", help="从 bangumi 补全缺失角色", add_help=False)
     imp_sub.add_parser("tracker", help="从 tracker.yml 拉取整部作品", add_help=False)
 
+    tool = sub.add_parser("tool", help="其他工具")
+    tool_sub = tool.add_subparsers(dest="tool_target", required=True)
+    tool_sub.add_parser("clean", help="清理构建产物", add_help=False)
+
     args, rest = parser.parse_known_args()
 
     handlers = {
@@ -62,6 +66,7 @@ def main():
         ("build",): ("scripts.build.build", "main"),
         ("import", "fill"): ("scripts.import.fill", "main"),
         ("import", "tracker"): ("scripts.import.tracker", "main"),
+        ("tool", "clean"): ("scripts.tool.clean", "main"),
     }
 
     key = (args.command,)
@@ -69,6 +74,8 @@ def main():
         key = (args.command, args.check_target)
     elif args.command == "import":
         key = (args.command, args.import_target)
+    elif args.command == "tool":
+        key = (args.command, args.tool_target)
 
     if key not in handlers:
         parser.print_help()

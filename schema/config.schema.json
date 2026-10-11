@@ -6,6 +6,35 @@
   "type": "object",
   "required": ["global", "ics"],
   "properties": {
+    "tool": {
+      "description": "工具配置。",
+      "type": "object",
+      "properties": {
+        "clean": {
+          "description": "清理构建产物。路径均相对项目根目录。",
+          "type": "object",
+          "properties": {
+            "target": {
+              "description": "直接删除的目录或文件。",
+              "type": "array",
+              "items": { "$ref": "#/$defs/filename" }
+            },
+            "suffix": {
+              "description": "按目录名精确匹配、递归删除的后缀列表。",
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "skip": {
+              "description": "不进入、不删除的目录名。",
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
     "global": { "$ref": "#/$defs/global" },
     "ics": {
       "description": "ICS 版本定义。键为版本名，每个版本生成一个 ics 文件。产物文件名为 global.ics.file + 本版本的 info.file，版本间不得重复。",

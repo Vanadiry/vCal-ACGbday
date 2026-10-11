@@ -3,6 +3,19 @@
 # 字段引用：@ 开头表示读取数据字段（如 @name.zh 读取角色中文名，@info.name.orig 读取作品原名）
 # 无 @ 的字符串为字面量
 
+# 工具配置
+tool:
+  clean:
+    target: # 直接删除的目录或文件，相对项目根目录
+      - "report"
+      - ".ruff_cache"
+    suffix: # 按名称后缀递归查找并删除的目录
+      - "__pycache__"
+      - ".egg-info"
+    skip: # 跳过不进入的目录名
+      - ".venv"
+      - ".git"
+
 # 全局配置
 global:
   info:
