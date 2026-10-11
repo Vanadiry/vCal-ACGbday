@@ -21,7 +21,7 @@ BG_BLUE = "\033[44m"
 BG_MAGENTA = "\033[45m"
 BG_CYAN = "\033[46m"
 
-# 关闭颜色（非 tty 或 NO_COLOR 环境变量时）
+# 关闭颜色：非 tty（管道 / CI）时自动关闭，或设置 NO_COLOR 环境变量
 _USE_COLOR = sys.stdout.isatty() and not os.environ.get("NO_COLOR")
 
 

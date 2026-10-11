@@ -56,16 +56,10 @@ def main():
     parser.add_argument("--tracker", default="import/tracker.yml", help="tracker 文件路径")
     parser.add_argument("--import-dir", default="import", help="import 输出目录")
     parser.add_argument("--auth", default=None, help="bangumi 访问令牌，用于拉取受限条目")
-    parser.add_argument("--no-color", action="store_true")
     args = parser.parse_args()
 
     if args.auth:
         bangumi.set_token(args.auth)
-
-    if args.no_color:
-        import os
-
-        os.environ["NO_COLOR"] = "1"
 
     tracker_path = Path(args.tracker)
     if not tracker_path.exists():

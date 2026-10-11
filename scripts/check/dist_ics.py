@@ -41,7 +41,6 @@ def check_ics(path):
 def main():
     parser = argparse.ArgumentParser(description="检查 dist 下 ICS 合法性")
     parser.add_argument("--dist", default="dist", help="dist 目录")
-    parser.add_argument("--no-color", action="store_true")
     args = parser.parse_args()
 
     dist = Path(args.dist)

@@ -1,7 +1,6 @@
 # 将版本位非 1-5 的 uuid 重写为标准 v4（小写）
 
 import argparse
-import os
 import re
 import sys
 import uuid as uuid_mod
@@ -33,11 +32,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="标准化 uuid 为 v4（小写）")
     parser.add_argument("--data", default="data", help="数据目录（默认 data）")
-    parser.add_argument("--no-color", action="store_true", help="关闭彩色输出")
     args = parser.parse_args()
-
-    if args.no_color:
-        os.environ["NO_COLOR"] = "1"
 
     data_dir = Path(args.data)
     if not data_dir.is_dir():

@@ -2,7 +2,6 @@
 
 import argparse
 import json
-import os
 import re
 import sys
 from collections import Counter
@@ -192,11 +191,7 @@ def main():
     parser = argparse.ArgumentParser(description="vCal-ACGbday data lint")
     parser.add_argument("--data", default="data", help="数据目录（默认 data）")
     parser.add_argument("--report", default="report/lint_report.yml", help="报告输出路径")
-    parser.add_argument("--no-color", action="store_true", help="关闭彩色输出")
     args = parser.parse_args()
-
-    if args.no_color:
-        os.environ["NO_COLOR"] = "1"
 
     errs = run_lint(args.data, args.report)
     sys.exit(0 if errs == 0 else 1)
