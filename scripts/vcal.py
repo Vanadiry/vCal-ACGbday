@@ -2,12 +2,36 @@
 
 import argparse
 import sys
+import tomllib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+PROJECT_NAME = "vcal-acgbday"
+
+
+def check_project_root():
+    """校验当前目录是项目根目录。返回错误信息，无误则返回 None。
+
+    以 pyproject.toml 的 project.name 为准而非目录名：
+    目录名会随 fork、clone 改名而变化，pyproject 内容不会。
+    """
+    p = Path("pyproject.toml")
+    if not p.is_file():
+        return f"当前目录不是项目根目录（未找到 {p}），请 cd 到项目目录后再执行"
+    with open(p, "rb") as f:
+        name = tomllib.load(f)["project"]["name"]
+    if name != PROJECT_NAME:
+        return f"当前目录的项目名 {name!r} 不是 {PROJECT_NAME!r}，请 cd 到项目目录后再执行"
+    return None
+
 
 def main():
+    err = check_project_root()
+    if err:
+        print(f"vcal: {err}", file=sys.stderr)
+        sys.exit(2)
+
     parser = argparse.ArgumentParser(prog="vcal", description="vCal-ACGbday 工具")
     sub = parser.add_subparsers(dest="command", required=True)
 

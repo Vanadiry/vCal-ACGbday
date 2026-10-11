@@ -41,4 +41,4 @@ ignore = [
 ]
 
 [tool.setuptools]
-packages = ["scripts", "scripts.lib", "scripts.check", "scripts.build", "scripts.import"]
+packages = ["scripts", "scripts.lib", "scripts.check", "scripts.build", "scripts.import", "scripts.tool"]
