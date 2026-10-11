@@ -489,22 +489,16 @@ name = "vcal-acgbday"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "icalendar" },
     { name = "jsonschema" },
     { name = "pyyaml" },
     { name = "requests" },
 ]
 
-[package.dev-dependencies]
-dev = [
-    { name = "icalendar" },
-]
-
 [package.metadata]
 requires-dist = [
+    { name = "icalendar", specifier = ">=7.3.0" },
     { name = "jsonschema", specifier = ">=4.26.0" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "requests", specifier = ">=2.34.2" },
 ]
-
-[package.metadata.requires-dev]
-dev = [{ name = "icalendar", specifier = ">=7.2.2" }]

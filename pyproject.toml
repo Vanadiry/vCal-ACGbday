@@ -7,6 +7,7 @@ authors = [
     {name = "Vanadiry", email = "v@vanadiry.com"},
 ]
 dependencies = [
+    "icalendar>=7.3.0",
     "jsonschema>=4.26.0",
     "pyyaml>=6.0.3",
     "requests>=2.34.2",
@@ -14,11 +15,6 @@ dependencies = [
 
 [project.scripts]
 vcal = "scripts.vcal:main"
-
-[dependency-groups]
-dev = [
-    "icalendar>=7.2.2",
-]
 
 [build-system]
 requires = ["setuptools>=61.0"]
