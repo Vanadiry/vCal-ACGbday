@@ -87,7 +87,7 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
     tasks = []
     for sname, getter in (("bangumi", bangumi.fetch), ("moegirl", moegirl.fetch)):
         sid = refs.get("bangumi") if sname == "bangumi" else refs.get("moegirl")
-        if sid is None:
+        if not sid:
             continue
         key = int(sid) if sname == "bangumi" else sid
         tasks.append((sname, getter, key))
