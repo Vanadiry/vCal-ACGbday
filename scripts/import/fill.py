@@ -125,6 +125,8 @@ def main():
         out_dir = import_dir / work["folder"]
         out_dir.mkdir(parents=True, exist_ok=True)
         filename = _strip(char["name"].get("zh") or char["name"]["orig"])
+        if not filename or filename == "0":
+            filename = str(cid)
         out = out_dir / f"{filename}.yml"
         body = yaml.dump(
             char,
