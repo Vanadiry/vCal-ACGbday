@@ -11,9 +11,9 @@ from pathlib import Path
 import yaml
 from jsonschema import Draft202012Validator, FormatChecker
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from check.config import run_config_check
-from lib.color import bold, error, info, ok, warn
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.check.config import run_config_check
+from scripts.lib.color import bold, error, info, ok, warn
 
 CONTROL_CHAR_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 

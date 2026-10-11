@@ -1,12 +1,14 @@
 # 构建配置检查：按 schema 校验 config.yml，并补充 schema 无法表达的跨条目检查。
 
 import json
+import sys
 from pathlib import Path
 
 import yaml
 from jsonschema import Draft202012Validator
 
-from lib.color import error, info, ok
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.lib.color import error, info, ok
 
 _SCHEMAS = {}
 

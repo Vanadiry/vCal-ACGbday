@@ -6,7 +6,7 @@ import uuid as uuid_mod
 
 import yaml
 
-from lib.status import status_mark
+from .status import status_mark
 
 CONCURRENCY = 12
 STOP_PAUSE = 30

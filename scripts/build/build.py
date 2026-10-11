@@ -7,9 +7,8 @@ import uuid as uuid_mod
 from datetime import datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "check"))
-from check.lint import run_lint
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.check.lint import run_lint
 
 from .config import load_config
 from .ics import build_character_event, build_header, build_update_event

@@ -10,11 +10,10 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
-from lib import bangumi
-from lib.color import info
-from lib.import_common import (
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.lib import bangumi
+from scripts.lib.color import info
+from scripts.lib.import_common import (
     CONCURRENCY,
     BlockDumper,
     RateController,
@@ -23,7 +22,7 @@ from lib.import_common import (
     guarded_get,
     make_character,
 )
-from lib.status import status_mark
+from scripts.lib.status import status_mark
 
 
 def load_works(data_dir):

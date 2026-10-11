@@ -1,6 +1,6 @@
 # 通用状态标记。Y=PASS(绿) X=不符(红) ?=新增(橙)
 
-from color import color
+from .color import color
 
 STATUS_Y = color("Y", "\033[32m")
 STATUS_X = color("X", "\033[31m")

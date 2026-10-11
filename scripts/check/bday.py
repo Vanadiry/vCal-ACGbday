@@ -10,11 +10,10 @@ from pathlib import Path
 
 import yaml
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib import bangumi, moegirl
-from lib.status import status_mark
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.check.lint import run_lint
+from scripts.lib import bangumi, moegirl
+from scripts.lib.status import status_mark
 
 
 class BlockDumper(yaml.SafeDumper):
@@ -313,8 +312,6 @@ def main():
     print(f"扫描: {len(files)} 个角色", flush=True)
 
     # 前置 lint 检查，不通过则终止
-    from lint import run_lint
-
     lint_errs = run_lint(data_dir, str(Path(args.report).with_suffix(".lint.yml")))
     if lint_errs != 0:
         print("\nlint 检查未通过，请先修正数据再运行 vc-bday")
