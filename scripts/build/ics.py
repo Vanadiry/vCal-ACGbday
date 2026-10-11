@@ -12,6 +12,16 @@ def _strip_name(name):
     return str(name).replace(" ", "").replace("　", "") if name else ""
 
 
+def escape_text(value):
+    """转义 TEXT 值（RFC 5545 §3.3.11）。顺序不可调换。"""
+    s = str(value)
+    # 必须最先处理反斜杠，否则后面新加的反斜杠会被二次转义
+    s = s.replace("\\", "\\\\")
+    s = s.replace(";", "\\;")
+    s = s.replace(",", "\\,")
+    return s.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
+
+
 def build_header(global_info, version_info, ics_config):
     suffix = version_info.get("suffix", "")
     prodid_name = f"{global_info['name']} {suffix}".strip()
@@ -21,7 +31,7 @@ def build_header(global_info, version_info, ics_config):
         "VERSION:2.0",
         f"PRODID:-//{global_info['author']}//{prodid_name}//{version_info['language']}_{version_info['region']}",
         "CALSCALE:GREGORIAN",
-        f"X-WR-CALNAME:{calname_name} - {global_info['aname']}",
+        f"X-WR-CALNAME:{escape_text(calname_name + ' - ' + global_info['aname'])}",
         f"X-APPLE-LANGUAGE:{version_info['language']}",
         f"X-APPLE-REGION:{version_info['region']}",
         "",
@@ -40,14 +50,14 @@ def build_update_event(global_info, ics_config, category, build_meta):
         "contributors:",
         *global_info["contributors"],
     ]
-    desc = "\\n".join(desc_parts)
+    desc = escape_text("\n".join(desc_parts))
     lines = [
         "BEGIN:VEVENT",
-        f"SUMMARY;LANGUAGE=zh_CN:{build_meta['summary']}",
+        f"SUMMARY;LANGUAGE=zh_CN:{escape_text(build_meta['summary'])}",
         f"DTSTART;VALUE=DATE:{build_meta['update_dtstart']}0101",
         f"DESCRIPTION:{desc}",
         f"DTSTAMP:{build_meta['dtstamp']}",
-        f"CATEGORIES:{category}",
+        f"CATEGORIES:{escape_text(category)}",
         "CLASS:PUBLIC",
         "TRANSP:TRANSPARENT",
         f"UID:{build_meta['uuid']}",
@@ -62,7 +72,7 @@ def build_character_event(character, info, version, ics_config, dtstamp=None):
     summary = f"{_strip_name(name)}{version['summary']['suffix']}"
     location = _val(version["location"], character, info) or ""
 
-    desc = render_desc(version["desc"], character, info).replace("\n", "\\n")
+    desc = escape_text(render_desc(version["desc"], character, info))
 
     bday = character.get("bday", {})
     m, d = bday.get("m"), bday.get("d")
@@ -72,12 +82,12 @@ def build_character_event(character, info, version, ics_config, dtstamp=None):
 
     lines = [
         "BEGIN:VEVENT",
-        f"SUMMARY;LANGUAGE=zh_CN:{summary}",
+        f"SUMMARY;LANGUAGE=zh_CN:{escape_text(summary)}",
         f"DTSTART;VALUE=DATE:{date}",
-        f"LOCATION:{location}",
+        f"LOCATION:{escape_text(location)}",
         f"DESCRIPTION:{desc}",
         f"DTSTAMP:{dtstamp}",
-        f"CATEGORIES:{category}",
+        f"CATEGORIES:{escape_text(category)}",
         f"RRULE:FREQ={ics_config['loop']}",
         "CLASS:PUBLIC",
         "TRANSP:TRANSPARENT",
