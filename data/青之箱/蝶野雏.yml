@@ -1,0 +1,15 @@
+name:
+  orig: 蝶野 雛
+  zh: 蝶野雏
+  ja: 0
+  ja-kana: ちょうの ひな
+bday:
+  m: 3
+  d: 2
+desc:
+  main: |-
+    高一，猪股大喜的同学，艺术体操部成员。
+uuid: f49c453e-8d3f-4a84-b807-c3f5c77afdb9
+refs:
+  bangumi: 107704
+  moegirl: 蝶野雏

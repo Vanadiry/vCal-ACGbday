@@ -1,0 +1,16 @@
+name:
+  orig: 猪股 大喜
+  zh: 猪股大喜
+  ja: 0
+  ja-kana: いのまた たいき
+bday:
+  m: 1
+  d: 15
+desc:
+  main: |-
+    高一，男子羽毛球部成员。
+    与笠原匡、蝶野雏是连续三年的同班同学。
+uuid: 318c7c79-1abe-4e0b-ad10-217886491467
+refs:
+  bangumi: 107702
+  moegirl: 猪股大喜
