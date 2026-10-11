@@ -98,7 +98,13 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
             results = pool.map(lambda t: (t[0], t[1](t[2])), tasks)
             for sname, res in results:
                 if not res["found"] or res["birth"] is None:
-                    unavailable.append((sname, res.get("detail") or "无生日数据"))
+                    unavailable.append(
+                        (
+                            sname,
+                            res.get("detail") or "无生日数据",
+                            res.get("status", "no_data"),
+                        )
+                    )
                     continue
                 for k in ("month", "day", "year"):
                     v = res["birth"][k]
@@ -110,16 +116,25 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
     counts = Counter()
     local_map = {"month": bday.get("m"), "day": bday.get("d"), "year": bday.get("y")}
 
-    # 区分 404 与无数据，收集提示
-    nodata_hints = []  # 非 404 的缺失源
-    gone_404 = []  # 404 的源
-    for sname, detail in unavailable:
-        if "404" in (detail or ""):
+    # 按状态分类：源消失 / 无生日 / 源不可用
+    nodata_hints = []  # 源可达但无生日字段
+    gone_404 = []  # 源已消失
+    src_failed = []  # 源不可用（限速/请求失败），本次结论不可信
+    for sname, detail, status in unavailable:
+        if status == "not_found":
             gone_404.append(sname)
-        else:
+        elif status == "no_data":
             nodata_hints.append(sname)
+        else:
+            src_failed.append((sname, detail))
     if unavailable:
-        entry["unavailable"] = [{"source": s, "detail": d} for s, d in unavailable]
+        entry["unavailable"] = [
+            {"source": s, "status": st, "detail": d} for s, d, st in unavailable
+        ]
+    if src_failed:
+        counts["unavailable"] += len(src_failed)
+        for sname, detail in src_failed:
+            issues.append((f"refs:{sname}", "X", detail or "源不可用"))
 
     # 月/日判定
     for k in ("month", "day"):
@@ -328,6 +343,12 @@ def main():
         print(f"  {k}: {v}")
     write_report(args.report, files, items, counts, total)
     print(f"\n报告已写入: {args.report}")
+    if counts["unavailable"]:
+        print(
+            f"\n有 {counts['unavailable']} 处数据源不可用（限速或请求失败），"
+            "本次结果不可信。\n待源恢复后重跑：vcal check bday"
+        )
+        sys.exit(1)
 
 
 def write_report(report_path, files, items, counts, processed):

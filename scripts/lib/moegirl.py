@@ -44,7 +44,8 @@ def _extract_birth(text):
     return None
 
 
-def fetch(name):  # 返回 {found, birth:{year,month,day}, name, detail}
+def fetch(name):  # 返回 {found, birth:{year,month,day}, name, detail, status}
+    # status: ok / no_data / not_found / unavailable
     result = {"found": False, "birth": None, "name": None, "detail": None}
     url = BASE.format(name=quote(name))
     for attempt in range(MAX_RETRY):
@@ -52,28 +53,37 @@ def fetch(name):  # 返回 {found, birth:{year,month,day}, name, detail}
             r = requests.get(url, timeout=20, headers={"User-Agent": UA})
             if r.status_code == 403:
                 result["detail"] = f"403 限速 (第{attempt + 1}次)"
+                result["status"] = "unavailable"
                 if attempt < MAX_RETRY - 1:
                     time.sleep(RETRY_WAIT)
                     continue
                 return result
             if r.status_code == 404:
                 result["detail"] = "404 页面不存在"
+                result["status"] = "not_found"
                 return result
             if r.status_code != 200:
                 result["detail"] = f"HTTP {r.status_code}"
+                result["status"] = "unavailable"
                 return result
             aid = re.search(r'"wgArticleId":(\d+)', r.text)
             if aid and aid.group(1) == "0":
                 result["detail"] = "页面不存在"
+                result["status"] = "not_found"
                 return result
             birth = _extract_birth(r.text)
             result["found"] = True
             result["name"] = name
             result["birth"] = birth
-            result["detail"] = "无生日字段" if birth is None else None
+            if birth is None:
+                result["detail"] = "无生日字段"
+                result["status"] = "no_data"
+            else:
+                result["status"] = "ok"
             return result
         except requests.RequestException as e:
             result["detail"] = f"请求异常 {e}"
+            result["status"] = "unavailable"
             if attempt < MAX_RETRY - 1:
                 time.sleep(2)
     return result

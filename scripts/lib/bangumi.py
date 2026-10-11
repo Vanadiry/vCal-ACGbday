@@ -23,6 +23,7 @@ def _get(path):
     headers = {"User-Agent": UA}
     if TOKEN:
         headers["Authorization"] = f"Bearer {TOKEN}"
+    last = "请求失败"
     for attempt in range(MAX_RETRY):
         try:
             r = requests.get(f"{BASE}{path}", timeout=15, headers=headers)
@@ -32,11 +33,12 @@ def _get(path):
                 return None
             if r.status_code == 403:
                 return {"rate_limited": True}
+            last = f"HTTP {r.status_code}"
         except requests.RequestException as e:
             return {"error": str(e)}
         if attempt < MAX_RETRY - 1:
             time.sleep(2 * (attempt + 1))
-    return None
+    return {"error": last}
 
 
 def fetch_subject(sid):
@@ -57,14 +59,21 @@ def fetch_character(cid):
     return _get(f"/characters/{cid}")
 
 
-def fetch(cid):  # 返回 {found, birth:{year,month,day}, name, detail}
+def fetch(cid):  # 返回 {found, birth:{year,month,day}, name, detail, status}
+    # status: ok / no_data / not_found / unavailable
     result = {"found": False, "birth": None, "name": None, "detail": None}
     d = fetch_character(cid)
     if d is None:
         result["detail"] = "404 不存在"
+        result["status"] = "not_found"
+        return result
+    if isinstance(d, dict) and d.get("rate_limited"):
+        result["detail"] = "403 限速"
+        result["status"] = "unavailable"
         return result
     if isinstance(d, dict) and "error" in d:
         result["detail"] = f"请求异常 {d['error']}"
+        result["status"] = "unavailable"
         return result
     birth = {
         "year": d.get("birth_year"),
@@ -73,8 +82,10 @@ def fetch(cid):  # 返回 {found, birth:{year,month,day}, name, detail}
     }
     if not any(v is not None for v in birth.values()):
         result["detail"] = "无生日数据"
+        result["status"] = "no_data"
     else:
         result["birth"] = birth
+        result["status"] = "ok"
     result["found"] = True
     result["name"] = d.get("name")
     return result
