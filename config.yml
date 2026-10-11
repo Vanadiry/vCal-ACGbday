@@ -28,6 +28,7 @@ global:
   ics:
     file: "vCal_ACGbday"              # 基础文件名，产物为 <file><版本后缀>.ics
     dtstart: 2026                     # 角色生日 DTSTART 的年份（固定，RRULE 每年循环）
+    dtstart_leap: 2024                # 2 月 29 日专用的年份，闰年
     loop: "YEARLY"                    # RRULE 循环规则
     alarm: "-PT4H"                    # VALARM 提醒提前量
   js:

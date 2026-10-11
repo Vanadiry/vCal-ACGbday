@@ -116,7 +116,9 @@ def build_character_event(character, info, version, ics_config, dtstamp=None):
     m, d = bday.get("m"), bday.get("d")
     if not m or not d:
         return None
-    date = f"{ics_config['dtstart']}{m:02d}{d:02d}"
+    # 2 月 29 日在平年不存在，锚点须另取闰年（config.global.ics.dtstart_leap）
+    year = ics_config["dtstart_leap"] if (m, d) == (2, 29) else ics_config["dtstart"]
+    date = f"{year}{m:02d}{d:02d}"
 
     lines = [
         "BEGIN:VEVENT",

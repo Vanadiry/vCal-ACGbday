@@ -106,11 +106,17 @@
         "ics": {
           "description": "ICS 公共配置。",
           "type": "object",
-          "required": ["file", "dtstart", "loop", "alarm"],
+          "required": ["file", "dtstart", "dtstart_leap", "loop", "alarm"],
           "properties": {
             "file": { "$ref": "#/$defs/filename" },
             "dtstart": {
               "description": "角色生日 DTSTART 的年份（固定，RRULE 每年循环）。",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9999
+            },
+            "dtstart_leap": {
+              "description": "2 月 29 日专用的 DTSTART 年份，须为闰年。2 月 29 日在平年不存在，RFC 5545 要求展开时忽略无效日期，故锚点须选一个闰年。",
               "type": "integer",
               "minimum": 1,
               "maximum": 9999
