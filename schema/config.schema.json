@@ -20,7 +20,7 @@
               "items": { "$ref": "#/$defs/filename" }
             },
             "suffix": {
-              "description": "按目录名精确匹配、递归删除的后缀列表。",
+              "description": "按目录名后缀递归删除的后缀列表。",
               "type": "array",
               "items": { "type": "string", "minLength": 1 }
             },

@@ -38,9 +38,8 @@ def collect_targets(cfg):
 
     # 按后缀递归查找
     if suffix:
-        wanted = set(suffix)
         for p in sorted(Path(".").rglob("*")):
-            if not p.is_dir() or p.name not in wanted:
+            if not p.is_dir() or not any(p.name.endswith(s) for s in suffix):
                 continue
             # 跳过路径上任一段命中 skip 的
             if any(part in skip for part in p.relative_to(".").parts[:-1]):
