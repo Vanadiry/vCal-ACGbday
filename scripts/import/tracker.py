@@ -179,7 +179,8 @@ def main():
 
     try:
         with ThreadPoolExecutor(max_workers=CONCURRENCY) as pool:
-            pool.map(lambda t: process_character(*t), char_tasks)
+            for _ in pool.map(lambda t: process_character(*t), char_tasks):
+                pass
     except StopOnRateLimit:
         print(f"\n{info('连续 403，任务停止')}")
         sys.exit(1)
