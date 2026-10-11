@@ -6,10 +6,13 @@
 ## 环境准备
 
 需要 `python >= 3.11`。  
-推荐使用虚拟环境。
+推荐使用 `uv`，并创建虚拟环境。
 
-```python
-pip install -e ".[dev]"
+克隆项目后，同步环境，并激活虚拟环境。
+
+```shell
+uv sync
+source .venv/bin/activate # 视你系统而定
 ```
 
 ## 数据
