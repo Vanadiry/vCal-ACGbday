@@ -17,18 +17,32 @@ from .list import build_list
 from .loader import load_data
 
 
-def read_existing_dtstamps(path):
-    """读取已有 ICS 的 UID -> DTSTAMP 映射。"""
+def normalize_event(block):
+    """剔除 DTSTAMP 与 BEGIN/END:VEVENT，得到事件的实际内容。
+
+    比对两侧必须走同一个函数，否则格式差异会被误判为内容变化。
+    """
+    lines = block.split("\n")
+    return "\n".join(
+        line
+        for line in lines
+        if line not in ("BEGIN:VEVENT", "END:VEVENT") and not line.startswith("DTSTAMP")
+    )
+
+
+def read_existing_events(path):
+    """读取已有 ICS，返回 UID -> (DTSTAMP, 事件内容)。"""
     mapping = {}
     if not path.exists():
         return mapping
     content = path.read_text(encoding="utf-8")
     for m in re.finditer(r"BEGIN:VEVENT\n(.*?)\nEND:VEVENT", content, re.S):
         block = m.group(1)
-        uid = re.search(r"UID:(.+)", block)
-        stamp = re.search(r"DTSTAMP;VALUE=DATE:(\d{8})", block)
+        uid = re.search(r"^UID:(.+)$", block, re.M)
+        # 兼容迁移前的 VALUE=DATE 写法
+        stamp = re.search(r"^DTSTAMP(?:;VALUE=DATE)?:(\d{8}(?:T\d{6}Z)?)$", block, re.M)
         if uid and stamp:
-            mapping[uid.group(1)] = stamp.group(1)
+            mapping[uid.group(1)] = (stamp.group(1), normalize_event(block))
     return mapping
 
 
@@ -55,8 +69,9 @@ def main():
     now = datetime.now()
     build_meta = {
         "version": f"{now.year}.{now.month:02d}{now.day:02d}.{now.hour:02d}{now.minute:02d}{now.second:02d}",
-        "uuid": str(uuid_mod.uuid4()),
-        "dtstamp": now.strftime("%Y%m%d"),
+        # 固定 UUID，使各版本的 update 事件原地更新而非每次新增
+        "uuid": str(uuid_mod.uuid5(uuid_mod.NAMESPACE_URL, f"vcal-update-{ics_config['file']}")),
+        "dtstamp": now.strftime("%Y%m%dT%H%M%SZ"),
         "update_dtstart": now.year - 1,
         "summary": global_info["name"],
     }
@@ -65,22 +80,27 @@ def main():
         suffix = version["info"].get("file", "")
         filename = f"{ics_config['file']}{suffix}.ics"
         out_path = out / filename
-        old_dtstamps = read_existing_dtstamps(out_path)
+        old_events = read_existing_events(out_path)
 
         events = []
         for work in works:
             info = work["info"]
             for character in work["characters"]:
-                dtstamp = old_dtstamps.get(character.get("uuid"))
                 ev = build_character_event(
                     character,
                     info,
                     version,
                     ics_config,
-                    dtstamp=dtstamp or build_meta["dtstamp"],
+                    dtstamp=build_meta["dtstamp"],
                 )
-                if ev:
-                    events.append(ev)
+                if ev is None:
+                    continue
+                # 内容与上次构建一致则沿用旧 DTSTAMP，客户端据此忽略更新
+                uid = character["uuid"]
+                old = old_events.get(uid)
+                if old and normalize_event(ev) == old[1]:
+                    ev = ev.replace(f"DTSTAMP:{build_meta['dtstamp']}", f"DTSTAMP:{old[0]}", 1)
+                events.append(ev)
 
         header = build_header(global_info, version["info"], ics_config)
         update = build_update_event(global_info, ics_config, version["info"]["name"], build_meta)
