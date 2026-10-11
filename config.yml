@@ -11,7 +11,7 @@ tool:
       - ".ruff_cache"
     suffix: # 按名称后缀递归查找并删除的目录
       - "__pycache__"
-      - ".egg-info"
+      # - ".egg-info"
     skip: # 跳过不进入的目录名
       - ".venv"
       - ".git"
