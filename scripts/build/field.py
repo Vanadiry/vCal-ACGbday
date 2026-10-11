@@ -7,14 +7,16 @@ def resolve(ref, character, info):
         return ref
     path = ref[1:].split(".")
     if path[0] == "info":
-        obj = info
+        root = info
         path = path[1:]
     else:
-        obj = character
+        root = character
+    obj = root
     for key in path:
         if not isinstance(obj, dict) or key not in obj:
             return None
         obj = obj[key]
-    if obj == 0:
-        obj = character.get("name", {}).get("orig")
+    if type(obj) is int and obj == 0:
+        # 0 表示该语言的名称等同于本条目自身的 orig，回退到所属条目的 orig
+        return (root.get("name") or {}).get("orig")
     return obj

@@ -12,12 +12,19 @@ def _char_name(char, field):
     return _strip(name)
 
 
+def _work_name(info, field):
+    name = (info.get("name") or {}).get(field)
+    if name == 0:
+        name = (info.get("name") or {}).get("orig")
+    return _strip(name)
+
+
 def build_list(works):
     blocks = []
     for work in works:
         info = work["info"]
-        work_zh = _strip((info.get("name") or {}).get("zh"))
-        work_orig = _strip((info.get("name") or {}).get("orig"))
+        work_zh = _work_name(info, "zh")
+        work_orig = _work_name(info, "orig")
         blocks.append(f"#### {work_zh}")
         if work_orig:
             blocks.append(f"**《{work_orig}》**  ")
