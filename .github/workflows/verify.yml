@@ -1,4 +1,4 @@
-name: lint
+name: verify
 
 on:
   push:
@@ -11,23 +11,26 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.11"
+          enable-cache: true
 
       - name: Install dependencies
-        run: pip install -e ".[dev]"
+        run: uv sync --frozen --python 3.11
 
       - name: Run ruff
-        run: pip install --upgrade ruff && ruff check .
+        run: uv run --with ruff ruff check .
 
       - name: Run lint
-        run: vcal check lint
+        run: uv run vcal check lint
 
       - name: Check dist
-        run: vcal check dist
+        run: uv run vcal check dist
+
+      - name: Build
+        run: uv run vcal build --output "${{ runner.temp }}/dist"
