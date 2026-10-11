@@ -10,6 +10,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from scripts.lib.color import error, info, ok, warn
+from scripts.lib.yaml_edit import set_scalar
 
 UUID_FMT_RE = re.compile(
     r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
@@ -17,19 +18,7 @@ UUID_FMT_RE = re.compile(
 )
 
 
-class BlockDumper(yaml.SafeDumper):
-    pass
-
-
-def str_rep(dumper, data):
-    if "\n" in data:
-        return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
-    return dumper.represent_scalar("tag:yaml.org,2002:str", data)
-
-
 def main():
-    BlockDumper.add_representer(str, str_rep)
-
     parser = argparse.ArgumentParser(description="标准化 uuid 为 v4（小写）")
     parser.add_argument("--data", default="data", help="数据目录（默认 data）")
     args = parser.parse_args()
@@ -75,20 +64,9 @@ def main():
 
     rewritten = 0
     for p, _old, _why in invalid:
-        data = yaml.safe_load(p.read_text(encoding="utf-8"))
         new_uuid = str(uuid_mod.uuid4()).lower()
-        data["uuid"] = new_uuid
-        p.write_text(
-            yaml.dump(
-                data,
-                Dumper=BlockDumper,
-                allow_unicode=True,
-                sort_keys=False,
-                default_flow_style=False,
-            ),
-            encoding="utf-8",
-        )
-        rewritten += 1
+        if set_scalar(p, "", "uuid", new_uuid):
+            rewritten += 1
 
     print(f"\n{ok(f'已重写 {rewritten} 个 uuid')}")
 

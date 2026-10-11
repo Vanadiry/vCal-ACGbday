@@ -14,16 +14,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from scripts.check.lint import run_lint
 from scripts.lib import bangumi, moegirl
 from scripts.lib.status import status_mark
+from scripts.lib.yaml_edit import set_scalar
 
 
-class BlockDumper(yaml.SafeDumper):
-    pass
-
-
-def str_rep(dumper, data):
-    if "\n" in data:
-        return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
-    return dumper.represent_scalar("tag:yaml.org,2002:str", data)
+def _patch_year(path, year):
+    """补写缺失的年份。仅改动 bday 块内该字段，其余内容逐字节保留。"""
+    set_scalar(path, "bday:", "y", year)
 
 
 # 判定
@@ -166,18 +162,7 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
         # 允许自动补全
         assert isinstance(y_note, tuple) and len(y_note) == 2
         src_name, val = y_note
-        bday["y"] = val
-        d["bday"] = bday
-        p.write_text(
-            yaml.dump(
-                d,
-                Dumper=BlockDumper,
-                allow_unicode=True,
-                sort_keys=False,
-                default_flow_style=False,
-            ),
-            encoding="utf-8",
-        )
+        _patch_year(p, val)
         counts["patched_year"] += 1
         entry["sources"]["year"] = {
             "local": None,
@@ -205,18 +190,7 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
             if len(has_year) == 1:
                 src_name = has_year[0]
                 val = [v for s, v in year_srcs if s == src_name][0]
-                bday["y"] = val
-                d["bday"] = bday
-                p.write_text(
-                    yaml.dump(
-                        d,
-                        Dumper=BlockDumper,
-                        allow_unicode=True,
-                        sort_keys=False,
-                        default_flow_style=False,
-                    ),
-                    encoding="utf-8",
-                )
+                _patch_year(p, val)
                 counts["patched_year"] += 1
                 entry["sources"]["year"] = {
                     "local": None,
@@ -292,8 +266,6 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
 
 
 def main():
-    BlockDumper.add_representer(str, str_rep)
-
     parser = argparse.ArgumentParser(description="生日数据全面检查")
     parser.add_argument("--data", default="data", help="数据目录（默认 data）")
     parser.add_argument("--report", default="report/bday_report.yml", help="报告输出路径")
