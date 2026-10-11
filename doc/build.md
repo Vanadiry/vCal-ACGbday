@@ -14,7 +14,7 @@ vcal build [--config config.yml] [--data data] [--output dist]
 | `--data` | `data` | 数据目录 |
 | `--output` | `dist` | 输出目录 |
 
-执行 `vcal build` 时，会自动执行 `vcal check lint`，若不通过，将终止构建。
+执行 `vcal build` 时，会自动执行 `vcal check lint`（含 `config.yml` 检查），若不通过，将终止构建。
 
 ## 产物
 

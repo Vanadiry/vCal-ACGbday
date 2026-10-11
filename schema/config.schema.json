@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vanadiry.com/vcal/acgbday/schema/config.schema.json",
+  "title": "构建配置 (Build Config)",
+  "description": "config.yml 的完整结构。",
+  "type": "object",
+  "required": ["global", "ics"],
+  "properties": {
+    "global": { "$ref": "#/$defs/global" },
+    "ics": {
+      "description": "ICS 版本定义。键为版本名，每个版本生成一个 ics 文件。产物文件名为 global.ics.file + 本版本的 info.file，版本间不得重复。",
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "$ref": "#/$defs/versionName" },
+      "additionalProperties": { "$ref": "#/$defs/icsVersion" }
+    },
+    "js": {
+      "description": "JS 版本定义。键为版本名，每个版本生成一个 js 文件。产物文件名为 global.ics.file + 本版本的 file，版本间不得重复。",
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "$ref": "#/$defs/versionName" },
+      "additionalProperties": { "$ref": "#/$defs/jsVersion" }
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "description": "定义了 js 版本就必须有 global.js.notfound（生成 js 时无条件读取）。",
+      "if": { "required": ["js"] },
+      "then": {
+        "properties": {
+          "global": { "required": ["js"] }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "versionName": {
+      "description": "版本名，小写字母开头，可含数字和连字符。",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "fieldRef": {
+      "description": "字段引用，@ 开头表示读取数据字段，无 @ 则为字面量。",
+      "type": "string",
+      "minLength": 1
+    },
+    "filename": {
+      "description": "文件名片段，不得含路径分隔符。",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^/\\\\]+$"
+    },
+    "global": {
+      "description": "全局配置。",
+      "type": "object",
+      "required": ["info", "ics"],
+      "properties": {
+        "info": {
+          "description": "项目元信息。",
+          "type": "object",
+          "required": ["author", "name", "aname", "website", "contributors"],
+          "properties": {
+            "author": { "description": "作者，用于 PRODID 和 js 头部注释。", "type": "string", "minLength": 1 },
+            "name": { "description": "日历全名，用于 PRODID 和 update 事件 SUMMARY。", "type": "string", "minLength": 1 },
+            "aname": { "description": "缩写名，X-WR-CALNAME 后缀。", "type": "string", "minLength": 1 },
+            "website": { "description": "项目地址，记录在 update 事件 DESCRIPTION。", "type": "string", "minLength": 1 },
+            "contributors": {
+              "description": "贡献者列表，记录在 update 事件 DESCRIPTION，每个一行。",
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "ics": {
+          "description": "ICS 公共配置。",
+          "type": "object",
+          "required": ["file", "dtstart", "loop", "alarm"],
+          "properties": {
+            "file": { "$ref": "#/$defs/filename" },
+            "dtstart": {
+              "description": "角色生日 DTSTART 的年份（固定，RRULE 每年循环）。",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9999
+            },
+            "loop": {
+              "description": "RRULE 的 FREQ 部分。",
+              "enum": ["SECONDLY", "MINUTELY", "HOURLY", "DAILY", "WEEKLY", "MONTHLY", "YEARLY"]
+            },
+            "alarm": {
+              "description": "VALARM 的 TRIGGER 前置量，RFC 5545 duration 格式。",
+              "type": "string",
+              "pattern": "^[+-]?P.+"
+            }
+          },
+          "additionalProperties": false
+        },
+        "js": {
+          "description": "JS 公共配置。",
+          "type": "object",
+          "required": ["notfound"],
+          "properties": {
+            "notfound": {
+              "description": "当天没有角色生日时的显示文案。该值被直接拼进 js 的双引号字符串，含引号、反斜杠或换行会导致 js 语法错误。",
+              "type": "string",
+              "pattern": "^[^\"\\\\\\n\\r]*$"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "icsVersion": {
+      "description": "单个 ICS 版本。",
+      "type": "object",
+      "required": ["info", "summary", "location", "desc"],
+      "properties": {
+        "info": {
+          "description": "本版本的元信息。",
+          "type": "object",
+          "required": ["name", "language", "region"],
+          "properties": {
+            "name": { "description": "X-WR-CALNAME 和 CATEGORIES 用。", "type": "string", "minLength": 1 },
+            "language": { "description": "PRODID 语言。", "type": "string", "minLength": 1 },
+            "region": { "description": "PRODID 地区。", "type": "string", "minLength": 1 },
+            "file": { "$ref": "#/$defs/filename" },
+            "suffix": { "description": "元数据后缀，PRODID 和 X-WR-CALNAME 追加。", "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "summary": {
+          "description": "事件标题的构成。字段值去空格后接上 suffix。",
+          "type": "object",
+          "required": ["field", "suffix"],
+          "properties": {
+            "field": { "$ref": "#/$defs/fieldRef" },
+            "suffix": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "location": {
+          "description": "LOCATION 使用的字段引用。",
+          "$ref": "#/$defs/fieldRef"
+        },
+        "desc": {
+          "description": "DESCRIPTION 的组织方式。块之间空一行，行之间换行。",
+          "type": "array",
+          "items": { "$ref": "#/$defs/descBlock" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "descBlock": {
+      "description": "一个块。",
+      "type": "object",
+      "required": ["block"],
+      "properties": {
+        "block": {
+          "description": "块内的行。",
+          "type": "array",
+          "items": { "$ref": "#/$defs/descItem" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "descItem": {
+      "description": "块内的一项：字段引用或字面量、多个字段连成一行（用全角斜杠／分隔）、或单字段加可选包裹符号。",
+      "anyOf": [
+        { "$ref": "#/$defs/fieldRef" },
+        {
+          "type": "object",
+          "required": ["line"],
+          "properties": {
+            "line": { "type": "array", "items": { "$ref": "#/$defs/fieldRef" } }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["field"],
+          "properties": {
+            "field": { "$ref": "#/$defs/fieldRef" },
+            "bracket": {
+              "description": "包裹符号，取首尾两字作开闭符号。省略则不包裹，写单个字符会静默失效。",
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "jsVersion": {
+      "description": "单个 JS 版本。",
+      "type": "object",
+      "required": ["character", "location"],
+      "properties": {
+        "character": { "description": "角色显示名使用的字段引用。", "$ref": "#/$defs/fieldRef" },
+        "location": { "description": "作品名（分组 key）使用的字段引用。", "$ref": "#/$defs/fieldRef" },
+        "file": { "$ref": "#/$defs/filename" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

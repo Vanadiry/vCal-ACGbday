@@ -2,7 +2,7 @@
 
 ## check lint
 
-校验 `data/` 下所有数据文件是否符合 schema。
+校验 `config.yml` 与 `data/` 下所有数据文件是否符合 schema。
 
 ```text
 vcal check lint [--data DIR] [--report PATH]
@@ -19,6 +19,7 @@ vcal check lint [--data DIR] [--report PATH]
 2. **危险字符**：控制字符等可能导致崩溃的内容
 3. **uuid**：重复和不规范的 uuid
 4. **命名冲突**：同名角色，uuid 相同则报错，uuid 不同则警告
+5. **构建配置**：按 `schema/config.schema.json` 校验 `config.yml`，并检查各版本产物文件名是否冲突
 
 ## check uuid
 

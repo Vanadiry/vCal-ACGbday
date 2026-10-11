@@ -12,6 +12,7 @@ import yaml
 from jsonschema import Draft202012Validator, FormatChecker
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from check.config import run_config_check
 from lib.color import bold, error, info, ok, warn
 
 CONTROL_CHAR_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
@@ -124,6 +125,8 @@ def run_lint(data_dir, report_path):
     all_errors = []
     all_warnings = []
 
+    config_errs = run_config_check()
+
     for p in char_files:
         rel = p.relative_to(data_dir)
         for e in check_file(p, "character.schema.json", data_dir):
@@ -172,6 +175,7 @@ def run_lint(data_dir, report_path):
             "info_files": len(info_files),
             "errors": len(all_errors),
             "warnings": len(all_warnings),
+            "config_errors": config_errs,
         },
         "errors": all_errors,
         "warnings": all_warnings,
@@ -184,7 +188,7 @@ def run_lint(data_dir, report_path):
     )
     print(f"\n{info(f'报告已写入: {report_path}')}")
 
-    return len(all_errors)
+    return len(all_errors) + config_errs
 
 
 def main():
