@@ -125,6 +125,40 @@ def check_ics(path):
     return problems
 
 
+def classify(problem):
+    """把问题归类，返回 (类别, 说明)。"""
+    if "超长" in problem:
+        return "行超长", "RFC 5545 §3.1，上限 75 octet"
+    if "未转义" in problem:
+        return "未转义", "RFC 5545 §3.3.11，TEXT 值中 , ; \\ 须转义"
+    if "UID 重复" in problem:
+        return "UID 重复", "重复 UID 会让客户端只保留其中一条"
+    if "日期不存在" in problem:
+        return "非法日期", "如 2 月 30 日，须为真实存在的日期"
+    if "缺少" in problem:
+        return "缺少字段", "UID / SUMMARY / DTSTART / DTSTAMP 为必需"
+    if "无法解析" in problem or "解析失败" in problem:
+        return "解析失败", "无法按内容行解析"
+    return "其他", ""
+
+
+def print_problems(name, problems, per_group=3):
+    """按类型分组输出，避免同类问题刷屏淹没关键信息。"""
+    print(f"{error('E')} {name}")
+    groups = {}
+    for p in problems:
+        groups.setdefault(classify(p), []).append(p)
+    for (category, hint), items in sorted(groups.items(), key=lambda kv: -len(kv[1])):
+        head = f"  {bold(category)} {len(items)} 条"
+        if hint:
+            head += f" · {hint}"
+        print(head)
+        for p in items[:per_group]:
+            print(f"    {p}")
+        if len(items) > per_group:
+            print(f"    {warn(f'…… 还有 {len(items) - per_group} 条同类')}")
+
+
 def check_dist(dist):
     """检查目录下所有 ICS，返回问题总数。"""
     dist = Path(dist)
@@ -142,9 +176,7 @@ def check_dist(dist):
         problems = check_ics(p)
         if problems:
             total_problems += len(problems)
-            print(f"{error('E')} {p.name}")
-            for pr in problems[:10]:
-                print(f"    {pr}")
+            print_problems(p.name, problems)
         else:
             print(f"{ok('OK')} {p.name}")
 
