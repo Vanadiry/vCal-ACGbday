@@ -22,6 +22,44 @@ def escape_text(value):
     return s.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
 
 
+def fold(line, limit=75):
+    """按 octet 折行（RFC 5545 §3.1）。续行以单个空格开头。
+
+    优先在预算内最后一个转义换行处断开；找不到则按字符边界硬切。
+    断点只影响可读性，客户端展开时都会还原为同一字符串。
+    """
+    raw = line.encode("utf-8")
+    if len(raw) <= limit:
+        return line
+    chunks = []
+    pos = 0
+    first = True
+    while pos < len(raw):
+        budget = limit if first else limit - 1  # 续行的前导空格占 1 octet
+        cut = min(pos + budget, len(raw))
+        # 优先在转义换行 \n 处断开，太靠前则不用，避免浪费行
+        nl = raw.rfind(b"\\n", pos, cut)
+        if nl != -1 and nl - pos >= budget // 2:
+            cut = nl + 2
+        else:
+            # 回退到字符边界：raw[cut] 为续接字节(10xxxxxx)说明切在多字节字符中间
+            while cut < len(raw) and cut > pos and (raw[cut] & 0xC0) == 0x80:
+                cut -= 1
+            if cut == pos:
+                # limit 远大于单个字符的最大字节数，此分支仅作防御
+                cut = min(pos + 4, len(raw))
+        chunk = raw[pos:cut].decode("utf-8")
+        chunks.append(chunk if first else " " + chunk)
+        pos = cut
+        first = False
+    return "\n".join(chunks)
+
+
+def fold_lines(text, limit=75):
+    """对一段以换行分隔的内容逐行折行。"""
+    return "\n".join(fold(line, limit) for line in text.split("\n"))
+
+
 def build_header(global_info, version_info, ics_config):
     suffix = version_info.get("suffix", "")
     prodid_name = f"{global_info['name']} {suffix}".strip()
@@ -36,7 +74,7 @@ def build_header(global_info, version_info, ics_config):
         f"X-APPLE-REGION:{version_info['region']}",
         "",
     ]
-    return "\n".join(lines)
+    return fold_lines("\n".join(lines))
 
 
 def build_update_event(global_info, ics_config, category, build_meta):
@@ -63,7 +101,7 @@ def build_update_event(global_info, ics_config, category, build_meta):
         f"UID:{build_meta['uuid']}",
         "END:VEVENT",
     ]
-    return "\n".join(lines)
+    return fold_lines("\n".join(lines))
 
 
 def build_character_event(character, info, version, ics_config, dtstamp=None):
@@ -98,4 +136,4 @@ def build_character_event(character, info, version, ics_config, dtstamp=None):
         "END:VALARM",
         "END:VEVENT",
     ]
-    return "\n".join(lines)
+    return fold_lines("\n".join(lines))

@@ -40,24 +40,49 @@ DTSTAMP_RE = re.compile(r"^DTSTAMP(?:;VALUE=DATE)?:(\d{8})(?:T\d{6}Z)?$")
 
 
 def check_lines(text):
-    """逐行检查内容行规范（RFC 5545 §3.1 / §3.3.11）。"""
+    """逐行检查内容行规范（RFC 5545 §3.1 / §3.3.11）。
+
+    宽度按物理行判断（折行后每行都应 ≤75 octet）；属性名与 TEXT 转义
+    按逻辑行判断，续行以空格开头，合并进所属逻辑行。
+    """
     problems = []
-    for lineno, line in enumerate(text.split("\n"), 1):
-        if not line:
+    logical = None  # 当前逻辑行的 (起始行号, 内容)
+    for lineno, physical in enumerate(text.split("\n"), 1):
+        if not physical:
             continue
-        name = re.match(r"^([A-Z-]+)(;[^:]*)?:(.*)$", line)
-        if not name:
-            problems.append(f"第 {lineno} 行无法解析: {line[:40]}")
-            continue
-        prop, value = name.group(1), name.group(3)
-        # 内容行不得超过 75 octet（§3.1），续行以空格开头，不单独检查
-        width = len(line.encode("utf-8"))
+        # 宽度看物理行
+        width = len(physical.encode("utf-8"))
         if width > 75:
-            problems.append(f"第 {lineno} 行超长 {width} octet（上限 75）: {prop}")
-        if prop in TEXT_PROPS:
-            bad = find_unescaped(value)
-            if bad:
-                problems.append(f"第 {lineno} 行 {prop} 含未转义字符 {bad}")
+            head = physical[:32] + ("…" if len(physical) > 32 else "")
+            problems.append(f"第 {lineno} 行超长 {width} octet（上限 75）: {head}")
+        if physical.startswith(" "):
+            # 续行：并入上一逻辑行，去掉前导空格
+            if logical is None:
+                problems.append(f"第 {lineno} 行以空格开头，但无上一逻辑行")
+                logical = (lineno, physical[1:])
+            else:
+                logical = (logical[0], logical[1] + physical[1:])
+            continue
+        if logical is not None:
+            problems += check_logical(*logical)
+        logical = (lineno, physical)
+    if logical is not None:
+        problems += check_logical(*logical)
+    return problems
+
+
+def check_logical(lineno, line):
+    """检查一条逻辑行的属性名与 TEXT 转义。"""
+    problems = []
+    name = re.match(r"^([A-Z-]+)(;[^:]*)?:(.*)$", line)
+    if not name:
+        problems.append(f"第 {lineno} 行无法解析: {line[:40]}")
+        return problems
+    prop, value = name.group(1), name.group(3)
+    if prop in TEXT_PROPS:
+        bad = find_unescaped(value)
+        if bad:
+            problems.append(f"第 {lineno} 行 {prop} 含未转义字符 {bad}")
     return problems
 
 
