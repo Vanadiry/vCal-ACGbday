@@ -76,19 +76,19 @@ def check_name_conflicts(char_files):
     return [(n, items) for n, items in by_name.items() if len(items) > 1]
 
 
-def check_text_safety(obj, path, errs):  # 危险字符检查
+def check_text_safety(obj, errs):  # 危险字符检查，路径前缀由调用方统一拼
     if isinstance(obj, str):
         m = CONTROL_CHAR_RE.search(obj)
         if m:
-            errs.append(f"{path}: 含控制字符 U+{ord(m.group(0)):04X}（可能导致崩溃）")
+            errs.append(f"含控制字符 U+{ord(m.group(0)):04X}（可能导致崩溃）")
     elif isinstance(obj, dict):
         for k, v in obj.items():
             if isinstance(k, str):
-                check_text_safety(k, path, errs)
-            check_text_safety(v, path, errs)
+                check_text_safety(k, errs)
+            check_text_safety(v, errs)
     elif isinstance(obj, list):
         for item in obj:
-            check_text_safety(item, path, errs)
+            check_text_safety(item, errs)
 
 
 def check_bday(data, errs):  # 月日组合须为真实日期，schema 只能约束 m≤12、d≤31
@@ -113,7 +113,7 @@ def check_file(p, schema_name, data_dir):  # 校验单个 yml 文件，返回错
     if not isinstance(data, dict):
         return ["顶层应为 object"]
     errs = schema_errors(data, schema_name)
-    check_text_safety(data, str(p.relative_to(data_dir)), errs)
+    check_text_safety(data, errs)
     check_bday(data, errs)
     return errs
 
