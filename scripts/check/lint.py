@@ -105,6 +105,19 @@ def check_bday(data, errs):  # 月日组合须为真实日期，schema 只能约
         errs.append(f"bday: {m}/{d} 不是有效日期，该月最多 {last} 天")
 
 
+def check_filename(p, data, errs):  # 文件名须等于中文名，zh 为 0 时等同 orig
+    if p.name == "_info.yml":
+        return
+    name = data.get("name")
+    if not isinstance(name, dict):
+        return
+    zh = name.get("zh")
+    if zh == 0:
+        zh = name.get("orig")
+    if isinstance(zh, str) and zh and p.stem != zh:
+        errs.append(f"文件名与 name.zh 不一致，应为 {zh!r}")
+
+
 def check_file(p, schema_name, data_dir):  # 校验单个 yml 文件，返回错误列表
     try:
         data = yaml.safe_load(p.read_text(encoding="utf-8"))
@@ -115,6 +128,7 @@ def check_file(p, schema_name, data_dir):  # 校验单个 yml 文件，返回错
     errs = schema_errors(data, schema_name)
     check_text_safety(data, errs)
     check_bday(data, errs)
+    check_filename(p, data, errs)
     return errs
 
 
