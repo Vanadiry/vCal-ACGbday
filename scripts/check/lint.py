@@ -6,7 +6,6 @@ import json
 import re
 import sys
 from collections import Counter
-from datetime import datetime
 from pathlib import Path
 
 import yaml
@@ -15,6 +14,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from scripts.check.config import run_config_check
 from scripts.lib.color import bold, error, info, ok, warn
+from scripts.lib.report import Report
 
 CONTROL_CHAR_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 
@@ -199,25 +199,18 @@ def run_lint(data_dir, report_path):
     clean_files = len(char_files) + len(info_files) - len({e["file"] for e in all_errors})
     print(f"  {ok(f'无错误文件: {clean_files}')}")
 
-    report = {
-        "generated": datetime.now().isoformat(timespec="seconds"),
-        "data_dir": str(data_dir),
-        "summary": {
-            "character_files": len(char_files),
-            "info_files": len(info_files),
-            "errors": len(all_errors),
-            "warnings": len(all_warnings),
-            "config_errors": config_errs,
-        },
-        "errors": all_errors,
-        "warnings": all_warnings,
-    }
-    report_path = Path(report_path)
-    report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(
-        yaml.safe_dump(report, allow_unicode=True, sort_keys=False, default_flow_style=False),
-        encoding="utf-8",
-    )
+    with Report(report_path, data_dir=str(data_dir)) as rep:
+        for e in all_errors:
+            rep.add("errors", e)
+        for w in all_warnings:
+            rep.add("warnings", w)
+        rep.finish(
+            character_files=len(char_files),
+            info_files=len(info_files),
+            errors=len(all_errors),
+            warnings=len(all_warnings),
+            config_errors=config_errs,
+        )
     print(f"\n{info(f'报告已写入: {report_path}')}")
 
     return len(all_errors) + config_errs

@@ -5,7 +5,6 @@ import argparse
 import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
 from pathlib import Path
 
 import yaml
@@ -13,6 +12,8 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from scripts.check.lint import run_lint
 from scripts.lib import bangumi, moegirl
+from scripts.lib.color import info
+from scripts.lib.report import Report
 from scripts.lib.status import status_mark
 from scripts.lib.yaml_edit import set_scalar
 
@@ -289,48 +290,29 @@ def main():
         print("\nlint 检查未通过，请先修正数据再运行 vc-bday")
         sys.exit(1)
 
-    items = []
     counts = Counter()
     total = len(files)
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        results = pool.map(process_one, files, range(total), [total] * total)
-        for i, (entry, issues, line, c) in enumerate(results):
-            counts.update(c)
-            if issues:
-                items.append(entry)
-            print(line, flush=True)
-            write_report(args.report, files, items, counts, i + 1)
+    with Report(args.report) as rep:
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            results = pool.map(process_one, files, range(total), [total] * total)
+            for entry, issues, line, c in results:
+                counts.update(c)
+                if issues:
+                    rep.add("items", entry)
+                print(line, flush=True)
+        rep.finish(total=total, processed=total, **dict(counts))
 
     # 汇总
     print("\n== 汇总 ==")
     for k, v in counts.items():
         print(f"  {k}: {v}")
-    write_report(args.report, files, items, counts, total)
-    print(f"\n报告已写入: {args.report}")
+    print(f"\n{info(f'报告已写入: {args.report}')}")
     if counts["unavailable"]:
         print(
             f"\n有 {counts['unavailable']} 处数据源不可用（限速或请求失败），"
             "本次结果不可信。\n待源恢复后重跑：vcal check bday"
         )
         sys.exit(1)
-
-
-def write_report(report_path, files, items, counts, processed):
-    report = {
-        "generated": datetime.now().isoformat(timespec="seconds"),
-        "summary": {
-            "total": len(files),
-            "processed": processed,
-            **dict(counts),
-        },
-        "items": items,
-    }
-    p = Path(report_path)
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(
-        yaml.safe_dump(report, allow_unicode=True, sort_keys=False, default_flow_style=False),
-        encoding="utf-8",
-    )
 
 
 if __name__ == "__main__":

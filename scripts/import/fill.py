@@ -5,7 +5,6 @@ import argparse
 import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
 from pathlib import Path
 
 import yaml
@@ -22,6 +21,7 @@ from scripts.lib.import_common import (
     guarded_get,
     make_character,
 )
+from scripts.lib.report import Report
 from scripts.lib.status import status_mark
 
 
@@ -64,10 +64,7 @@ def main():
     import_dir = Path(args.import_dir)
     import_dir.mkdir(parents=True, exist_ok=True)
 
-    report = {
-        "generated": datetime.now().isoformat(timespec="seconds"),
-        "items": [],
-    }
+    rep = Report(args.report)
     items_lock = threading.Lock()
 
     counts = {"新增": 0, "已有": 0, "客串": 0, "无生日": 0, "失败": 0}
@@ -94,28 +91,30 @@ def main():
         detail = guarded_get(controller, bangumi.fetch_character, cid)
         if not detail or isinstance(detail, dict) and "error" in detail:
             with items_lock:
-                report["items"].append(
+                rep.add(
+                    "items",
                     {
                         "work": work["folder"],
                         "subject_id": sid,
                         "character": name,
                         "character_id": cid,
                         "reason": "详情获取失败",
-                    }
+                    },
                 )
             log(work, name, "X", "失败")
             return
         birth_mon, birth_day = detail.get("birth_mon"), detail.get("birth_day")
         if not birth_mon or not birth_day:
             with items_lock:
-                report["items"].append(
+                rep.add(
+                    "items",
                     {
                         "work": work["folder"],
                         "subject_id": sid,
                         "character": name,
                         "character_id": cid,
                         "reason": "无生日数据",
-                    }
+                    },
                 )
             log(work, name, "?", "无生日")
             return
@@ -174,15 +173,11 @@ def main():
         print(f"\n{info('连续 403，任务停止')}")
         sys.exit(1)
 
-    report_path = Path(args.report)
-    report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(
-        yaml.safe_dump(report, allow_unicode=True, sort_keys=False, default_flow_style=False),
-        encoding="utf-8",
-    )
+    rep.finish(**dict(counts))
+    rep.close()
     summary = "  ".join(f"{k}: {v}" for k, v in counts.items())
     print(f"\n{info('汇总')} {summary}")
-    print(f"{info(f'报告已写入: {report_path}')} ({len(report['items'])} 条无生日/失败)")
+    print(f"{info(f'报告已写入: {args.report}')} ({counts['X'] + counts['?']} 条无生日/失败)")
 
 
 if __name__ == "__main__":
