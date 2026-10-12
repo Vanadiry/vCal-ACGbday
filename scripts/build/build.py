@@ -115,12 +115,10 @@ def main():
                     changed = True
                 events.append(ev)
 
-        header = build_header(global_info, version["info"], ics_config)
+        header = build_header(global_info, version["info"])
         old_update = old_events.get(build_meta["uuid"])
         if changed or old_update is None:
-            update = build_update_event(
-                global_info, ics_config, version["info"]["name"], build_meta
-            )
+            update = build_update_event(global_info, version["info"]["name"], build_meta)
         else:
             # 无任何条目变化时不发新版本号，原样沿用上次构建的 update 事件
             update = f"BEGIN:VEVENT\n{old_update[2]}\nEND:VEVENT"

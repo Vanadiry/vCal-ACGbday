@@ -32,12 +32,6 @@ def color(text, *codes):  # 给文本加颜色
     return f"{code_str}{text}{RESET}"
 
 
-def cprint(text="", *codes, **kwargs):  # 带颜色打印
-    end = kwargs.pop("end", "\n")
-    file = kwargs.pop("file", sys.stdout)
-    print(color(text, *codes), end=end, file=file, **kwargs)
-
-
 # 语义化便捷函数
 def ok(text):
     return color(text, GREEN)

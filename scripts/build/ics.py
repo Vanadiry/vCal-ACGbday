@@ -60,7 +60,7 @@ def fold_lines(text, limit=75):
     return "\n".join(fold(line, limit) for line in text.split("\n"))
 
 
-def build_header(global_info, version_info, ics_config):
+def build_header(global_info, version_info):
     suffix = version_info.get("suffix", "")
     prodid_name = f"{global_info['name']} {suffix}".strip()
     calname_name = f"{version_info['name']} {suffix}".strip()
@@ -77,7 +77,7 @@ def build_header(global_info, version_info, ics_config):
     return fold_lines("\n".join(lines))
 
 
-def build_update_event(global_info, ics_config, category, build_meta):
+def build_update_event(global_info, category, build_meta):
     desc_parts = [
         "version:",
         build_meta["version"],
