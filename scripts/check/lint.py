@@ -1,6 +1,7 @@
 # 结构检查：单文件校验走 schema，全局检查保留。
 
 import argparse
+import calendar
 import json
 import re
 import sys
@@ -16,6 +17,8 @@ from scripts.check.config import run_config_check
 from scripts.lib.color import bold, error, info, ok, warn
 
 CONTROL_CHAR_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
+LEAP_YEAR = 2024  # 借用闰年校验，使 2/29 放行；锚点由 config 的 dtstart_leap 处理
 
 _SCHEMAS = {}
 
@@ -88,6 +91,20 @@ def check_text_safety(obj, path, errs):  # 危险字符检查
             check_text_safety(item, path, errs)
 
 
+def check_bday(data, errs):  # 月日组合须为真实日期，schema 只能约束 m≤12、d≤31
+    bday = data.get("bday")
+    if not isinstance(bday, dict):
+        return
+    m, d = bday.get("m"), bday.get("d")
+    if not isinstance(m, int) or not isinstance(d, int):
+        return
+    if not 1 <= m <= 12 or not 1 <= d <= 31:
+        return  # 越界由 schema 报错，不重复
+    last = calendar.monthrange(LEAP_YEAR, m)[1]
+    if d > last:
+        errs.append(f"bday: {m}/{d} 不是有效日期，该月最多 {last} 天")
+
+
 def check_file(p, schema_name, data_dir):  # 校验单个 yml 文件，返回错误列表
     try:
         data = yaml.safe_load(p.read_text(encoding="utf-8"))
@@ -97,6 +114,7 @@ def check_file(p, schema_name, data_dir):  # 校验单个 yml 文件，返回错
         return ["顶层应为 object"]
     errs = schema_errors(data, schema_name)
     check_text_safety(data, str(p.relative_to(data_dir)), errs)
+    check_bday(data, errs)
     return errs
 
 
