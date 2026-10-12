@@ -1,5 +1,5 @@
-# 生日数据全面检查。比较 data 与 bgm API / 萌娘百科，补全缺失年份。
-# 月日与年份分开检查，各自套用同一套规则。
+# 生日数据全面检查，比较 data 与 bgm API / 萌娘百科，补全缺失年份
+# 月日与年份分开检查，各自套用同一套规则
 
 import argparse
 import sys
@@ -27,7 +27,7 @@ def _patch_year(path, year):
 
 
 def judge_field(src_values, local_value) -> tuple[str, str | tuple[str, int] | None]:
-    # 单字段判定。src_values: 有效源[(src,value)]，返回 (code, note)
+    # 单字段判定，src_values 为有效源 [(src, value)]，返回 (code, note)
     if not src_values:
         # 无有效源
         if local_value is None:
@@ -55,7 +55,7 @@ def judge_field(src_values, local_value) -> tuple[str, str | tuple[str, int] | N
     if local_value is not None and local_value == v1:
         return "?", f"{s0}:{v0} 与 data 不同，源 {s0} 可能有问题"
     if local_value is None:
-        # 两源不同 + data 缺该字段：year 需要看日月是否一致，此处返回特殊标记
+        # 两源不同且 data 缺该字段，year 需看日月是否一致，此处返回特殊标记
         return "patch_conflict", f"{s0}:{v0} vs {s1}:{v1}"
     return "X", f"{s0}:{v0} vs {s1}:{v1} vs data:{local_value}"
 
@@ -78,7 +78,7 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
         line = f"  [{idx + 1}/{total}] {status_mark('Y')} {name_col} [verified]"
         return entry, [], line, counts
 
-    srcs = {}  # 'month'/'day'/'year' -> [(src, value)]
+    srcs = {}  # 'month'/'day'/'year' 映射到 [(src, value)]
     unavailable = []  # [(src, detail)] 源不可用
     tasks = []
     for sname, getter in (("bangumi", bangumi.fetch), ("moegirl", moegirl.fetch)):
@@ -173,7 +173,7 @@ def process_one(p, idx, total):  # 处理单个角色，返回 (entry, issues, l
         }
         issues.append(("year", "?", f"源({src_name})"))
     elif y_code == "patch_conflict":
-        # 两源不同且 data 缺年：若日月一致且仅一源有年，可补全；否则不补
+        # 两源不同且 data 缺年，若日月一致且仅一源有年则可补全，否则不补
         year_srcs = srcs.get("year", [])
         month_srcs = srcs.get("month", [])
         day_srcs = srcs.get("day", [])
@@ -278,11 +278,11 @@ def main():
 
     data_dir = Path(args.data)
     if not data_dir.is_dir():
-        print(f"数据目录不存在: {data_dir}")
+        print(f"数据目录不存在：{data_dir}")
         sys.exit(2)
 
     files = [p for p in data_dir.rglob("*.yml") if p.is_file() and p.name != "_info.yml"]
-    print(f"扫描: {len(files)} 个角色", flush=True)
+    print(f"扫描：{len(files)} 个角色", flush=True)
 
     # 前置 lint 检查，不通过则终止
     lint_errs = run_lint(data_dir, str(Path(args.report).with_suffix(".lint.yml")))
@@ -306,11 +306,11 @@ def main():
     print("\n== 汇总 ==")
     for k, v in counts.items():
         print(f"  {k}: {v}")
-    print(f"\n{info(f'报告已写入: {args.report}')}")
+    print(f"\n{info(f'报告已写入：{args.report}')}")
     if counts["unavailable"]:
         print(
-            f"\n有 {counts['unavailable']} 处数据源不可用（限速或请求失败），"
-            "本次结果不可信。\n待源恢复后重跑：vcal check bday"
+            f"\n有 {counts['unavailable']} 处数据源不可用，因为限速或请求失败，"
+            "本次结果不可信\n待源恢复后重跑：vcal check bday"
         )
         sys.exit(1)
 

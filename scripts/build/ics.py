@@ -42,7 +42,7 @@ def fold(line, limit=75):
         if nl != -1 and nl - pos >= budget // 2:
             cut = nl + 2
         else:
-            # 回退到字符边界：raw[cut] 为续接字节(10xxxxxx)说明切在多字节字符中间
+            # 回退到字符边界：raw[cut] 为续接字节(10xxxxxx)，说明切在多字节字符中间
             while cut < len(raw) and cut > pos and (raw[cut] & 0xC0) == 0x80:
                 cut -= 1
             if cut == pos:

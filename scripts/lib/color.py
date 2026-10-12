@@ -1,4 +1,4 @@
-# 终端彩色输出支持。import 或单独运行打印颜色示例。
+# 终端彩色输出支持，import 或单独运行可打印颜色示例
 
 import os
 import sys
@@ -58,7 +58,7 @@ def dim(text):
 
 
 if __name__ == "__main__":
-    print("颜色支持模块测试:")
+    print("颜色支持模块测试：")
     print(
         f"  {ok('OK')}  {warn('WARN')}  {error('ERROR')}  {info('INFO')}  {bold('BOLD')}  {dim('DIM')}"
     )

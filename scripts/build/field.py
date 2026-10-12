@@ -17,6 +17,6 @@ def resolve(ref, character, info):
             return None
         obj = obj[key]
     if type(obj) is int and obj == 0:
-        # 0 表示该语言的名称等同于本条目自身的 orig，回退到所属条目的 orig
+        # 0 表示该语言的名称等同于本条目自身的 orig，无需另填
         return (root.get("name") or {}).get("orig")
     return obj

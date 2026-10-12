@@ -1,5 +1,5 @@
-# 清理构建产物：按 config.yml 的 tool.clean 配置删除目录。
-# 目标为相对当前目录（项目根，由 vcal 入口校验）的路径。
+# 清理构建产物：按 config.yml 的 tool.clean 配置删除目录
+# 目标为相对当前目录的路径，当前目录由 vcal 入口校验为项目根
 
 import argparse
 import shutil
@@ -87,7 +87,7 @@ def main():
     args = parser.parse_args()
 
     if not Path(args.config).is_file():
-        print(error(f"配置文件不存在: {args.config}"))
+        print(error(f"配置文件不存在：{args.config}"))
         sys.exit(2)
 
     cfg = load_clean_config(args.config)
@@ -106,7 +106,7 @@ def main():
 
     print()
     removed = remove_targets([p for p, _ in paths])
-    print(f"{info('已清理:')}")
+    print(f"{info('已清理')}")
     for r in removed:
         print(f"  {r}")
 

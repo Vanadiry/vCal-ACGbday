@@ -1,7 +1,7 @@
-# 报告写入：列表段逐条追加，避免长任务中反复全量重写（每次重写都要重新序列化累积内容，开销 O(n²)）
-#
-# 结构为「头部字段 + 若干列表段 + summary」。
-# summary 必须最后写——追加只能向后写，已落盘的键无法回头修改。
+# 报告写入：列表段逐条追加，避免长任务中反复全量重写
+# 全量重写每次都要重新序列化累积内容，654 个角色即 21 万次重复序列化
+# 结构为“头部字段 + 若干列表段 + summary”
+# summary 必须最后写，追加只能向后写，已落盘的键无法回头修改
 
 import textwrap
 from datetime import datetime
@@ -33,9 +33,7 @@ class Report:
         if self._section != key:
             self._f.write(f"{key}:\n")
             self._section = key
-        frag = yaml.safe_dump(
-            [item], allow_unicode=True, sort_keys=False, default_flow_style=False
-        )
+        frag = yaml.safe_dump([item], allow_unicode=True, sort_keys=False, default_flow_style=False)
         self._f.write(textwrap.indent(frag, "  "))
         self._f.flush()  # 长任务中途查看报告时能读到已追加的内容
 

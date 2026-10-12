@@ -1,5 +1,5 @@
 # 补全已有数据：遍历 data/ 的 _info.yml，从 bangumi 拉取缺失角色
-# 有生日 → 建 import/<作品名>/<角色>.yml；无生日 → 记录 import/report.yml
+# 有生日则建 import/<作品名>/<角色>.yml，无生日则记录 import/report.yml
 
 import argparse
 import sys
@@ -59,7 +59,7 @@ def main():
         bangumi.set_token(args.auth)
 
     works = load_works(args.data)
-    print(info(f"扫描: {len(works)} 部作品"))
+    print(info(f"扫描：{len(works)} 部作品"))
 
     import_dir = Path(args.import_dir)
     import_dir.mkdir(parents=True, exist_ok=True)
@@ -142,7 +142,7 @@ def main():
     def process_subject(work, sid):
         chars = guarded_get(controller, bangumi.fetch_subject_characters, sid)
         print(
-            f"  {status_mark('Y')} {work['folder']} (subject {sid}) 拉取完成: {len(chars)} 角色",
+            f"  {status_mark('Y')} {work['folder']} subject {sid} 拉取完成，{len(chars)} 个角色",
             flush=True,
         )
         return [(work, sid, c) for c in chars]
@@ -177,7 +177,7 @@ def main():
     rep.close()
     summary = "  ".join(f"{k}: {v}" for k, v in counts.items())
     print(f"\n{info('汇总')} {summary}")
-    print(f"{info(f'报告已写入: {args.report}')} ({counts['X'] + counts['?']} 条无生日/失败)")
+    print(f"{info(f'报告已写入：{args.report}')}，{counts['X'] + counts['?']} 条无生日或失败")
 
 
 if __name__ == "__main__":

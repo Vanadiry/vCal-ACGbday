@@ -25,7 +25,7 @@ def main():
 
     data_dir = Path(args.data)
     if not data_dir.is_dir():
-        print(error(f"数据目录不存在: {data_dir}"))
+        print(error(f"数据目录不存在：{data_dir}"))
         sys.exit(2)
 
     invalid = []
@@ -53,7 +53,7 @@ def main():
         if ver not in (1, 2, 3, 4, 5):
             invalid.append((p, u, f"版本位 {ver}"))
 
-    print(info(f"扫描: {len(files)} 个角色文件, 不合规 uuid: {len(invalid)} 个"))
+    print(info(f"扫描：{len(files)} 个角色文件，不合规 uuid {len(invalid)} 个"))
 
     if not invalid:
         print(ok("无不合规 uuid"))
@@ -85,7 +85,7 @@ def main():
             else:
                 seen[u] = p
     if dup:
-        print(warn(f"重写后出现 {len(dup)} 处 uuid 重复:"))
+        print(warn(f"重写后出现 {len(dup)} 处 uuid 重复"))
         for a, b, u in dup:
             print(f"  {u}: {a.relative_to(data_dir)} <-> {b.relative_to(data_dir)}")
     else:

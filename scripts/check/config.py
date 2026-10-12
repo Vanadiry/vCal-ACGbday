@@ -1,4 +1,4 @@
-# 构建配置检查：按 schema 校验 config.yml，并补充 schema 无法表达的跨条目检查。
+# 构建配置检查：校验 config.yml，并补 schema 无法表达的跨条目检查
 
 import json
 import sys
@@ -51,21 +51,21 @@ def run_config_check(config_path="config.yml"):
     """校验构建配置。返回错误数（0 表示通过）。"""
     config_path = Path(config_path)
     if not config_path.is_file():
-        print(error(f"配置文件不存在: {config_path}"))
+        print(error(f"配置文件不存在：{config_path}"))
         return 1
 
     try:
         with open(config_path, encoding="utf-8") as f:
             config = yaml.safe_load(f)
     except yaml.YAMLError as e:
-        print(f"  {error('E')} {config_path}: YAML 解析失败: {e}")
+        print(f"  {error('E')} {config_path}，YAML 解析失败：{e}")
         return 1
 
     if not isinstance(config, dict):
         print(f"  {error('E')} {config_path}: 顶层应为 object")
         return 1
 
-    print(info(f"配置检查: {config_path}"))
+    print(info(f"配置检查：{config_path}"))
 
     errs = check_schema(config, "config.schema.json")
     errs += check_output_collisions(config)
@@ -75,5 +75,5 @@ def run_config_check(config_path="config.yml"):
     print(f"  {ok('配置检查通过')}" if not errs else "")
 
     print()
-    print(f"  {error(f'配置错误: {len(errs)}')}")
+    print(f"  {error(f'配置错误：{len(errs)}')}")
     return len(errs)

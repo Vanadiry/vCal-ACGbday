@@ -1,5 +1,5 @@
-# bgm API 角色数据抓取。import 或单独运行。
-# 单独运行: python scripts/lib/bangumi.py <character_id>
+# bgm API 角色数据抓取，import 或单独运行
+# 单独运行：python scripts/lib/bangumi.py <character_id>
 
 import argparse
 import json
@@ -14,7 +14,7 @@ TOKEN = None
 
 
 def set_token(token):
-    """设置 bangumi 访问令牌。传入 None/空串 则清除（恢复匿名请求）。"""
+    """设置 bangumi 访问令牌。传入 None/空串则清除，恢复匿名请求"""
     global TOKEN
     TOKEN = (token or "").strip() or None
 

@@ -11,14 +11,14 @@ PROJECT_NAME = "vcal-acgbday"
 
 
 def check_project_root():
-    """校验当前目录是项目根目录。返回错误信息，无误则返回 None。
+    """校验当前目录为项目根目录。返回错误信息，无误则返回 None。
 
     以 pyproject.toml 的 project.name 为准而非目录名：
     目录名会随 fork、clone 改名而变化，pyproject 内容不会。
     """
     p = Path("pyproject.toml")
     if not p.is_file():
-        return f"当前目录不是项目根目录（未找到 {p}），请 cd 到项目目录后再执行"
+        return f"当前目录不是项目根目录，因为未找到 {p}，请 cd 到项目目录后再执行"
     with open(p, "rb") as f:
         name = tomllib.load(f)["project"]["name"]
     if name != PROJECT_NAME:
@@ -38,8 +38,8 @@ def main():
     check = sub.add_parser("check", help="检查数据与产物")
     check_sub = check.add_subparsers(dest="check_target", required=True)
 
-    # 叶子子命令本身不带参数，其自动添加的 -h/--help 会遮蔽真实命令的 --help，
-    # 故关闭，让 --help 透传给实际处理该命令的模块。
+    # 叶子子命令本身不带参数，其自动添加的 -h/--help 会遮蔽真实命令的 --help
+    # 故关闭，让 --help 透传给实际处理该命令的模块
     check_sub.add_parser("lint", help="结构检查", add_help=False)
     check_sub.add_parser("uuid", help="uuid 标准化", add_help=False)
     check_sub.add_parser("bday", help="生日数据检查", add_help=False)

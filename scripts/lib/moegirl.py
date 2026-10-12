@@ -1,5 +1,5 @@
-# 萌娘百科页面抓取，提取生日。import 或单独运行。
-# 单独运行: python scripts/lib/moegirl.py <条目名>
+# 萌娘百科页面抓取，提取生日，import 或单独运行
+# 单独运行：python scripts/lib/moegirl.py <条目名>
 
 import html
 import json
@@ -15,15 +15,15 @@ BASE = "https://zh.moegirl.org.cn/{name}"
 MAX_RETRY = 3
 RETRY_WAIT = 5
 
-# div 结构: <span>生日</span></div><div> 值 </div>
+# div 结构：<span>生日</span></div><div> 值 </div>
 DIV_PAT = re.compile(
     r'font-weight: bold; text-align: center;"><span>([^<]+)</span></div>'
     r"<div[^>]*>(.*?)</div>",
     re.S,
 )
-# td 表格结构: <td>生日</td> <td> 值 </td>
+# td 表格结构：<td>生日</td> <td> 值 </td>
 TD_PAT = re.compile(r"<td[^>]*>\s*生日\s*</td>\s*<td[^>]*>(.*?)</td>", re.S)
-# 年份可选: 1966年11月1日 / 11月1日
+# 年份可选：1966 年 11 月 1 日 / 11 月 1 日
 BDAY_PAT = re.compile(r"(?:(\d{4})\s*年)?\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 
 
@@ -52,7 +52,7 @@ def fetch(name):  # 返回 {found, birth:{year,month,day}, name, detail, status}
         try:
             r = requests.get(url, timeout=20, headers={"User-Agent": UA})
             if r.status_code == 403:
-                result["detail"] = f"403 限速 (第{attempt + 1}次)"
+                result["detail"] = f"403 限速，第 {attempt + 1} 次"
                 result["status"] = "unavailable"
                 if attempt < MAX_RETRY - 1:
                     time.sleep(RETRY_WAIT)
@@ -91,6 +91,6 @@ def fetch(name):  # 返回 {found, birth:{year,month,day}, name, detail, status}
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("用法: python scripts/lib/moegirl.py <条目名>")
+        print("用法：python scripts/lib/moegirl.py <条目名>")
         sys.exit(2)
     print(json.dumps(fetch(sys.argv[1]), ensure_ascii=False))

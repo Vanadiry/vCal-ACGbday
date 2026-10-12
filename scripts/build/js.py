@@ -32,7 +32,7 @@ def build_grouped(works, character_field, location_field):
                 continue
             items.append([name, f"{m:02d}{d:02d}"])
         if items:
-            # 不同作品可能解析出同一个名字，合并而不是覆盖
+            # 不同作品可能解析出同一个名字，要合并，不能覆盖
             grouped.setdefault(origin, []).extend(items)
     return grouped
 

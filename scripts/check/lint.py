@@ -1,4 +1,4 @@
-# 结构检查：单文件校验走 schema，全局检查保留。
+# 结构检查：单文件校验走 schema，全局检查保留
 
 import argparse
 import calendar
@@ -91,7 +91,7 @@ def check_text_safety(obj, errs):  # 危险字符检查，路径前缀由调用�
             check_text_safety(item, errs)
 
 
-def check_bday(data, errs):  # 月日组合须为真实日期，schema 只能约束 m≤12、d≤31
+def check_bday(data, errs):  # 月日组合须为真实日期，schema 只能约束 m ≤ 12、d ≤ 31
     bday = data.get("bday")
     if not isinstance(bday, dict):
         return
@@ -99,7 +99,7 @@ def check_bday(data, errs):  # 月日组合须为真实日期，schema 只能约
     if not isinstance(m, int) or not isinstance(d, int):
         return
     if not 1 <= m <= 12 or not 1 <= d <= 31:
-        return  # 越界由 schema 报错，不重复
+        return  # 越界由 schema 报错，此处不重复
     last = calendar.monthrange(LEAP_YEAR, m)[1]
     if d > last:
         errs.append(f"bday: {m}/{d} 不是有效日期，该月最多 {last} 天")
@@ -148,11 +148,11 @@ def scan_files(data_dir: Path):
 def run_lint(data_dir, report_path):
     data_dir = Path(data_dir)
     if not data_dir.is_dir():
-        print(error(f"数据目录不存在: {data_dir}"))
+        print(error(f"数据目录不存在：{data_dir}"))
         return -1
 
     char_files, info_files = scan_files(data_dir)
-    print(info(f"扫描: 角色 {len(char_files)} 个, _info {len(info_files)} 个"))
+    print(info(f"扫描：角色 {len(char_files)} 个，_info {len(info_files)} 个"))
 
     all_errors = []
     all_warnings = []
@@ -193,11 +193,11 @@ def run_lint(data_dir, report_path):
     # 汇总
     print()
     print(bold("== 结果汇总 =="))
-    print(f"  角色文件: {len(char_files)}, _info: {len(info_files)}")
-    print(f"  {error(f'错误: {len(all_errors)}')}")
-    print(f"  {warn(f'警告: {len(all_warnings)}')}")
+    print(f"  角色文件：{len(char_files)}，_info：{len(info_files)}")
+    print(f"  {error(f'错误：{len(all_errors)}')}")
+    print(f"  {warn(f'警告：{len(all_warnings)}')}")
     clean_files = len(char_files) + len(info_files) - len({e["file"] for e in all_errors})
-    print(f"  {ok(f'无错误文件: {clean_files}')}")
+    print(f"  {ok(f'无错误文件：{clean_files}')}")
 
     with Report(report_path, data_dir=str(data_dir)) as rep:
         for e in all_errors:
@@ -211,7 +211,7 @@ def run_lint(data_dir, report_path):
             warnings=len(all_warnings),
             config_errors=config_errs,
         )
-    print(f"\n{info(f'报告已写入: {report_path}')}")
+    print(f"\n{info(f'报告已写入：{report_path}')}")
 
     return len(all_errors) + config_errs
 

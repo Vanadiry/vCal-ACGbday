@@ -12,8 +12,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from scripts.lib.color import bold, error, ok, warn
 
 
-# TEXT 值中未转义的字符（RFC 5545 §3.3.11）。合法转义序列为
-# \\ 、\; 、\, 、\N 或 \n，即反斜杠后跟这些字符时不算未转义。
+# TEXT 值中未转义的字符（RFC 5545 §3.3.11）
+# 合法转义序列为 \\ 、\; 、\, 、\N 或 \n，即反斜杠后跟这些字符时不算未转义
 def find_unescaped(value):
     """返回 value 中未转义的字符列表。逐字符扫描以正确处理 \\ 成对的情况。"""
     bad = []
@@ -181,14 +181,14 @@ def print_problems(name, problems, per_group=3):
         for p in items[:per_group]:
             print(f"    {p}")
         if len(items) > per_group:
-            print(f"    {warn(f'…… 还有 {len(items) - per_group} 条同类')}")
+            print(f"    {warn(f'还有 {len(items) - per_group} 条同类')}")
 
 
 def check_dist(dist):
     """检查目录下所有 ICS，返回问题总数。"""
     dist = Path(dist)
     if not dist.is_dir():
-        print(error(f"目录不存在: {dist}"))
+        print(error(f"目录不存在：{dist}"))
         return 1
 
     ics_files = sorted(dist.glob("*.ics"))
@@ -207,7 +207,7 @@ def check_dist(dist):
 
     print()
     print(bold("== 结果 =="))
-    print(f"  文件: {len(ics_files)}, 问题: {total_problems}")
+    print(f"  文件：{len(ics_files)}，问题：{total_problems}")
     return total_problems
 
 

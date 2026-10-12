@@ -1,13 +1,13 @@
-# 数据文件的行内编辑：只改动目标字段所在行，其余内容逐字节保留。
-# 用于避免 yaml.dump 整体重写时丢失注释与原有格式。
+# 数据文件的行内编辑：只改动目标字段所在行，其余内容逐字节保留
+# 用于避免 yaml.dump 整体重写时丢失注释与原有格式
 
 import re
 
 
 def _find_block(lines, block_key):
-    """定位顶层块（如 bday）的起止行号，返回 (起始行下标, 结束行下标，不含结束)。
+    """定位顶层块（如 bday）的起止行号，返回 (起始行下标, 结束行下标，不含结束)
 
-    起始行是 block_key 所在行；结束行是其后第一个缩进为空的非空行。
+    起始行为 block_key 所在行，结束行为其后第一个缩进为空的非空行
     """
     start = None
     for i, line in enumerate(lines):
@@ -26,7 +26,7 @@ def _find_block(lines, block_key):
 
 
 def set_scalar(path, block_key, field, value):
-    """在文件的 block_key 块内设置 field 字段。
+    """在文件的 block_key 块内设置 field 字段
 
     field 已存在则替换该行；不存在则在块内最后一个字段之后插入。
     返回 True 表示文件有改动。
